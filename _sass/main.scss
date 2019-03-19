@@ -13,8 +13,8 @@ body {
   line-height: 20px;
   font-weight: normal;
   font-style: normal;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #333333;
+  font-family: "Lora", "Georgia", "Times New Roman", Times, serif;
+  color: #222;
   padding: 20px;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -38,17 +38,23 @@ h1 {
 }
 
 h2 {
-  margin-top: 6px;
-  margin-bottom: 30px;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 15px;
   color:  #222;
   font-family: 'ProximaNova', sans-serif;
-  font-size: 48px;
+  font-size: 35px;
   font-weight: 900;
 }
 
+
 h3 {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  color:  #222;
+
+  font-size: 16px;
+  font-weight: 550;
 }
 
 h4,
@@ -63,10 +69,15 @@ img {
 a {
   background-repeat: repeat-x;
   font-family: "Lora", sans-serif;
-  color: #f6554f;
   font-weight: 200;
   text-decoration: none;
+  color: #f6554f;
   border-bottom: 1px solid #f6554f;
+}
+
+a:hover{
+
+  border-bottom: 0;
 }
 mark {
   background: #fffc76;
@@ -79,9 +90,8 @@ blockquote {
   background: #eee;
 }
 .logo {
-  position: relative;
-  margin: 0 auto 35px;
-  text-align: center;
+  width: 50%;
+  // margin: 35px 50px 35px 50px;
   animation-duration: 0.7s;
   animation-fill-mode: both;
   animation-name: bounce;
@@ -123,7 +133,6 @@ blockquote {
     }
   }
   .logo-prompt {
-    position: absolute;
     display: none;
     vertical-align: middle;
     padding: 5px;
@@ -152,6 +161,11 @@ blockquote {
 }
 iframe {
   margin: 45px 0 !important;
+}
+.header{
+  border-bottom: 1px solid #cecaca;
+  max-height: 140px;
+  margin-bottom: 20px;
 }
 ul,
 ol {
@@ -222,6 +236,27 @@ table {
 }
 iframe {
   width: 100%;
+}
+.home {
+  position: relative;
+  margin-left: 10px;
+  font-size: 14px;
+  font-family: ProximaNova,serif;
+  font-weight: 900;
+}
+.home:before {
+  content: "";
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  margin-top: -5px;
+  background: url('/assets/img/arrow-right.png');
+  transform: scale(-1, 1);
+  width: 6px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 article {
   max-width: 500px;
@@ -306,12 +341,12 @@ article {
 }
 .page-navigation,
 .footer {
-  text-align: center;
   max-width: 500px;
   margin: 0 auto;
   font-size: 0.8rem;
 }
 .page-navigation {
+  text-align: left;
   margin: 50px auto 0 auto;
   a {
     display: inline-block;
@@ -323,14 +358,27 @@ article {
   }
 }
 .footer {
-  margin-top: 50px;
+  position: absolute;
+  text-align: center;
+  left: 45%;
+  bottom: 0;
   color: #777;
   a {
     border: none;
     font-weight: bold;
   }
+  @media (max-height: 700px) {
+    position: relative;
+    padding-bottom: 0;
+    left: 0;
+
+  }
+
 }
 section {
+  /* Lists */
+
+
   max-width: 500px;
   margin: 0 auto 50px auto;
   ul {
@@ -338,20 +386,7 @@ section {
     margin: 0;
     padding: 0;
     li {
-      margin: 25px 0;
-      .title {
-        max-width: 100%;
-        //overflow: hidden !important;
-        //text-overflow: ellipsis !important;
-        //white-space: nowrap !important;
-        word-wrap: normal !important;
-      }
-      a {
-        text-decoration: none;
-        border: 0;
-        color: #000;
-        box-sizing: border-box;
-      }
+      margin: 5px;
       .post-date {
         float: right;
         margin: 0 0 0 20px;
@@ -362,16 +397,14 @@ section {
         letter-spacing: 1px;
         text-transform: uppercase;
       }
-      @media (min-width: 992px) {a {
-          border-bottom: 2px solid transparent;
-          &:hover {
-            border-color: #000;
-          }
-        }
+      }
+      a {
+        text-decoration: none;
       }
     }
   }
-}
+
+
 @keyframes bounce {0% {
     transform: translate3d( 0, -1000px, 0 );
   }
