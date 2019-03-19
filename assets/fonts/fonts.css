@@ -1,0 +1,68 @@
+/* Lora */
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: bold;
+  font-display: swap;
+  src:
+      local('Lora Bold'),
+      local('Lora-Bold'),
+      url('./Lora-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+  src:
+      local('Lora Bold Italic'),
+      local('Lora-BoldItalic'),
+      url('./Lora-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src:
+      local('Lora Italic'),
+      local('Lora-Italic'),
+      url('./Lora-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-display: swap;
+  src:
+      local('Lora'),
+      local('Lora-Regular'),
+      url('./Lora-Regular.ttf') format('truetype');
+}
+
+/* ProximaNova */
+
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('./proxima_nova/ProximaNovaRegular.otf') format('opentype');
+	font-weight: normal ;
+}
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('./proxima_nova/ProximaNovaBold.otf') format('opentype');
+  font-weight: bold;
+}
+
+@font-face{
+	font-family: 'ProximaNova';
+	src: url('./proxima_nova/ProximaNovaExtrabold.otf') format('opentype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+	src: url('./proxima_nova/ProximaNovaLight.otf') format('opentype');
+	font-weight: 300;
+}
+
+
