@@ -1,0 +1,106 @@
+/* Code */
+.slide pre {
+    margin-top: 0;
+    margin-bottom: 1em;
+    counter-reset: code;
+    white-space: normal;
+}
+
+/* Inner */
+
+.slide pre code {
+    display: block;
+    margin-left: -100px;
+    padding: 0;
+    width: calc(100% + 100px + 100px);
+    border-radius: 0;
+    background: none;
+    line-height: 1.5;
+    white-space: pre;
+    tab-size: 4;
+}
+
+.slide pre.padding {
+    padding: 0 0 0 100px;
+}
+
+/* Line Numbers */
+
+.slide pre code:not(:only-child)::before {
+    position: absolute;
+    margin-left: -2em;
+    color: var(--color-grey);
+    opacity: 0.75;
+    counter-increment: code;
+    content: counter(code, decimal-leading-zero) '.';
+}
+
+/* Marked */
+
+.slide pre mark {
+    position: relative;
+    z-index: -1;
+    margin: 0 -0.3em;
+}
+
+/* Important */
+
+.slide pre mark.important {
+    background: var(--color-red);
+    color: #ffffff;
+}
+
+/* Comment */
+
+.slide pre .comment {
+    color: #999999;
+}
+
+/* Marked Line */
+
+.slide pre code.mark:not(:only-child) {
+    background: var(--color-fill);
+}
+
+/* Next Line */
+
+.slide pre code.mark.next:not(:only-child) {
+    visibility: visible;
+    background: none;
+}
+
+.slide pre code.mark.next.active:not(:only-child) {
+    background: var(--color-fill);
+}
+
+/* Full */
+
+.shower.full .slide pre code:not(:only-child).mark.next {
+    visibility: visible;
+    background: none;
+}
+
+.shower.full .slide pre code:not(:only-child).mark.next.active {
+    background: var(--color-fill);
+}
+.compar {
+  position: relative;
+  font-size: 20px;
+  padding-left: 100px!important;
+  white-space: normal!important;
+  max-height: 60px;
+  margin-top: 10px;
+}
+.compar_left{
+  position: relative;
+  max-width: 40%;
+  margin-right: 0;
+  border-right: 1px solid #bdbdbd;
+  height: 60px;
+}
+.compar_right{
+  position: relative;
+  padding-left: 45%!important;
+  top: -60px;
+
+ }

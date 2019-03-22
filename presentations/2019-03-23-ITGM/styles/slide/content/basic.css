@@ -1,0 +1,82 @@
+/* Basic */
+.slide h1{
+  margin-top: 6px;
+  margin-bottom: 30px;
+  color:  #222;
+  font-family: 'ProximaNova', sans-serif;
+  font-size: 90px;
+  font-weight: 900;
+}
+.slide h2 {
+  margin-top: 6px;
+  margin-bottom: 30px;
+  color:  #222;
+  font-family: 'ProximaNova', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+
+}
+.slide h2.title {
+  margin-left: 300px;
+  line-height: 1.3;
+
+
+}
+
+.slide h2.one-line {
+  margin-top: 80px;
+  font-size: 60px;
+
+}
+
+.slide h2.h2:before{
+  content: '';
+  position: absolute;
+  top: 110px;
+  bottom: 0;
+  width: 105px;
+  height: 3px;
+  background: #f6554f;
+}
+.slide * + h2 {
+  margin-top: 41px;
+}
+.slide h3 {
+  margin-top: 6px;
+  margin-bottom: 34px;
+  color:  #222;
+
+  font-size: 35px;
+  font-weight: 550;
+
+}
+.slide h3.h3:before{
+  content: '';
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  background: #f6554f;
+}
+.slide h2.contacts__name{
+  position: absolute;
+  left: 400px;
+  bottom: 40px;
+  font-size: 14px;
+  font-family: 'Lora', sans-serif;
+  font-weight: 400;
+}
+.slide p {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-family: 'Lora',sans-serif;
+}
+
+.slide p.note {
+  color: var(--color-grey);
+}
+
+.slide figure {
+  margin: 0;
+}
