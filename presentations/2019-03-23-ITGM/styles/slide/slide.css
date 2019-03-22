@@ -28,7 +28,7 @@
 
 /* Modiifiers*/
 
-@import 'modifiers/white.css';
+@import 'modifiers/color.css';
 @import 'modifiers/line-height.css';
 @import 'modifiers/margin.css';
 @import 'modifiers/font-size.css';

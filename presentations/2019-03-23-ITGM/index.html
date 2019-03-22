@@ -109,16 +109,16 @@
       <pre>
         <code class="ruby ml-150">
           # app/models/documents.rb
-          <mark>619.</mark>  # ###################################
-          620.  # Callbacks
-          621.
-          622.  before_validation :on => :create do
-          623.    self.scorer = applicant
-          624.    self.closing_status ||= 'likely'
+          <mark>619</mark>  # ###################################
+          620 # Callbacks
+          621
+          622  before_validation :on => :create do
+          623    self.scorer = applicant
+          624    self.closing_status ||= 'likely'
                   # …
-          728.
-          <mark>729.</mark>  # ###################################
-          730.  # Class Methods
+          728
+          <mark>729</mark>  # ###################################
+          730  # Class Methods
         </code>
       </pre>
     </section>
@@ -203,6 +203,8 @@
           class CreateDocument
             def call(document, params)
               document.attributes = params
+
+              # before_create
               rename_document(document) if document.valid?
 
               document.save!
@@ -222,6 +224,7 @@
 
               document.save!
 
+              # after_commit on: :create
               make_async_call_with_document(document)
             end
           end
@@ -340,12 +343,42 @@
       </pre>
     </section>
 
+     <section class="slide">
+      <div class="shout">
+        <h1>dry-validation</h1>
+        <p>
+          <a href="https://dry-rb.org/gems/dry-validation">
+            https://dry-rb.org/gems/dry-validation
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          # app/services/document/create_document.rb
+          class Document::CreateDocument
+            def call(document, params)
+              result = <mark>schema</mark>(document).(params)
+              if result.success?
+                # …
+                
+              end
+            end
+          end
+
+          class CreateDocumentSchema < Dry::Validation::Schema
+          end
+        </code>
+      </pre>
+    </section>
+
     <section class="slide">
       <pre>
         <code class="ruby ml-150">
           # Initialize once
           command = CreateDocument.new(
-            form_class: Document::CreateDocumentForm,
             rename_document: Document::RenameDocument.new
           )
 
@@ -368,8 +401,7 @@
     <section class="slide">
       <pre>
         <code class="ruby ml-150">
-          class CreateDocument
-            attr_reader :form_class
+          class Document::CreateDocument
             attr_reader :rename_document
             attr_reader :upload_document_to_perfect_audit
             attr_reader :update_expiration_dates
@@ -417,7 +449,7 @@
 
     <section class="slide">
       <pre>
-        <code class="ruby fs-18">
+        <code class="ruby ml-150 fs-20">
           # app/containers/global_container.rb
           module GlobalContainer
             extend Dry::Container::Mixin
@@ -425,13 +457,12 @@
             namespace('services') do
               register('create_document') do
                 Document::CreateDocument.new(
-                  self['forms.create_document_form_class']
+                  rename_document: self['services.rename_document']
                 )
               end
-            end
-            namespace('forms') do
-              register('create_document_form_class') do
-                Document::DocumentForm
+
+              register('rename_document') do
+                Document::RenameDocument.new
               end
             end
           end
@@ -441,16 +472,16 @@
 
     <section class="slide">
       <pre>
-        <code class="ruby ml-150 ">
+        <code class="ruby ml-150 fs-20">
           # создание документа от заёмщика
           command = GlobalContainer['services.create_document']
-          command.form  # Document::CreateDocumentForm
-          command.class # Document::CreateDocument
+          command.rename_document   # Document::RenameDocument
+          command.class             # Document::CreateDocument
 
           # создания документа из CRM
           command = GlobalContainer['crm.services.create_document']
-          command.form  # Crm::Document::CreateDocumentForm
-          command.class # Document::CreateDocument
+          command.rename_document  # Crm::Document::RenameDocument
+          command.class            # Document::CreateDocument
         </code>
       </pre>
     </section>
@@ -463,13 +494,13 @@
       <pre class="mb-0">
         <code class="ruby ml-150">
           # app/lib/containers/global_container.rb
-             1. module GlobalContainer
-             2.   extend Dry::Container::Mixin
+             1 module GlobalContainer
+             2   extend Dry::Container::Mixin
                     namespace('services') do
                       # …
-          2044.     end
-          2045.   end
-          <mark>2046.</mark> end
+          2044     end
+          2045   end
+          <mark>2046</mark> end
         </code>
       </pre>
 
@@ -481,33 +512,29 @@
       <pre>
         <code class="ruby ml-150">
           # app/lib/containers/api_v2_container.rb
-             1. module ApiV2Container
-             2.   extend Dry::Container::Mixin
+             1 module ApiV2Container
+             2   extend Dry::Container::Mixin
                     namespace('auth') do
                       # ...
-           124.     end
-           125.   end
-           126. end
+           124     end
+           125   end
+           126 end
         </code>
       </pre>
     </section>
 
     <section class="slide">
       <pre>
-        <code class="ruby ml-120 fs-20">
-          class CreateDocument
+        <code class="ruby ml-120">
+          # app/services/document/create_document.rb
+          class Document::CreateDocument
             def call(document, params)
-              form = ApiV2Container['document_form'].new(document)
-              if form.validate(params)
-                document = form.sync
-                rename_document(document)
-
-                document.save!
+              result = schema(document).(params)
+              if result.success?
+                # …
               else
                 return false
               end
-
-              document
             end
           end
         </code>
@@ -516,20 +543,16 @@
 
     <section class="slide">
       <pre>
-        <code class="ruby ml-120 fs-20">
-          class CreateDocument
+        <code class="ruby ml-120">
+          # app/services/document/create_document.rb
+          class Document::CreateDocument
             def call(document, params)
-              form = ApiV2Container['document_form'].new(document)
-              if form.validate(params)
-                document = form.sync
-                rename_document(document)
-
-                document.save!
+              result = schema(document).(params)
+              if result.success?
+                # …
               else
                 <mark>return false</mark>
               end
-
-              document
             end
           end
         </code>
@@ -563,11 +586,12 @@
         <code class="ruby ml-150 ">
           class CreateDocument
             def call(document, params)
-              if form.validate(params)
+              result = schema(document).(params)
+              if result.success?
                 # …
                 Success(document)
               else
-                Failure(form.errors)
+                Failure(result.errors)
               end
             end
           end
@@ -621,7 +645,7 @@
     </section>
 
     <section class="slide">
-      <div class="shout w-90">
+      <div class="shout">
           <h2 class="fw-600">ActiveSupport</h2>
           <h1>number_to_currency</h1>
       </div>
@@ -633,7 +657,7 @@
         <code class="ruby ml-150 mt-50">
           report = MemoryProfiler.report do
             # ActiveSupport::NumberHelper::NumberToCurrencyConverter
-            number_to_currency(BigDecimal(100))
+            number_to_currency(BigDecimal(1543679.753))
           end
 
           report.total_allocated_memsize
@@ -662,7 +686,7 @@
       <pre>
         <code class="ruby ml-150 mt-50">
           report = MemoryProfiler.report do
-            d = BigDecimal(100)
+            d = BigDecimal(1543679.753)
             FasterSupport::Numbers.number_to_currency_n_u(d)
           end
 
