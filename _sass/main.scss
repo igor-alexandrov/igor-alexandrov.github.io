@@ -9,7 +9,7 @@ html {
   height: 100%;
 }
 body {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
   font-weight: normal;
   font-style: normal;
@@ -39,7 +39,7 @@ h1 {
 
 h2 {
   position: relative;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 15px;
   color:  #222;
   font-family: 'ProximaNova', sans-serif;
@@ -49,12 +49,13 @@ h2 {
 
 
 h3 {
+  line-height: 29px;
   margin-top: 6px;
   margin-bottom: 16px;
   color:  #222;
 
-  font-size: 16px;
-  font-weight: 550;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 h4,
@@ -76,7 +77,6 @@ a {
 }
 
 a:hover{
-
   border-bottom: 0;
 }
 mark {
@@ -90,21 +90,24 @@ blockquote {
   background: #eee;
 }
 .logo {
-  width: 50%;
-  // margin: 35px 50px 35px 50px;
-  animation-duration: 0.7s;
-  animation-fill-mode: both;
-  animation-name: bounce;
-  -webkit-animation-duration: 0.7s;
-  -webkit-animation-fill-mode: both;
-  -webkit-animation-name: bounce;
+  width: 150px;
+  height: 150px;
+  @media (max-width: 600px) {
+    margin: 0 auto;
+  }
+  // animation-duration: 0.7s;
+  // animation-fill-mode: both;
+  // animation-name: bounce;
+  // -webkit-animation-duration: 0.7s;
+  // -webkit-animation-fill-mode: both;
+  // -webkit-animation-name: bounce;
   a {
     background: #ddd url("logo_wrapper.png");
     color: #000;
     text-decoration: none;
     font-weight: 700;
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     font-size: 1.5em;
     border-radius: 100%;
     display: inline-block;
@@ -164,8 +167,13 @@ iframe {
 }
 .header{
   border-bottom: 1px solid #cecaca;
-  max-height: 140px;
+  max-height: 170px;
   margin-bottom: 20px;
+  @media (max-width: 600px) {
+    padding-bottom: 20px;
+    max-height: none;
+    text-align: center;
+  }
 }
 ul,
 ol {
@@ -259,7 +267,7 @@ iframe {
   background-size: contain;
 }
 article {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   h1.title {
     line-height: 1.4em;
@@ -341,7 +349,7 @@ article {
 }
 .page-navigation,
 .footer {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   font-size: 0.8rem;
 }
@@ -358,7 +366,7 @@ article {
   }
 }
 .footer {
-  position: absolute;
+  // position: absolute;
   text-align: center;
   left: 45%;
   bottom: 0;
@@ -379,7 +387,7 @@ section {
   /* Lists */
 
 
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto 50px auto;
   ul {
     list-style: none;

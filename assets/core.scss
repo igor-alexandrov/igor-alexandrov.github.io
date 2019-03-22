@@ -2,8 +2,9 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+@import './fonts/fonts.css';
+
 @import 'main';
 @import 'syntax';
 @import 'lists';
 @import 'about';
-@import './fonts/fonts.css';
