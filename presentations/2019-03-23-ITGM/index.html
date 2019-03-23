@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  </head>
+
+  <body class="shower list">
+    <script>hljs.initHighlightingOnLoad();</script>
+    <header class="caption">
+      <h1>IT Global Meetup #14</h1>
+      <p>Not the Rails Way</p>
+    </header>
+
+    <section class="slide" id="cover">
+      <img class="cover preview" src="pictures/jr_robot.jpg" alt="JetRockets">
+      <h2 class="title one-line">Not the Rails Way</h2>
+
+      <h2 class="contacts__name">Игорь Александров, JetRockets Co-Founder</h2>
+    </section>
+
+
+
+    <section class="slide">
+      <h2 class="h2">Игорь Александров</h2>
+      <img class="foto" src="pictures/alexandrov.jpg" alt="JetRockets">
+      <div class="contacts">
+        <a href="https://jetrockets.pro/">jetrockets.pro</a>
+        <a href="https://github.com/jetrockets">github.com/jetrockets</a>
+        <a href="https://github.com/igor-alexandrov">github.com/igor-alexandrov</a>
+      </div>
+    </section>
+
+    <!-- <section class="slide" id="cover">
+      <h2 class="shout">Заголовок</h2>
+    </section> -->
+
+<!--     <section class="slide">
+      <h2 class="h2">Факты</h2>
+      <ul>
+        <li>На Rails c 2008 года</li>
+        <li>>= Rails 2.2</li>
+        <li>SmallTalk => Ruby</li>
+        <li>Последние 5 лет слышу “Ruby/Rails мертв…”</li>
+      </ul>
+    </section>
+ -->
+    <section class="slide slide__black" id="picture">
+      <img class="cover" src="pictures/diagram/1.jpg" alt="picture">
+    </section>
+
+    <section class="slide slide__black" id="picture">
+      <img class="cover" src="pictures/diagram/2.jpg" alt="picture">
+    </section>
+
+    <section class="slide slide__black" id="picture">
+      <img class="cover" src="pictures/diagram/3.jpg" alt="picture">
+    </section>
+
+    <section class="slide slide__black" id="picture">
+      <img class="cover" src="pictures/diagram/4.jpg" alt="picture">
+    </section>
+
+    <section class="slide slide__black" id="picture">
+      <img class="cover" src="pictures/diagram/5.jpg" alt="picture">
+    </section>
+
+    <section class="slide slide__black" id="picture">
+      <img class="cover" src="pictures/diagram/6.jpg" alt="picture">
+    </section>
+
+    <section class="slide">
+      <h1 class="shout">Знакомо?</h1>
+    </section>
+
+    <section class="slide">
+      <h1 class="shout">Разве проблема <br> в Ruby?</h1>
+    </section>
+
+    <section class="slide">
+      <h1 class="shout">Проблема №1 &mdash; архитектура</h1>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          class DocumentsController < ApplicationController
+            def create
+              @document = Document.new(params[:document])
+
+              # 90% of developers don't care about 'magic'
+              if <mark>@document.save</mark>
+                # …
+              else
+                # …
+              end
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+
+    <section class="slide" >
+      <pre>
+        <code class="ruby ml-150">
+          # app/models/documents.rb
+          <mark>619</mark>  # ###################################
+          620 # Callbacks
+          621
+          622  before_validation :on => :create do
+          623    self.scorer = applicant
+          624    self.closing_status ||= 'likely'
+                  # …
+          728
+          <mark>729</mark>  # ###################################
+          730  # Class Methods
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h1 class="shout">Приложение &mdash; цепочка сервисов</h1>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Запрос => [*] => [*] => Ответ</h2>
+    </section>
+
+    <section class="slide">
+      <h1 class="shout">Приложение &mdash; цепочка функций</h1>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          class CreateDocument
+
+            # ...
+
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          class CreateDocument
+            def call
+              # ...
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          class CreateDocument
+            def call(document, params)
+              # ...
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          class CreateDocument
+            def call(document, params)
+              document.attributes = params
+              document.save!
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          class CreateDocument
+            def call(document, params)
+              document.attributes = params
+              document.save!
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          class CreateDocument
+            def call(document, params)
+              document.attributes = params
+
+              # before_create
+              rename_document(document) if document.valid?
+
+              document.save!
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          class CreateDocument
+            def call(document, params)
+              document.attributes = params
+              rename_document(document) if document.valid?
+
+              document.save!
+
+              # after_commit on: :create
+              make_async_call_with_document(document)
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2 class="h2">Pros</h2>
+      <ul>
+        <li>Единый интерфейс сервисов;</li>
+        <li>частично избавились от колбеков;</li>
+        <li>тестирование функциональных объектов &mdash; проще;</li>
+        <li>композиция сервисов.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2 class="h2">Cons</h2>
+      <ul>
+        <li>
+          Валидации остались в моделях:
+          <pre >
+            <code class="compar">
+            <div class=" compar_left">
+              document.save(validate: false)
+            </div>
+            <div class="compar_right">
+              document.from_crm = true
+            </br>
+              document.save
+          </div>
+            </code>
+          </pre>
+        </li>
+        <li>
+          композиция сервисов получалась не всегда, получалось дублирование;
+        </li>
+        <li>
+          тестирование не стало проще из-за невозможности управлять зависимостями;
+        </li>
+        <li>
+          не получалось сделать композицию объектов (Domain).
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="shout">
+        <h2 class="fw-600">Silver Bullet?</h2>
+        <h1>Form Object!</h1>
+        <p>
+          <a href="http://trailblazer.to/gems/reform">
+            http://trailblazer.to/gems/reform
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          class CreateDocument
+            def call(document, params)
+              form = CreateDocumentForm.new(document)
+
+              if form.validate(params)
+                document = form.sync
+                rename_document(document)
+              end
+
+              document.save!
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          class CreateDocument
+            attr_reader :form_class
+            attr_reader :rename_document
+
+            def initialize(form_class:, rename_document:)
+              @form_class = form_class
+              @rename_document = rename_document
+            end
+
+            def call(document, params)
+              # …
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          class CreateDocument
+            def call(document, params)
+              form = form_class.new(document)
+              if form.validate(params)
+                document = form.sync
+                rename_document(document)
+
+                document.save!
+              end
+
+              document
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+     <section class="slide">
+      <div class="shout">
+        <h1>dry-validation</h1>
+        <p>
+          <a href="https://dry-rb.org/gems/dry-validation">
+            https://dry-rb.org/gems/dry-validation
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          # app/services/document/create_document.rb
+          class Document::CreateDocument
+            def call(document, params)
+              result = <mark>schema</mark>(document).(params)
+              if result.success?
+                # …
+                
+              end
+            end
+          end
+
+          class CreateDocumentSchema < Dry::Validation::Schema
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          # Initialize once
+          command = CreateDocument.new(
+            rename_document: Document::RenameDocument.new
+          )
+
+          # Use several times
+          command.call(passport, params[:passport])
+          command.call(visa, params[:visa])
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h1 class="shout">Profit?</h1>
+    </section>
+
+    <section class="slide">
+      <!-- Сделать это watermark на следующем слайде -->
+      <h1 class="shout">Не совсем…</h1>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          class Document::CreateDocument
+            attr_reader :rename_document
+            attr_reader :upload_document_to_perfect_audit
+            attr_reader :update_expiration_dates
+            attr_reader :convert_document_to_pdf
+            attr_reader :create_affiliations
+            attr_reader :update_cpl_records
+            attr_reader :update_application_status
+
+            # hundreds of other stuff here
+            # …
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <div class="shout">
+        <h2 class="fw-600">Silver Bullet?</h2>
+        <h1>dry-container</h1>
+        <p>
+          <a href="https://dry-rb.org/gems/dry-container">
+            https://dry-rb.org/gems/dry-container
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="h2">dry-container</h2>
+      <ul>
+        <li>IoC Container</li>
+        <li>Stubs!</li>
+        <li>Thread safe</li>
+      </ul>
+
+      <!--
+        Принцип инверсии зависимостей (англ. dependency inversion principle, DIP) — важный принцип объектно-ориентированного программирования, используемый для уменьшения связанности в компьютерных программах. Входит в пятёрку принципов SOLID.
+
+        Формулировка:
+
+        A. Модули верхних уровней не должны зависеть от модулей нижних уровней. Оба типа модулей должны зависеть от абстракций.
+        B. Абстракции не должны зависеть от деталей. Детали должны зависеть от абстракций.
+       -->
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150 fs-20">
+          # app/containers/global_container.rb
+          module GlobalContainer
+            extend Dry::Container::Mixin
+
+            namespace('services') do
+              register('create_document') do
+                Document::CreateDocument.new(
+                  rename_document: self['services.rename_document']
+                )
+              end
+
+              register('rename_document') do
+                Document::RenameDocument.new
+              end
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150 fs-20">
+          # создание документа от заёмщика
+          command = GlobalContainer['services.create_document']
+          command.rename_document   # Document::RenameDocument
+          command.class             # Document::CreateDocument
+
+          # создания документа из CRM
+          command = GlobalContainer['crm.services.create_document']
+          command.rename_document  # Crm::Document::RenameDocument
+          command.class            # Document::CreateDocument
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h1 class="shout">Profit?</h1>
+    </section>
+
+    <section class="slide">
+      <pre class="mb-0">
+        <code class="ruby ml-150">
+          # app/lib/containers/global_container.rb
+             1 module GlobalContainer
+             2   extend Dry::Container::Mixin
+                    namespace('services') do
+                      # …
+          2044     end
+          2045   end
+          <mark>2046</mark> end
+        </code>
+      </pre>
+
+
+      <h3 class="lh-1_5 mt-0">2046 LOC??? </br> IOC головного мозга</h3>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          # app/lib/containers/api_v2_container.rb
+             1 module ApiV2Container
+             2   extend Dry::Container::Mixin
+                    namespace('auth') do
+                      # ...
+           124     end
+           125   end
+           126 end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-120">
+          # app/services/document/create_document.rb
+          class Document::CreateDocument
+            def call(document, params)
+              result = schema(document).(params)
+              if result.success?
+                # …
+              else
+                return false
+              end
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-120">
+          # app/services/document/create_document.rb
+          class Document::CreateDocument
+            def call(document, params)
+              result = schema(document).(params)
+              if result.success?
+                # …
+              else
+                <mark>return false</mark>
+              end
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <div class="shout">
+        <h2 class="fw-600">Silver Bullet?</h2>
+        <h1>dry-monads</h1>
+        <p>
+          <a href="https://dry-rb.org/gems/dry-monads">
+            https://dry-rb.org/gems/dry-monads
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="h2">dry-monads</h2>
+      <ul>
+        <li><strike>Монада – это то, что все знают, но не могут объяснить;</strike></li>
+        <li>монада – контейнер, в котором есть результат с объектом;</li>
+        <li>chaining;</li>
+        <li>синтаксический сахар.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150 ">
+          class CreateDocument
+            def call(document, params)
+              result = schema(document).(params)
+              if result.success?
+                # …
+                Success(document)
+              else
+                Failure(result.errors)
+              end
+            end
+          end
+        </code>
+      </pre>
+    </section>
+
+
+    <section class="slide">
+      <pre>
+        <code class="ruby ml-150">
+          result = command.call(document, params[:document])
+
+          case result
+          when Dry::Monads::Success
+            # …
+          when Dry::Monads.Failure(LendingOne::ValidationError)
+            # …
+          when Dry::Monads::Failure
+            # …
+          end
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2 class="h2">Pros</h2>
+      <ul>
+        <li>Тестирование функциональных объектов;</li>
+        <li>простое расширение логики;</li>
+        <li>композиция – основа моделирования процессов;</li>
+        <li>масштабирование и слабая связанность компонентов приложения.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2 class="h2">Cons</h2>
+      <ul>
+        <li>Имитация функций объектами;</li>
+        <li>концептуально множатся сущности (которые не являются сущностями по факту);</li>
+        <li>IoC с доступом по строкам;</li>
+        <li>можно написать монадический метод и вернуть не монадическое значение;</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="shout">
+        <h2 class="fw-600">Проблема №2.</h2>
+        <h1>Nobody wants </br> to <strike>think</strike> hack</h1>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="shout">
+          <h2 class="fw-600">ActiveSupport</h2>
+          <h1>number_to_currency</h1>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="h2">number_to_currency</h2>
+      <pre>
+        <code class="ruby ml-150 mt-50">
+          report = MemoryProfiler.report do
+            # ActiveSupport::NumberHelper::NumberToCurrencyConverter
+            number_to_currency(BigDecimal(1543679.753))
+          end
+
+          report.total_allocated_memsize
+          # 10168
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h1 class="shout">10 килобайт?</h1>
+    </section>
+
+    <section class="slide">
+      <div class="shout">
+        <h1>FasterSupport</h1>
+        <p>
+          <a href="https://github.com/jetrockets/faster_support">
+            https://github.com/jetrockets/faster_support
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="h2">FasterSupport</h2>
+      <pre>
+        <code class="ruby ml-150 mt-50">
+          report = MemoryProfiler.report do
+            d = BigDecimal(1543679.753)
+            FasterSupport::Numbers.number_to_currency_n_u(d)
+          end
+
+          report.total_allocated_memsize
+          # 80
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2 class="h2">Performance</h2>
+      <pre>
+        <code class="shell mt-40 fs-18">
+          Checking for BigDecimal
+          Warming up --------------------------------------
+                 ActiveSupport   874.000  i/100ms
+                 FasterSupport    30.613k i/100ms
+          Calculating -------------------------------------
+                 ActiveSupport      9.263k (± 5.2%) i/s -     46.322k in   5.015584s
+                 FasterSupport    386.647k (± 2.9%) i/s -      1.959M in   5.071773s
+
+          Comparison:
+                 FasterSupport:   386647.3 i/s
+                 ActiveSupport:     9262.8 i/s - 41.74x  slower
+        </code>
+      </pre>
+    </section>
+
+    <!-- Вставить слайд с performance -->
+
+    <!-- Вставить слайд с sidekiq -->
+
+    <section class="slide">
+      <pre>
+        <h2 class="h2">Counter Cache</h2>
+        <code class="ruby ml-150 mt-50">
+          d = Document.first
+          d.comments_count # => 0
+          Document.increment_counter(:comments_count, 1)
+
+          d.comments_count # => 0
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <h2 class="h2">Counter Cache</h2>
+        <code class="ruby ml-150 mt-50">
+          d = Document.first
+          d.comments_count # => 0
+          d.increment(:comments_count)
+          d.reload
+
+          d.comments_count # => 0
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+        <div class="shout">
+            <h2 class="fw-600">PostgreSQL</h2>
+            <pre><h1 class="fs-60">RETURNING statement</h1></pre>
+        </div>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <h2 class="h2">RETURNING statement</h2>
+        <code class="sql ml-150 mt-50">
+          UPDATE "documents"
+          SET
+            "comments_count" = COALESCE("comments_count", 0) + 1
+          WHERE
+            "documents"."id" = 343195
+          <mark>RETURNING</mark>
+            "id", "comments_count"
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <h2 class="h2">RETURNING statement</h2>
+        <code class="ruby ml-150 mt-50">
+          d = Document.first
+          d.comments_count # => 0
+          d.increment_counter_with_value(:comments_count)
+
+          d.comments_count # => 1
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <div class="shout">
+        <h2>PostgreSQL RETURNING statement</h2>
+        <p>
+          <a href="https://github.com/jetrockets/activerecord-update_counters_with_values">
+            activerecord-update_counters_with_values
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="h2">Links</h2>
+      <ol class="links">
+        <li><a href="https://jetrockets.pro/">jetrockets.pro</a></li>
+        <li><a href="https://github.com/jetrockets">github.com/jetrockets</a></li>
+        <li><a href="https://github.com/igor-alexandrov">github.com/igor-alexandrov</a></li>
+      </ol>
+      <img class="cover logo right" src="pictures/jr.jpg" alt="JetRockets">
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+  </body>
+</html>

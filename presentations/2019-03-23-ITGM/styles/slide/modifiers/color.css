@@ -1,0 +1,12 @@
+/* White */
+
+.white {
+  color: #FFF!important;
+}
+.hljs-number{
+  color: #ddd!important;
+}
+
+mark span.hljs-number{
+  color: #f6554f!important;
+}
