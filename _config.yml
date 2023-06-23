@@ -1,6 +1,6 @@
 # Site Info
 title:              "Igor Alexandrov"
-description:        "A minimalist Jekyll theme"
+description:        "Ruby/Crystal developer, Open Source contributor, [JetRockets](https://jetrockets.com) CTO and co-founder, and a proud father."
 author_name:        "Igor Alexandrov" # change this to your name
 logo_url:           assets/img/avatar.jpg
 
@@ -8,7 +8,7 @@ logo_url:           assets/img/avatar.jpg
 url:                https://igor-alexandrov.github.io # main url
 # baseurl:            /the-plain
 permalink:          /:title # Post permalink
-timezone:           Asia/Kuala_Lumpur # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:           Asia/Tbilisi # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 mathjax:            true  # enables support for mathjax - set to 'false' to disable
 
 # Site Build
