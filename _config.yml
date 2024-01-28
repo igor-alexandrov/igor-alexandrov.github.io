@@ -1,45 +1,73 @@
-# Site Info
-title:              "Igor Alexandrov"
-description:        "Ruby/Crystal developer, Open Source contributor, [JetRockets](https://jetrockets.com) CTO and co-founder, and a proud father."
-author_name:        "Igor Alexandrov" # change this to your name
-logo_url:           assets/img/avatar.jpg
+# Site setings
+name: "Ruby & Beyond"
+description: "Ruby/Crystal developer, Open Source contributor, [JetRockets](https://jetrockets.com) CTO and co-founder, and a proud father."
+meta_description: "Igor Alexandrov – Ruby/Crystal developer, Open Source contributor, JetRockets CTO and co-founder, and a proud father."
+# logo: "assets/images/logo.png"
+favicon: "assets/images/favicon.ico"
+timezone: Asia/Tbilisi
+baseurl:
+production_url: https://igor-alexandrov.com/
+disqus: "igor-alexandrov.com"
+# mailchimp_url: "//justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117"
+cover_image: bc_1.jpg
+# Add your GA Tracking Id
+ga_analytics:
 
-# Site Settings
-url:                https://igor-alexandrov.github.io # main url
-# baseurl:            /the-plain
-permalink:          /:title # Post permalink
-timezone:           Asia/Tbilisi # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-mathjax:            true  # enables support for mathjax - set to 'false' to disable
+# Author
+author:
+  name: "Igor Alexandrov"
+  image: "igor.jpeg"
+  greetings: "Ruby & Beyond"
+  description: "My name is Igor Alexandrov.<br/>I am CTO of JetRockets and a software engineer with more than 15 years of experience."
+  bio: "Daniel is a designer, photographer, speaker, author of a couple of books about typography and the founder of photo magazine Curious."
 
-# Site Build
-highlighter:        rouge
-markdown:           kramdown
-kramdown:
-    input:          GFM
-sass:
-    style:          :compressed
+# Contact form setings
+email: igor.alexandrov@gmail.com
+contact_page_description: "Horace theme comes with a contact form built-in. You can use this form with Formspree service and get up to 50 submissions for free. Also, you can easily switch to another service if you want."
+thankyou_page_description: "Your message has been successfully sent. We will contact you very soon!"
 
-# Other Params
-include:            [ "robots.txt" ]
-exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script" ]
-plugins:
+# Social links
+twitter: "igor_alexandrov"
+# facebook: "username"
+github: "igor-alexandrov"
+# codepen: "username"
+# dribbble: "username"
+# medium: "@username"
+# instagram: "username"
+# pinterest: "username"
+linkedin: "igor-alexandrov"
+# producthunt: "@username"
+
+# Navigation
+navigation:
+  - text: Speaking Opportunities
+    url: /speaking-opportunities
+  - text: About
+    url: /about
+  - text: Archive
+    url: /archive
+  # - text: Style Guide
+  #   url: /style-guide
+
+include: [ "robots.txt" ]
+
+# Required Plugins
+plugins_dir:
+  - jekyll-paginate
+  - jekyll-seo-tag
   - jekyll-sitemap
 
+# Pagination
+paginate: 5
+paginate_path: /page:num/
 
+# Permalinks
+permalink: /:title
 
-defaults:
-  -
-    scope:
-      path:         ""
-    values:
-      layout:       "null"
-  -
-    scope:
-      type:         "pages"
-    values:
-      layout:       "page"
-  -
-    scope:
-      type:         "posts"
-    values:
-      layout:       "post"
+# Other
+markdown: kramdown
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed

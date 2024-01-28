@@ -1,10 +1,10 @@
 ---
 layout: page
-title: About
+title: Who am I?
+featured_image: /assets/images/igor.jpeg
+featured_image_alt: Igor Alexandrov
 ---
 
-Hello.
+As a hobby, I do diving (I have a Rescue Diver PADI certification) and woodworking, I live in Batumi with beautiful wife and two daughters.
 
-This will be your About page. Anything about you, it should be written here in details. You may describe your bio here like who you are, what you do, your intention, social site hyperlinks and how people can contact you, etc.
-
-
+_Thank You for reading!_

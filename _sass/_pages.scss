@@ -1,0 +1,37 @@
+.page-header {
+  border-left: 3px solid $color-accent;
+  margin-bottom: 3.33333em;
+  padding-left: 30px;
+  height: fit-content
+}
+
+.page-title {
+  font-size: 1.33333rem;
+  margin: 0;
+}
+
+.page-hero {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0 0 1.66667em;
+}
+
+// @media all and (max-width: 800px) {
+//   .page-hero {
+//     /* When on medium sized screens, we center it by evenly distributing empty space around items */
+//     justify-content: space-around;
+//   }
+// }
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .page-hero {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+.page-hero img {
+  border-radius: 8px;
+}

@@ -1,0 +1,9 @@
+{
+  "name": "igor-alexandrov.com",
+  "version": "1.0.0",
+  "author": "Igor Alexandrov",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "3.2.4"
+  }
+}
