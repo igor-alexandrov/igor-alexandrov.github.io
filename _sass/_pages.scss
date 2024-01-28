@@ -17,6 +17,10 @@
   margin: 0 0 1.66667em;
 }
 
+.page-hero img {
+  width: 200px;
+}
+
 // @media all and (max-width: 800px) {
 //   .page-hero {
 //     /* When on medium sized screens, we center it by evenly distributing empty space around items */
@@ -29,6 +33,11 @@
   .page-hero {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
+  }
+
+  .page-hero img {
+    /* On small screens, we want the image to take up the full width */
+    width: 100%;
   }
 }
 
