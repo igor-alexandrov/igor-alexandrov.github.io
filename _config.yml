@@ -23,8 +23,9 @@ author:
 
 # Contact form setings
 email: igor.alexandrov@gmail.com
-contact_page_description: "Horace theme comes with a contact form built-in. You can use this form with Formspree service and get up to 50 submissions for free. Also, you can easily switch to another service if you want."
-thankyou_page_description: "Your message has been successfully sent. We will contact you very soon!"
+formspree_id: mqkrenkd
+contact_page_description: "If you have any questions or just want to say \"Hi 👋\", please feel free to drop me a line. I will try my best to respond as soon as possible!"
+thankyou_page_description: "Your message has been successfully sent. I will contact you very soon!"
 
 # Social links
 twitter: "igor_alexandrov"
@@ -46,6 +47,8 @@ navigation:
     url: /about
   - text: Archive
     url: /archive
+  - text: Contact Me
+    url: /contact-me
   # - text: Style Guide
   #   url: /style-guide
 
