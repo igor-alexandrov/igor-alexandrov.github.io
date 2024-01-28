@@ -14,8 +14,8 @@
 
 {% if speaking-opportunity.youtube_embed %}
 <iframe
-  width="560"
-  height="315"
+  width="100%"
+  height="400"
   src="{{ speaking-opportunity.youtube_embed }}"
   title="YouTube video player"
   frameborder="0"
@@ -23,9 +23,11 @@
   allowfullscreen
 >
 </iframe>
-{% endif %} {% if speaking-opportunity.slideshare_embed %}
+{% endif %}
+
+{% if speaking-opportunity.slideshare_embed %}
 <iframe
-  width="720"
+  width="100%"
   height="560"
   src="{{ speaking-opportunity.slideshare_embed }}"
   title="YouTube video player"
@@ -34,7 +36,9 @@
   allowfullscreen
 >
 </iframe>
-{% endif %} {% if speaking-opportunity.transistor_embed %}
+{% endif %}
+
+{% if speaking-opportunity.transistor_embed %}
 <iframe
   width="100%"
   height="180"
@@ -44,7 +48,6 @@
   src="{{speaking-opportunity.transistor_embed}}"
 >
 </iframe>
-
 {% endif %}
 
 <hr />
