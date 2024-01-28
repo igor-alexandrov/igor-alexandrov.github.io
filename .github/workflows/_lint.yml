@@ -1,0 +1,19 @@
+name: _lint
+
+on:
+  workflow_call:
+  schedule:
+    - cron: "0 3 * * 1" # Every monday at 3 AM
+
+jobs:
+  rubocop:
+    runs-on: self-hosted
+    timeout-minutes: 5
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: .ruby-version
+        bundler-cache: true
+    - name: RuboCop
+      run: bin/rubocop -f github
