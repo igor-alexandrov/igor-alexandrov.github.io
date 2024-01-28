@@ -1,6 +1,9 @@
 ---
 title: Upgrading Rails application from 7.0 to 7.1
 layout: post
+tags:
+  - Ruby
+  - Rails
 ---
 
 On October 5th, Rails 7.1 has been released. In this article, I will show you how I upgraded one of our projects, OneTribe (https://onetribe.team/), to the new major release within one day of my holidays.
@@ -42,7 +45,7 @@ class TimeTracking::Entry < TimeTrackingRecord
   self.primary_key = [:id, :date]
 
   range_partition_by :date
-	
+
 	# ...
 end
 </code></pre>
