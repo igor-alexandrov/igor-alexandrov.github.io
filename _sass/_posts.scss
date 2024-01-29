@@ -43,6 +43,10 @@
   width: 100%;
 }
 
+.post-content pre[class*="language-"] {
+  font-size: 0.875rem;
+}
+
 .post-footer {
   margin-bottom: 1.66667em;
 }
