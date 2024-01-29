@@ -1,10 +1,11 @@
-<aside id="sidebar" class="sidebar">
+<aside class="sidebar">
   <div class="sidebar-scrollable">
     <div class="sidebar-inside">
-      <button id="sidebar-hide" class="sidebar-toggle btn-icon">
+      <button data-action="click->reveal#toggle" id="sidebar-hide" class="sidebar-toggle btn-icon">
         <span class="screen-reader-text">Close Sidebar</span
         ><span aria-hidden="true" class="icon-close"></span>
       </button>
+
       <nav id="sidebar-navigation" class="widget site-navigation">
         <h2 class="widget-title">Explore Site</h2>
         <ul class="menu">
@@ -15,10 +16,8 @@
           {% endfor %}
         </ul>
       </nav>
+
       {% include widgets.html %}
     </div>
-    <!-- .sidebar-inside -->
   </div>
-  <!-- .sidebar-scrollable -->
 </aside>
-<!-- .sidebar -->

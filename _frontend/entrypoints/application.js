@@ -2,8 +2,7 @@
 //
 // When using a plain API, perhaps it's better to generate an HTML entrypoint
 // and link to the scripts and stylesheets, and let Vite transform it.
-console.log('Vite ⚡️ Ruby')
-
+//
 // Example: Import a stylesheet in <sourceCodeDir>/index.css
 // import '~/index.css'
 
@@ -11,6 +10,8 @@ import '~/prism';
 
 import { Application } from '@hotwired/stimulus'
 import ScrollTo from 'stimulus-scroll-to'
+import Reveal from 'stimulus-reveal-controller'
 
 const application = Application.start()
 application.register('scroll-to', ScrollTo)
+application.register('reveal', Reveal)

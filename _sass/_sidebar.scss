@@ -54,7 +54,7 @@
   visibility: hidden;
 }
 
-.sidebar--opened .site {
+.sidebar-opened .site {
   height: 100%;
   left: 0;
   overflow: hidden;
@@ -69,13 +69,13 @@
   z-index: 9998;
 }
 
-.sidebar--opened .sidebar {
+.sidebar-opened .sidebar {
   -webkit-transition: none;
   transition: none;
   visibility: visible;
 }
 
-.sidebar--opened .site-overlay {
+.sidebar-opened .site-overlay {
   opacity: 1;
   right: 600px;
   -webkit-transition:
