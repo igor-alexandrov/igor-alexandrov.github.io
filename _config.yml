@@ -63,6 +63,7 @@ exclude:
   - bin
   - vite.config.ts
   - Procfile.dev
+  - Rakefile
 
 # Required Plugins
 plugins_dir:
