@@ -35,7 +35,7 @@ After this you can try to run `bundle update rails` and depending from your othe
 gem 'pg_party', github: 'rkrage/pg_party'
 </code></pre>
 
-After solving issue with PgParty bundle succeeded. I was almost sure that application is ready for the next phase of update, but remembered that Rails 7.1 introduced composite primary keys for ActiveRecord support out of the box (you can find full list of new features and improvements [here](https://rubyonrails.org/2023/10/5/Rails-7-1-0-has-been-released)).
+After solving issue with PgParty bundle succeeded. I was almost sure that application is ready for the next phase of update, but remembered that Rails 7.1 introduced composite primary keys for ActiveRecord support out of the box (you can find a more details list of new features and improvements [in the official Ruby on Rails blog post](https://rubyonrails.org/2023/10/5/Rails-7-1-0-has-been-released)).
 
 In OneTribe we’ve used the gem called `composite_primary_keys` (https://github.com/composite-primary-keys/composite_primary_keys). It was rather easy, I replaced `self.primary_keys = <array>` call with `self.primary_key = <array>` and removed `composite_primary_keys` from application bundle.
 
