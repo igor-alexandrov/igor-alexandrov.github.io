@@ -55,7 +55,14 @@ navigation:
   # - text: Style Guide
   #   url: /style-guide
 
-include: [ "robots.txt" ]
+include:
+  - robots.txt
+
+exclude:
+  - config
+  - bin
+  - vite.config.ts
+  - Procfile.dev
 
 # Required Plugins
 plugins_dir:

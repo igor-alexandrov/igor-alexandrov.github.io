@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 # This will help ensure the proper Jekyll version is running.
 gem "jekyll", "~> 4.3.0"
-gem 'jekyll-vite'
+gem "jekyll-vite"
 gem "rack"
 gem "rackup", "~> 1.0.0"
 
