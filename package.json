@@ -4,6 +4,8 @@
   "author": "Igor Alexandrov",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "3.2.4"
+    "prettier": "3.2.4",
+    "vite": "^5.0.0",
+    "vite-plugin-ruby": "^5.0.0"
   }
 }

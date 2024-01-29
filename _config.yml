@@ -63,6 +63,9 @@ plugins_dir:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+plugins:
+  - jekyll/vite
+
 # Pagination
 paginate: 5
 paginate_path: /page:num/
