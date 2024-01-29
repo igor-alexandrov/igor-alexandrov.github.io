@@ -411,6 +411,11 @@ stimulus-reveal-controller@^4.1.0:
   resolved "https://registry.yarnpkg.com/stimulus-reveal-controller/-/stimulus-reveal-controller-4.1.0.tgz#bf0fb4c2706f22d41544b5b02e2fbd794f608575"
   integrity sha512-cPpTLV/+IQgiE+J3iBMjf3kD3H9ZOeoRJjyhvcsjyPE82mdcsuWxlzpI1pwSJPN66qSud4hVkhNH5w4xadyOfA==
 
+stimulus-scroll-progress@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/stimulus-scroll-progress/-/stimulus-scroll-progress-4.2.0.tgz#00beb08917af38b191b11b6b914580cdabdf7baa"
+  integrity sha512-x00kTg25KPCKq9geFzv6LgsvZd6mhb5h4wvDS8Ik4SqMDuoSi72JYoLmOeOrtDorgkMaW5s2A+TAC1YLoE5s7Q==
+
 stimulus-scroll-to@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/stimulus-scroll-to/-/stimulus-scroll-to-4.1.0.tgz#22b24d768d673f029ab0f68100556e113075fa95"

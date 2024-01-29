@@ -820,3 +820,18 @@ pre[class*="language-"] {
   margin-bottom: 3.33333em;
   padding: 35px 30px 45px;
 }
+
+.scroll-progress {
+  height: 0.5rem;
+  // background-color: $color-accent;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  --tw-gradient-from: #EDA895;
+  --tw-gradient-to: #D51F06;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+
+  background-image: linear-gradient(to right,var(--tw-gradient-stops));
+
+}
