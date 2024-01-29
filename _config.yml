@@ -20,6 +20,7 @@ author:
   greetings: "Ruby & Beyond"
   description: "My name is Igor Alexandrov.<br/>I am CTO of JetRockets and a software engineer with more than 15 years of experience."
   bio: "Daniel is a designer, photographer, speaker, author of a couple of books about typography and the founder of photo magazine Curious."
+  twitter: "@igor_alexandrov"
 
 # Contact form setings
 email: igor.alexandrov@gmail.com
@@ -28,7 +29,9 @@ contact_page_description: "If you have any questions or just want to say \"Hi ðŸ
 thankyou_page_description: "Your message has been successfully sent. I will contact you very soon!"
 
 # Social links
-twitter: "igor_alexandrov"
+twitter:
+  username: "igor_alexandrov"
+  card: summary
 # facebook: "username"
 github: "igor-alexandrov"
 # codepen: "username"
