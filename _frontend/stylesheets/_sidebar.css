@@ -3,7 +3,7 @@
  * ----------------------------------------------------------------------------
  */
 .sidebar {
-  background: $gray-darkest;
+  background: var(--gray-darkest);
   bottom: 0;
   color: #fff;
   -webkit-overflow-scrolling: touch;

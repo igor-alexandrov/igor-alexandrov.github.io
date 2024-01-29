@@ -1,5 +1,5 @@
 .page-header {
-  border-left: 3px solid $color-accent;
+  border-left: 3px solid var(--color-accent);
   margin-bottom: 3.33333em;
   padding-left: 30px;
   height: fit-content
@@ -21,12 +21,11 @@
   width: 200px;
 }
 
-// @media all and (max-width: 800px) {
-//   .page-hero {
-//     /* When on medium sized screens, we center it by evenly distributing empty space around items */
-//     justify-content: space-around;
-//   }
-// }
+/* @media all and (max-width: 800px) {
+  .page-hero {
+    justify-content: space-around;
+  }
+} */
 
 /* Small screens */
 @media all and (max-width: 500px) {

@@ -17,7 +17,7 @@
 }
 
 .widget-title:after {
-  background: $color-accent;
+  background: var(--color-accent);
   content: "";
   display: block;
   height: 1px;
@@ -45,7 +45,7 @@
 }
 
 .widget a:hover {
-  color: $gray-light;
+  color: var(--gray-light);
 }
 
 .widget.site-navigation .menu {
@@ -63,7 +63,7 @@
 }
 
 .widget.site-navigation a:hover {
-  color: $color-accent;
+  color: var(--color-accent);
 }
 
 .widget-recent-posts ul {
@@ -106,7 +106,7 @@
 }
 
 .widget-tagcloud a {
-  border: 1px solid $gray-dark;
+  border: 1px solid var(--gray-dark);
   border-radius: 20px;
   color: #fff;
   display: inline-block;
@@ -119,6 +119,6 @@
 }
 
 .widget-tagcloud a:hover {
-  border-color: $color-accent;
-  color: $color-accent;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }

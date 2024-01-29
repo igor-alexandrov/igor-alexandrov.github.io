@@ -85,6 +85,6 @@ permalink: /blog/:title
 markdown: kramdown
 
 # Sass
-sass:
-  sass_dir: _sass
-  style: compressed
+# sass:
+#   sass_dir: _sass
+#   style: compressed

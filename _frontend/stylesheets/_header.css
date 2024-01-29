@@ -3,19 +3,19 @@
  * ----------------------------------------------------------------------------
  */
 .site-header {
-  background: $gray-lightest;
-  border-bottom: 1px solid $gray-lighter;
+  background: var(--gray-lightest);
+  border-bottom: 1px solid var(--gray-lighter);
   margin: 0 0 3.33333em;
   padding-bottom: 1.11111em;
   padding-top: 1.11111em;
 }
 
 .site-header a {
-  color: $gray-darkest;
+  color: var(--gray-darkest);
 }
 
 .site-header a:hover {
-  color: $color-accent;
+  color: var(--color-accent);
 }
 
 .site-header-inside {
@@ -43,7 +43,7 @@
 }
 
 .site-title {
-  color: $gray-darkest;
+  color: var(--gray-darkest);
   font-size: 1.33333rem;
   font-weight: bold;
   line-height: 1.2;

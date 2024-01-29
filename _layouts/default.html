@@ -40,10 +40,9 @@
       rel="stylesheet"
     />
 
-    <!-- CSS Styles -->
-    <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet" />
     {% vite_client_tag %}
     {% vite_javascript_tag application %}
+    {% vite_stylesheet_tag application %}
   </head>
 
   {% capture layout %}

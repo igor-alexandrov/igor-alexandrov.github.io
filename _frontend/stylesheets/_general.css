@@ -3,25 +3,25 @@
  * ----------------------------------------------------------------------------
  */
 html {
-  font-family: $font-primary;
+  font-family: var(--font-primary);
   font-size: 112.5%;
 }
 
 body {
   background: #fff;
-  color: $gray-dark;
+  color: var(--gray-dark);
   line-height: 1.66667;
 }
 
 a {
-  color: $color-accent;
+  color: var(--color-accent);
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: $gray-darkest;
+  color: var(--gray-darkest);
 }
 
 h1,
@@ -30,7 +30,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $gray-darkest;
+  color: var(--gray-darkest);
   font-weight: bold;
   line-height: 1.2;
   text-rendering: optimizeLegibility;
@@ -86,8 +86,8 @@ address {
 
 mark,
 ins {
-  background: $yellow;
-  color: $gray-dark;
+  background: var(--yellow);
+  color: var(--gray-dark);
   padding: 0 3px;
   text-decoration: none;
 }
@@ -98,9 +98,9 @@ code {
 }
 
 pre {
-  background: $gray-darkest;
+  background: var(--gray-darkest);
   border-radius: 8px;
-  color: $gray-light;
+  color: var(--gray-light);
   font-size: 0.88889rem;
   margin: 0 0 1.875em;
   overflow: auto;
@@ -113,7 +113,7 @@ pre code {
 }
 
 blockquote {
-  color: $gray-darkest;
+  color: var(--gray-darkest);
   font-size: 1.88889rem;
   line-height: 1.25;
   margin: 0 0 0.88235em;
@@ -123,7 +123,7 @@ blockquote {
 
 blockquote:before,
 blockquote:after {
-  background-color: $color-accent;
+  background-color: var(--color-accent);
   content: "";
   display: block;
   height: 3px;
@@ -184,7 +184,7 @@ li > ol {
 }
 
 hr {
-  background-color: $gray-lighter;
+  background-color: var(--gray-lighter);
   border: 0;
   height: 1px;
   margin: 1.66667em 0;
@@ -199,7 +199,7 @@ table {
 }
 
 caption {
-  color: $gray-darkest;
+  color: var(--gray-darkest);
   font-size: 0.875em;
   font-style: normal;
   margin-bottom: 1em;
@@ -208,18 +208,18 @@ caption {
 
 th,
 td {
-  border-bottom: 1px solid $gray-lighter;
+  border-bottom: 1px solid var(--gray-lighter);
   padding: 0.625em 5px;
 }
 
 th {
-  color: $gray-darkest;
+  color: var(--gray-darkest);
   font-weight: bold;
 }
 
 /* Form fields */
 label {
-  color: $gray-darkest;
+  color: var(--gray-darkest);
   font-size: 0.88889rem;
   font-weight: bold;
 }
@@ -228,11 +228,11 @@ input,
 select,
 textarea {
   background: #fff;
-  border: 1px solid $gray-lighter;
+  border: 1px solid var(--gray-lighter);
   border-radius: 8px;
   box-shadow: none;
   box-sizing: border-box;
-  color: $gray-dark;
+  color: var(--gray-dark);
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5;
@@ -252,7 +252,7 @@ textarea {
   width: 100%;
 
   &:disabled {
-    background: $gray-lightest;
+    background: var(--gray-lightest);
   }
 }
 
@@ -271,7 +271,7 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"],
 .btn {
-  background: $color-accent;
+  background: var(--color-accent);
   border: 2px solid transparent;
   border-radius: 30px;
   box-sizing: border-box;
@@ -287,14 +287,14 @@ input[type="reset"],
   vertical-align: middle;
 
   &.btn-secondary {
-    background: $gray-lightest;
-    color: $gray-dark;
+    background: var(--gray-lightest);
+    color: var(--gray-dark);
   }
 
   &.btn-outlined {
     background: 0;
-    border-color: $color-accent;
-    color: $color-accent;
+    border-color: var(--color-accent);
+    color: var(--color-accent);
   }
 
   &.btn-icon {
@@ -320,8 +320,8 @@ input[type="reset"],
   &:hover,
   &:focus,
   &:active {
-    background: $color-accent;
-    box-shadow: 0 0 1px 7px rgba($color-accent, 0.15);
+    background: var(--color-accent);
+    box-shadow: 0 0 1px 7px rgba(var(--color-accent), 0.15);
     color: #fff;
     outline: 0;
   }
@@ -333,27 +333,27 @@ a.btn {
 }
 
 .tag-top-button {
-  background: $gray-lightest;
-  color: $gray;
+  background: var(--gray-lightest);
+  color: var(--gray);
   font-size: 0.77778rem;
   letter-spacing: 1px;
 }
 /* Placeholder text color */
 ::-webkit-input-placeholder {
-  color: $gray;
+  color: var(--gray);
 }
 
 :-moz-placeholder {
-  color: $gray;
+  color: var(--gray);
 }
 
 ::-moz-placeholder {
-  color: $gray;
+  color: var(--gray);
   opacity: 1;
 }
 
 :-ms-input-placeholder {
-  color: $gray;
+  color: var(--gray);
 }
 
 /* Videos, audios and embeds */
@@ -560,9 +560,9 @@ img {
 .top-button,
 .newer-posts,
 .older-posts {
-  background: $gray-lightest;
+  background: var(--gray-lightest);
   border-radius: 100%;
-  color: $gray-dark;
+  color: var(--gray-dark);
   display: inline-block;
   font-size: 14px;
   height: 40px;
@@ -590,9 +590,9 @@ img {
 .top-button:hover,
 .newer-posts:hover,
 .older-posts:hover {
-  background: $color-accent;
+  background: var(--color-accent);
   color: #fff;
-  box-shadow: 0 0 1px 7px rgba($color-accent, 0.15);
+  box-shadow: 0 0 1px 7px rgba(var(--color-accent), 0.15);
 }
 
 /* Animations */
@@ -677,7 +677,7 @@ img {
  */
 code[class*="language-"],
 pre[class*="language-"] {
-  color: $gray-light;
+  color: var(--gray-light);
   background: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -706,7 +706,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: $gray-darkest;
+  background: var(--gray-darkest);
 }
 
 /* Inline code */
@@ -724,7 +724,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-  color: $gray-light;
+  color: var(--gray-light);
 }
 
 .namespace {
@@ -759,7 +759,7 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-  color: $gray-light;
+  color: var(--gray-light);
 }
 
 .token.atrule,
@@ -797,7 +797,7 @@ pre[class*="language-"] {
   font-size: 1rem;
   margin-bottom: 0.55556em;
   span {
-    color: $gray;
+    color: var(--gray);
     font-size: 0.77778rem;
     font-weight: normal;
     font-style: italic;
@@ -813,8 +813,8 @@ pre[class*="language-"] {
 }
 
 .contact-form {
-  background: $gray-lightest;
-  border: 1px solid $gray-lighter;
+  background: var(--gray-lightest);
+  border: 1px solid var(--gray-lighter);
   border-radius: 8px;
   box-sizing: border-box;
   margin-bottom: 3.33333em;
@@ -823,7 +823,6 @@ pre[class*="language-"] {
 
 .scroll-progress {
   height: 0.5rem;
-  // background-color: $color-accent;
   position: fixed;
   top: 0;
   z-index: 100;
