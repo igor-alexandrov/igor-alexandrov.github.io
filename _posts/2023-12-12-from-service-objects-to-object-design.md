@@ -13,13 +13,13 @@ As technology evolves and our understanding of scalable and maintainable code de
 
 <!--more-->
 
-# TL;DR;
+## TL;DR;
 
 Service objects were discussed many times by several authors. Usually, they are a code smell, and I will not try to explain why again. I will show a practical example of refactoring a service object into an object-orientated code.
 
 I will not try to blame anybody; probably, it was me who clicked the “Approve” button on the PR that introduced the code listed below. Anyway, I believe it is always better to return and work on your mistakes.
 
-# The sign of the poor design
+## The sign of the poor design
 
 The issue was relatively small and easy. OneTribe integrates with Slack, which includes a status change feature: when somebody takes time off, Slack user status will be updated with an emoji and text accordingly.
 
@@ -77,7 +77,7 @@ Where should I put the rescue block for `Slack::Web::Api::Errors::TokenRevoked` 
 
 But the biggest question goes to the `Slack::StatusChangeService` object.
 
-# Service Objects in Ruby
+## Service Objects in Ruby
 
 The strengths of object-oriented programming lie in its capacity to imbue objects with both behavior and data, thereby equipping them with potent functionalities. Additionally, this approach facilitates a more coherent alignment of objects with the underlying concepts in the domain model, resulting in more easily understandable code for developers.
 
@@ -118,7 +118,7 @@ Service objects deprive us of these advantages and may lead to other code proble
 3. **Maintenance Overhead**: When a codebase is riddled with numerous service objects, maintaining, updating, and debugging them can become challenging. This can increase the cognitive load for developers trying to understand the code.
 4. **Reduced Readability and Discoverability**: An abundance of service objects might make it difficult for new project developers to understand where to find specific functionality, affecting code discoverability and readability.
 
-# Refactoring
+## Refactoring
 
 My approach to refactoring involves identifying distinct responsibilities within the service object and extracting them into separate classes or modules. The class above implements a request to Slack API to change member status – icon and text shown next to the member name. OneTribe uses it to notify team members about current timeoffs visually.
 
@@ -290,7 +290,7 @@ Let’s go through the list of changes that were made:
 - The code that has been used to change the status has been moved from the `TimeOff` class to `Member`; now, this part of the code follows the Law of Demeter.
 - Last, I’ve managed to fix the issue with revoked Slack tokens.
 
-# Conclusions
+## Conclusions
 
 In conclusion, refactoring service objects in Ruby presents a crucial opportunity to enhance a codebase's maintainability, scalability, and overall quality. Through careful analysis and thoughtful restructuring, developers can effectively break down monolithic service objects into smaller, more focused classes or modules. This process allows for better adherence to the Single Responsibility Principle (SRP), improving code readability and facilitating more straightforward maintenance.
 

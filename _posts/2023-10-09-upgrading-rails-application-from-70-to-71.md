@@ -8,11 +8,14 @@ tags:
 
 On October 5th, Rails 7.1 has been released. In this article, I will show you how I upgraded one of our projects, OneTribe (https://onetribe.team/), to the new major release within one day of my holidays.
 
-Prerequisites
+## Prerequisites
+
 OneTribe runs Ruby 3.2.2 and Rails 7.0.7, we host code on a GitHub and deploy with GitHub Actions and Kamal. I showed how to do this in my previous article: https://jetrockets.com/blog/how-to-use-basecamp-s-kamal-with-aws-and-github.
 
 {% include image-caption.html imageurl="/assets/images/posts/2023-10-09/1.png" title="OneTribe master git branch" caption="OneTribe master git branch" %}
-# Dependencies Update
+
+## Dependencies Update
+
 I started with upgrading rails in application Gemfile.
 
 <pre class="language-ruby"><code>
@@ -60,7 +63,7 @@ In our case, I don’t need additional tags to be added to ActionText allowed ta
 
 I ran the application test suit, and all specs passed successfully, meaning I can start `rails app:update`.
 
-# Application Configuration Update
+## Application Configuration Update
 
 Rails has a special task `rails app:update` that can help you to update application configuration in an interactive mode. I use VS Code for development and wanted to use its merge tool, so I specified THOR_MERGE constant before running the command `THOR_MERGE="code --wait" ./bin/rails app:update` and used merge tool to track changes over files.
 
@@ -127,7 +130,7 @@ end
 
 Thats all. I reran my specs to ensure I didn’t break anything. Of course, I ran Rubocop to ensure all the changes fit the code style, created PR, and successfully upgraded OneTribe to the new Rails version.
 
-# Conclusions
+## Conclusions
 
 Rails 7.1 gives you many new features and abilities [https://rubyonrails.org/2023/10/5/Rails-7-1-0-has-been-released](https://rubyonrails.org/2023/10/5/Rails-7-1-0-has-been-released), but as usual, the upgrading process is smooth and straightforward.
 
