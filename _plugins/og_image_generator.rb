@@ -1,10 +1,10 @@
+return if jekyll.environment == "production"
+
 require "./lib/jekyll-opengraph/image"
 
 module SamplePlugin
   class OgImageGenerator < Jekyll::Generator
     def generate(site)
-      return if jekyll.environment == "production"
-
       FileUtils.mkdir_p "assets/og-images/posts"
 
       site.posts.docs.each do |post|
