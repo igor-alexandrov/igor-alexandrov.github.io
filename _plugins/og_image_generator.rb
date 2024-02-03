@@ -36,13 +36,13 @@ module SamplePlugin
               y: 100
             }
           end
+        end
 
-          image = image.text(site.baseurl, gravity: :se, color: "#535358", dpi: 150, font: 'Helvetica, Regular') do |_canvas, _text|
-            {
-              x: 80,
-              y: post.tags.any? ? 150 : 100
-            }
-          end
+        image = image.text(site.baseurl, gravity: :se, color: "#535358", dpi: 200, font: 'Helvetica, Regular') do |_canvas, _text|
+          {
+            x: 80,
+            y: post.tags.any? ? 150 : 100
+          }
         end
 
         image.save(filename)

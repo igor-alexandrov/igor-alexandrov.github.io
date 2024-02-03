@@ -12,7 +12,7 @@ class JekyllOpengraph::Element::Border
 
   def apply(&block)
     result = block.call(@canvas, @border) if block_given?
-    x, y = result&.fetch(:x, 0), result&.fetch(:y, 0)
+    x, y = result ? [ result.fetch(:x, 0), result.fetch(:y, 0) ] : [ 0, 0 ]
 
     if vertical?
       x = @position == :left ? x : @canvas.width - @size - x

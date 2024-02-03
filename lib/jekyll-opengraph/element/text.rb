@@ -23,7 +23,7 @@ class JekyllOpengraph::Element::Text
 
   def apply(&block)
     result = block.call(@canvas, @text) if block_given?
-    x, y = result&.fetch(:x, 0), result&.fetch(:y, 0)
+    x, y = result ? [ result.fetch(:x, 0), result.fetch(:y, 0) ] : [ 0, 0 ]
 
     if gravity_nw?
       @canvas.composite(@text, :over, x: [ x ], y: [ y ]).flatten
