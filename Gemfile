@@ -6,6 +6,9 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.3.0"
 gem "jekyll-vite"
 gem "rack"
+
+gem "ruby-vips"
+
 gem "rackup", "~> 1.0.0"
 
 gem "rubocop-rails-omakase", require: false

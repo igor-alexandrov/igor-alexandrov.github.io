@@ -5,8 +5,7 @@ meta_description: "Igor Alexandrov – Ruby/Crystal developer, Open Source contr
 # logo: "assets/images/logo.png"
 favicon: "assets/images/favicon.ico"
 timezone: Asia/Tbilisi
-baseurl:
-production_url: https://igor-alexandrov.com/
+baseurl: https://igor.works
 disqus: "igor-alexandrov"
 # mailchimp_url: "//justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117"
 cover_image: bc_3.jpg
@@ -65,14 +64,17 @@ exclude:
   - Procfile.dev
   - Rakefile
 
-# Required Plugins
-plugins_dir:
-  - jekyll-paginate
-  - jekyll-seo-tag
-  - jekyll-sitemap
+# # Required Plugins
+# plugins_dir:
+#   - jekyll-paginate
+#   - jekyll-seo-tag
+#   - jekyll-sitemap
 
 plugins:
   - jekyll/vite
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Pagination
 paginate: 5
@@ -83,8 +85,3 @@ permalink: /blog/:title
 
 # Other
 markdown: kramdown
-
-# Sass
-# sass:
-#   sass_dir: _sass
-#   style: compressed

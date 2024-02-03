@@ -3,8 +3,8 @@ title: From Service Objects to Object Design
 layout: post
 tags:
   - Ruby
-  - Software Design
-  - Object-Oriented Programming
+  - Software-Design
+  - Object-Oriented-Programming
 featured: true
 hidden: true
 ---
