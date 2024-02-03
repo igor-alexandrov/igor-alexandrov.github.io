@@ -1,4 +1,4 @@
-return if jekyll.environment == "production"
+return if ENV['JEKYLL_ENV'] == "production"
 
 require "./lib/jekyll-opengraph/image"
 
