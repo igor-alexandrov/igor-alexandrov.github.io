@@ -18,11 +18,11 @@ module JekyllOpengraph
       self
     end
 
-    def border(size, position: :bottom, color: "#000000")
+    def border(size, position: :bottom, fill: "#000000")
       @canvas = JekyllOpengraph::Element::Border.new(
         @canvas, size,
         position: position,
-        color: color
+        fill: fill
       ).apply
 
       self

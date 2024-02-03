@@ -13,7 +13,7 @@ module SamplePlugin
         date = post.date.strftime("%B %d, %Y")
 
         image = JekyllOpengraph::Image.new(1200, 600)
-          .border(20, position: :bottom, color: '#d51f06')
+          .border(20, position: :bottom, fill: [ '#820C02', '#A91401', '#D51F06', '#DE3F24', '#EDA895', '#FFFFFF' ])
           .text(post.title, width: 1040, color: "#2f313d", dpi: 500, font: 'Helvetica, Bold') do |_canvas, _text|
             {
               x: 80,
@@ -38,7 +38,7 @@ module SamplePlugin
           end
         end
 
-        image = image.text(site.baseurl, gravity: :se, color: "#535358", dpi: 200, font: 'Helvetica, Regular') do |_canvas, _text|
+        image = image.text(site.baseurl || 'http://127.0.0.1:4000', gravity: :se, color: "#535358", dpi: 200, font: 'Helvetica, Regular') do |_canvas, _text|
           {
             x: 80,
             y: post.tags.any? ? 150 : 100

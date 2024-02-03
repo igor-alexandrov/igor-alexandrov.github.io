@@ -1,13 +1,26 @@
 class JekyllOpengraph::Element::Border
-  def initialize(canvas, size, position: :bottom, color: "#000000")
+  class Part < Data.define(:rgb, :width, :height, :offset)
+  end
+
+  def initialize(canvas, size, position: :bottom, fill: "#000000")
     @canvas = canvas
     @size = size
     @position = position
-    @color = color
+    @fill = fill
 
     validate_position!
 
-    @border = Vips::Image.black(*dimensions).ifthenelse([ 0, 0, 0 ], hex_to_rgb(@color))
+    @border = Vips::Image.black(*dimensions)
+
+    parts.each.with_index do |part, index|
+      border = Vips::Image.black(part.width, part.height).ifthenelse([ 0, 0, 0 ], part.rgb)
+
+      if vertical?
+        @border = @border.composite(border, :over, x: [ 0 ], y: [ part.offset ]).flatten
+      else
+        @border = @border.composite(border, :over, x: [ part.offset ], y: [ 0 ]).flatten
+      end
+    end
   end
 
   def apply(&block)
@@ -20,6 +33,25 @@ class JekyllOpengraph::Element::Border
     else
       y = @position == :top ? y : @canvas.height - @size - y
       @canvas.composite(@border, :over, x: [ 0 ], y: [ y ]).flatten
+    end
+  end
+
+  def parts
+    if @fill.is_a?(Array)
+      width, height = vertical? ? [ @size, (@canvas.height / @fill.size) ] : [ (@canvas.width / @fill.size), @size ]
+
+      @fill.map.with_index do |item, index|
+        Part.new(
+          rgb: hex_to_rgb(item),
+          width: width,
+          height: height,
+          offset: index * (vertical? ? height : width)
+        )
+      end
+    else
+      length = vertical? ? @canvas.height : @canvas.width
+
+      [ Part.new(rgb: hex_to_rgb(@fill), length: length, offset: 0) ]
     end
   end
 
