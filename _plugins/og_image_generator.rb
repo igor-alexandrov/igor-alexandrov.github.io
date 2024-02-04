@@ -1,5 +1,3 @@
-return if ENV['JEKYLL_ENV'] == "production"
-
 require "./lib/jekyll-opengraph/image"
 
 module SamplePlugin
@@ -9,7 +7,8 @@ module SamplePlugin
 
       site.posts.docs.each do |post|
         filename = "assets/og-images/posts/#{post.data['slug']}.png"
-        generate_image_for_post(site, post, filename)
+
+        generate_image_for_post(site, post, filename) unless File.exist?(filename)
 
         post.data['image'] ||= {
           'path' => filename,
