@@ -66,7 +66,7 @@ exclude:
 
 # # Required Plugins
 # plugins_dir:
-#   - jekyll-paginate
+#   - jekyll_og_image
 #   - jekyll-seo-tag
 #   - jekyll-sitemap
 
@@ -75,6 +75,7 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-og-image
 
 # Pagination
 paginate: 5
@@ -85,3 +86,17 @@ permalink: /blog/:title
 
 # Other
 markdown: kramdown
+
+og_image:
+  output_dir: "assets/images/og"
+  # force: true
+  domain: "igor.works"
+  border_bottom:
+    width: 20
+    fill:
+      # - "#4285F4"
+      - "#820C02"
+      - "#A91401"
+      - "#D51F06"
+      - "#DE3F24"
+      - "#EDA895"
