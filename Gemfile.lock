@@ -54,7 +54,7 @@ GEM
       jekyll (>= 3.7, < 5.0)
       sinatra (>= 1.4)
       sinatra-contrib (>= 1.4)
-    jekyll-og-image (1.0.3)
+    jekyll-og-image (1.0.4)
       anyway_config (~> 2.6)
       jekyll (>= 3.4, < 5.0)
       jekyll-seo-tag (~> 2.8)
@@ -184,7 +184,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.3.0)
   jekyll-admin
-  jekyll-og-image (~> 1.0.3)
+  jekyll-og-image (~> 1.0.4)
   jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
