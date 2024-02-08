@@ -14,7 +14,7 @@ Right after my first try of Kamal (MRSK) in the spring of 2023, I understood tha
 
 <!--more-->
 
-Before we start, let me remind you what Kamal is. Kamal is a Ruby library created by 37 Signals to orchestrate the deployment of Docker containers. Before switching to Kamal, I had a bunch of scripts and technologies to deploy my applications. Kamal allowed me to simplify the deployment process and make it more reliable. Also, there were already some GitHub workflows to run lints and tests. In this article, I will mention only the deployment part.
+Before we start, let me remind you what Kamal is. Kamal is a Ruby library created by 37signals to orchestrate the deployment of Docker containers. Before switching to Kamal, I had a bunch of scripts and technologies to deploy my applications. Kamal allowed me to simplify the deployment process and make it more reliable. Also, there were already some GitHub workflows to run lints and tests. In this article, I will mention only the deployment part.
 
 ## First Try
 
