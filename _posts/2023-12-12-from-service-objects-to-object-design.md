@@ -5,8 +5,8 @@ tags:
   - Ruby
   - Software-Design
   - Object-Oriented-Programming
-featured: true
-hidden: true
+featured: false
+hidden: false
 ---
 
 As technology evolves and our understanding of scalable and maintainable code deepens, optimizing software architecture becomes paramount. In the realm of Ruby programming, the concept of Service Objects has long been a cornerstone in managing complex business logic. A couple of days ago, I got an email from OneTribe’s AppSignal that included information about the issue that I already have seen several times and didn’t have enough time and willingness to work on it.

@@ -86,6 +86,9 @@ permalink: /blog/:title
 
 # Other
 markdown: kramdown
+# highlighter: rouge
+# kramdown:
+#   input: GFM
 
 og_image:
   output_dir: "/assets/og"

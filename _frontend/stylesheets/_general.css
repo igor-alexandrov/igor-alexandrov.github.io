@@ -101,7 +101,8 @@ pre {
   background: var(--gray-darkest);
   border-radius: 8px;
   color: var(--gray-light);
-  font-size: 0.88889rem;
+  /* font-size: 0.88889rem; */
+  font-size: 0.75rem;
   margin: 0 0 1.875em;
   overflow: auto;
   padding: 1.875em;

@@ -13,3 +13,12 @@
 @import '~/stylesheets/_footer.css';
 @import '~/stylesheets/_media-queries.css';
 @import '~/stylesheets/_prism.css';
+/* @import '~/stylesheets/_monokay.css'; */
+
+/* .post-content pre {
+  font-size: 0.75em;
+} */
+
+pre[class*="language-"] {
+  font-size: 0.75em;
+}
