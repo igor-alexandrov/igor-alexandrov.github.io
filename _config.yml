@@ -30,7 +30,7 @@ thankyou_page_description: "Your message has been successfully sent. I will cont
 # Social links
 twitter:
   username: "igor_alexandrov"
-  card: summary
+  card: summary_large_image
 # facebook: "username"
 github: "igor-alexandrov"
 # codepen: "username"

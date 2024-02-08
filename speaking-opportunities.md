@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Speaking Opportunities
+twitter:
+  card: summary
 ---
 
 As a Ruby programmer, co-founder, and CTO of a consulting company, my public talks and podcasts delve into a variety of topics spanning technology, programming, leadership, and entrepreneurship.

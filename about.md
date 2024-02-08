@@ -3,6 +3,8 @@ layout: page
 title: Who am I?
 featured_image: /assets/images/igor.jpeg
 featured_image_alt: Igor Alexandrov
+twitter:
+  card: summary
 ---
 
 I am a Ruby/Rails and Crystal engineer, Open Source contributor, JetRockets CTO and co-founder, and a proud father.
