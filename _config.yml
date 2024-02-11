@@ -93,6 +93,14 @@ markdown: kramdown
 og_image:
   output_dir: "/assets/og"
   image: "/assets/images/igor.jpeg"
+  # canvas:
+  #   color: "#CCCCCC"
+  # header:
+  #   font_family: "Roboto"
+  #   font_color: "#000000"
+  # content:
+  #   font_family: "Roboto"
+  #   font_color: "#000000"
   # force: true
   domain: "igor.works"
   border_bottom:

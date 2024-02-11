@@ -32,7 +32,7 @@
     <p>{{ post.excerpt | strip_html | truncatewords:40 }}</p>
     <p class="post-tags">
       {% if post.tags.size > 0 %} {% for tag in post.tags %}<a
-        href="{{ site.baseurl }}/tags/index.html#{{ tag | cgi_escape }}"
+        href="{{ site.baseurl }}/archive/#{{ tag | cgi_escape }}"
         rel="tag"
         >{{ tag }}</a
       >{% endfor %} {% endif %}
