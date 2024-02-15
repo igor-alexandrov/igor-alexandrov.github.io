@@ -5,8 +5,6 @@ tags:
   - Ruby
   - DevOps
   - GitHub
-featured: true
-hidden: true
 render_with_liquid: false
 ---
 

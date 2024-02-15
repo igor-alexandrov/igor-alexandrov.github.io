@@ -54,7 +54,7 @@ GEM
       jekyll (>= 3.7, < 5.0)
       sinatra (>= 1.4)
       sinatra-contrib (>= 1.4)
-    jekyll-og-image (1.0.5)
+    jekyll-og-image (1.2.1)
       anyway_config (~> 2.6)
       jekyll (>= 3.4, < 5.0)
       jekyll-seo-tag (~> 2.8)
@@ -83,7 +83,7 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    minitest (5.21.2)
+    minitest (5.22.2)
     multi_json (1.15.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
@@ -184,7 +184,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.3.0)
   jekyll-admin
-  jekyll-og-image (~> 1.0.5)
+  jekyll-og-image (~> 1.2.1)
   jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
