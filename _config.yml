@@ -45,14 +45,14 @@ linkedin: "igor-alexandrov"
 navigation:
   - text: Speaking Opportunities
     url: /speaking-opportunities
+  # - text: What to Learn
+  #   url: /what-to-learn
   - text: About
     url: /about
   - text: Archive
     url: /archive
   - text: Contact Me
     url: /contact-me
-  # - text: Style Guide
-  #   url: /style-guide
 
 include:
   - robots.txt

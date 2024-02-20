@@ -20,5 +20,5 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
 
   # gem "jekyll-og-image", path: "../jekyll-og-image"
-  gem "jekyll-og-image", "~> 1.2.1"
+  gem "jekyll-og-image", "~> 1.3"
 end
