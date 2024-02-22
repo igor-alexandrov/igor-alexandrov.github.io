@@ -7,3 +7,7 @@
     @apply antialiased;
   }
 }
+
+a {
+  @apply text-ruby hover:text-red-700
+}
