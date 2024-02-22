@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         lato: ['"Lato"', "sans-serif"],
       },
+      colors: {
+        ruby: "#d51f06"
+      }
     },
   },
   plugins: [],
