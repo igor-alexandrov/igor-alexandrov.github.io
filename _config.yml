@@ -11,6 +11,7 @@ disqus: "igor-alexandrov"
 cover_image: bc_3.jpg
 # Add your GA Tracking Id
 ga_analytics: G-XFQY6HN501
+page_excerpts: true
 
 # Author
 author:
