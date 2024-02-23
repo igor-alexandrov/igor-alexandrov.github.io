@@ -2,17 +2,18 @@
 layout: default
 ---
 
-<article class="prose prose-lg mx-auto max-w-7xl px-6 lg:px-8">
+<article class="prose prose-lg mx-auto max-w-7xl px-6 lg:px-8 bg-white">
   {% if page.featured_image %}
-    <div>
-      <header>
-        <h1>{{ page.title }}</h1>
-      </header>
-      <img class="rounded-xl shadow-lg"
+    <header class="grid lg:grid-cols-2 mx-auto max-w-4xl">
+      <div>
+        <h1 >{{ page.title }}</h1>
+      </div>
+
+      <img class="not-prose rounded-xl shadow-lg max-h-64"
         src="{{ site.baseurl }}{{ page.featured_image }}"
         alt="{% if page.featured_image_alt %}{{ page.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"
       />
-    </div>
+    </header>
   {% else %}
     <header>
       <h1>{{ page.title }}</h1>
