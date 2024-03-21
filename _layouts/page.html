@@ -4,11 +4,13 @@ layout: default
 
 <article class="prose prose-lg mx-auto max-w-6xl px-6 lg:px-8 bg-white">
   {% if page.featured_image %}
-    <header class="grid lg:grid-cols-2 mx-auto my-20">
-      <h1 class="">{{ page.title }}</h1>
+    <header class="grid lg:grid-cols-2 mx-auto my-10 sm:my-20">
+      <div>
+        <h1 class="pl-4 border-l-4 border-ruby">{{ page.title }}</h1>
+      </div>
 
       <div class="flex lg:justify-end">
-        <img class="not-prose rounded-xl shadow-lg max-h-64"
+        <img class="not-prose rounded-xl shadow-lg sm:max-h-64"
           src="{{ site.baseurl }}{{ page.featured_image }}"
           alt="{% if page.featured_image_alt %}{{ page.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"
         />
