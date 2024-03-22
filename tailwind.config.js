@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         lato: ['"Lato"', "sans-serif"],
+        "ubuntu-mono": ['"Ubuntu Mono"', "monospace"],
       },
       colors: {
         ruby: "#d51f06",

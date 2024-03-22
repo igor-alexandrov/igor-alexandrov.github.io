@@ -5,7 +5,7 @@ pre[class*="language-"] {
   color: #000;
   background: 0 0;
   text-shadow: 0 1px #fff;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  /* font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; */
   /* font-size: 0.80rem; */
   text-align: left;
   white-space: pre;
@@ -20,7 +20,8 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  @apply text-sm;
+  @apply text-base;
+  @apply font-ubuntu-mono
 }
 code[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
@@ -159,7 +160,7 @@ div.code-toolbar > .toolbar {
   position: absolute;
   z-index: 10;
   top: 0.3em;
-  right: 0.2em;
+  right: 0.4em;
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
 }
@@ -176,16 +177,16 @@ div.code-toolbar > .toolbar > .toolbar-item > a {
   cursor: pointer;
 }
 div.code-toolbar > .toolbar > .toolbar-item > button {
-  background: 0 0;
-  border: 0;
-  color: inherit;
+  /* background: 0 0; */
+  /* border: 0; */
+  /* color: inherit;
   font: inherit;
   line-height: normal;
-  overflow: visible;
-  padding: 0;
-  -webkit-user-select: none;
+  overflow: visible; */
+  /* padding: 0; */
+  /* -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
+  -ms-user-select: none; */
 }
 div.code-toolbar > .toolbar > .toolbar-item > a,
 div.code-toolbar > .toolbar > .toolbar-item > button,
@@ -206,4 +207,8 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus,
 div.code-toolbar > .toolbar > .toolbar-item > span:hover {
   color: inherit;
   text-decoration: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button {
+  @apply btn-primary;
 }
