@@ -13,15 +13,27 @@ module.exports = {
         "ubuntu-mono": ['"Ubuntu Mono"', "monospace"],
       },
       colors: {
-        ruby: "#d51f06",
+        'ruby': {
+          '50': '#fff2f0',
+          '100': '#ffe2de',
+          '200': '#ffcac3',
+          '300': '#ffa599',
+          '400': '#ff715e',
+          '500': '#ff452c',
+          '600': '#f6280c',
+          '700': '#d51f06',
+          '800': '#ab1d09',
+          '900': '#8d1e0f',
+          '950': '#4d0b02',
+        },
       },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
             a: {
-              color: theme("colors.ruby"),
+              color: theme("colors.ruby.700"),
               "&:hover": {
-                color: theme("colors.red.700"),
+                color: theme("colors.ruby.500"),
               },
             },
           },
