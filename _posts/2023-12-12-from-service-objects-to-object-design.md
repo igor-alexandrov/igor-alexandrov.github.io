@@ -68,7 +68,6 @@ class TimeOff < ApplicationRecord
     end
   end
 end
-```
 </code></pre>
 
 What is wrong with this code? Method `change_slack_status` is defined in `TimeOff` class. What does it mean? What Slack status did it change? The body of the method also asks a lot of questions. What is `slack_authorization`, and why is it an attribute or a method of `TimeOff` instance?

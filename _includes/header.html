@@ -1,18 +1,38 @@
 <header class="bg-white">
-  <nav class="mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+  <nav
+    class="mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8"
+    aria-label="Global"
+  >
     <a href="{{ site.baseurl }}" class="text-2xl font-bold">{{ site.name }}</a>
 
     <div class="flex flex-auto justify-end lg:gap-x-8">
       <div class="hidden lg:flex gap-x-8">
         {% for link in site.navigation %}
-          <a href="{{ link.url }}" class="text-lg font-semibold text-gray-900">{{ link.text }}</a>
+        <a href="{{ link.url }}" class="text-lg font-semibold text-gray-900"
+          >{{ link.text }}</a
+        >
         {% endfor %}
       </div>
       <div class="flex">
-        <button type="button" class="rounded-md text-gray-700" data-action="click->reveal#toggle">
+        <button
+          type="button"
+          class="rounded-md text-gray-700"
+          data-action="click->reveal#toggle"
+        >
           <span class="sr-only">Open menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
           </svg>
         </button>
       </div>

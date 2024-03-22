@@ -21,48 +21,35 @@
       rel="stylesheet"
     />
 
-    {% vite_client_tag %}
-    {% vite_javascript_tag application %}
-    {% vite_stylesheet_tag application %}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat&display=swap" rel="stylesheet">
+    {% vite_client_tag %} {% vite_javascript_tag application %} {%
+    vite_stylesheet_tag application %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  {% capture layout %}
-    {% if page.layout %}
-      layout-{{ page.layout }}
-    {% endif %}
+  {% capture layout %} {% if page.layout %} layout-{{ page.layout }} {% endif %}
   {% endcapture %}
 
   <body data-controller="reveal" class="flex flex-col bg-white font-lato">
-    <div>
-      {% if page.url == "/" %}
-        <div class="hero-wrap">
-          {% if site.cover_image %}
-            <div
-              class="hero-wrap-bg"
-              style="background-image: url({{ site.baseurl }}/assets/images/{{ site.cover_image }})"
-            ></div>
-          {% endif %}
+    {% if page.url == "/" %}
+    <div class="hero-wrap">
+      {% if site.cover_image %}
+      <div
+        class="hero-wrap-bg"
+        style="background-image: url({{ site.baseurl }}/assets/images/{{ site.cover_image }})"
+      ></div>
+      {% endif %} {% include header.html %}
 
-          {% include header.html %}
-
-          <section class="hero outer fadeInDown delay_05s">
-            <div class="inner">{% include author.html %}</div>
-          </section>
-        </div>
-      {% else %}
-        {% include header.html %}
-      {% endif %}
-
-      {{ content }}
-
-      {% if paginator.total_posts > site.paginate %} {% endif %}
+      <section class="hero outer fadeInDown delay_05s">
+        <div class="inner">{% include author.html %}</div>
+      </section>
     </div>
-
-    {% include sidebar.html %}
-    {% include analytics.html %}
-    {% include footer.html %}
+    {% else %} {% include header.html %} {% endif %} {{ content }} {% if
+    paginator.total_posts > site.paginate %} {% endif %} {% include sidebar.html
+    %} {% include analytics.html %} {% include footer.html %}
   </body>
 </html>

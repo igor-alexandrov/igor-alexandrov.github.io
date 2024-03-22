@@ -99,13 +99,13 @@ On lines _43-53_, I configured AWS credentials and logged in to Amazon ECR. It i
 
 This setup had several drawbacks.
 
-* The first and the most important, the action was not reusable. To configure deploy to another environment, I had to copy-paste the action completely.
+- The first and the most important, the action was not reusable. To configure deploy to another environment, I had to copy-paste the action completely.
 
-* Besides that, the action didn't provide an ability to run deploy without running specs and lints. It was not a big deal, but sometimes I wanted to run deploy separately.
+- Besides that, the action didn't provide an ability to run deploy without running specs and lints. It was not a big deal, but sometimes I wanted to run deploy separately.
 
-* The action didn't provide an ability to run deploy to another branch.
+- The action didn't provide an ability to run deploy to another branch.
 
-* Sometimes I wanted to restart Traefik container. This cound be done from the local machine, but for me it would be better to do it from the action.
+- Sometimes I wanted to restart Traefik container. This cound be done from the local machine, but for me it would be better to do it from the action.
 
 ## Action's File Structure
 
@@ -134,10 +134,10 @@ You may notice two directories, `build_deploy` and `pre-deploy`, both have file 
 
 How are Composite Actions different from Reusable Workflows?
 
-* Composite Actions allow you to bundle multiple existing workflow steps into a single action.
-* A Composite Action cannot be used without a repo checkout while Reusable Workflows can be used without a checkout.
-* A Reusable Workflow can include multiple jobs and multiple steps within those jobs. However, Composite Actions can only have one job.
-* Reusable Workflow can use Secrets by declaring them to a workflow via parameters while Composite Actions cannot use Secrets in a flexible way.
+- Composite Actions allow you to bundle multiple existing workflow steps into a single action.
+- A Composite Action cannot be used without a repo checkout while Reusable Workflows can be used without a checkout.
+- A Reusable Workflow can include multiple jobs and multiple steps within those jobs. However, Composite Actions can only have one job.
+- Reusable Workflow can use Secrets by declaring them to a workflow via parameters while Composite Actions cannot use Secrets in a flexible way.
 
 Files with numeric prefixes are main workflow definitions that call the reusable workflows and composite actions. They cover the most common usecases for a modern Rails project: deploy to production and staging, database backup, manual deploy, pull request validation, and Kamal command execution.
 
@@ -307,7 +307,7 @@ jobs:
           environment: production
 </code></pre>
 
-The `concurrency` section in lines  _23-25_ deserves attention in the file. It allows me to run only one deployment at a time. GitHub has a great [documentation section](https://docs.github.com/en/actions/using-jobs/using-concurrency) that covers all possible use cases. If a deployment is already running, it will be canceled, and the `"Kamal Release"` step from the previous workflow run will be executed. This is an essential feature because it allows me to avoid concurrent deployments and handle them correctly.
+The `concurrency` section in lines _23-25_ deserves attention in the file. It allows me to run only one deployment at a time. GitHub has a great [documentation section](https://docs.github.com/en/actions/using-jobs/using-concurrency) that covers all possible use cases. If a deployment is already running, it will be canceled, and the `"Kamal Release"` step from the previous workflow run will be executed. This is an essential feature because it allows me to avoid concurrent deployments and handle them correctly.
 
 Staging deploy is defined in the `02.build_deploy_staging.yaml` file and is similar to production, except for the event that starts the workflow: for staging deploy I use the `push` event to GIT `staging` branch, instead of the `release`.
 
@@ -326,7 +326,6 @@ on:
 
 # ...
 </code></pre>
-
 
 In this article I will not cover database backup workflow, defined in the `03.database_backup.yaml` file, because it is not related to the theme of the article. However lets look at `04.deploy_manually.yaml`, `05.validate_pull_request.yaml`, and `06.kamal_run_command.yaml` files.
 
