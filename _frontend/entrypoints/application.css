@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "../stylesheets/prism.css";
 
 @tailwind base;
@@ -17,6 +18,10 @@ a {
 .article {
   @apply mx-auto px-6 lg:px-8 bg-white;
   @apply prose lg:prose-xl max-w-6xl w-full;
-  @apply prose-code:before:hidden prose-code:after:hidden prose-code:bg-amber-50 prose-code:p-1 prose-code:rounded-md;
+  @apply prose-code:before:hidden prose-code:after:hidden prose-code:bg-amber-50 prose-code:p-1 prose-code:rounded-md prose-code:font-ubuntu-mono;
   @apply prose-pre:rounded-lg prose-pre:bg-white prose-pre:border prose-pre:border-gray-500;
+}
+
+.btn-primary {
+  @apply rounded-md bg-ruby px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-ruby focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
 }
