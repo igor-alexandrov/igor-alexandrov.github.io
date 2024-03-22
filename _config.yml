@@ -25,7 +25,7 @@ author:
 # Contact form setings
 email: igor.alexandrov@gmail.com
 formspree_id: mqkrenkd
-contact_page_description: "If you have any questions or just want to say \"Hi 👋\", please feel free to drop me a line. I will try my best to respond as soon as possible!"
+contact_page_description: 'If you have any questions or just want to say "Hi 👋", please feel free to drop me a line. I will try my best to respond as soon as possible!'
 thankyou_page_description: "Your message has been successfully sent. I will contact you very soon!"
 
 # Social links
@@ -88,7 +88,7 @@ permalink: /blog/:title
 
 # Other
 markdown: kramdown
-# highlighter: rouge
+highlighter: nil
 # kramdown:
 #   input: GFM
 

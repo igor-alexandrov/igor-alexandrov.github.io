@@ -12,24 +12,21 @@ module.exports = {
         lato: ['"Lato"', "sans-serif"],
       },
       colors: {
-        ruby: "#d51f06"
+        ruby: "#d51f06",
       },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
             a: {
-              color: theme('colors.ruby'),
-              '&:hover': {
-                color: theme('colors.red.700')
-              }
-            }
-          }
-        }
-      })
-    }
+              color: theme("colors.ruby"),
+              "&:hover": {
+                color: theme("colors.red.700"),
+              },
+            },
+          },
+        },
+      }),
+    },
   },
-  plugins: [
-    require('@tailwindcss/typography')
-  ],
-}
-
+  plugins: [require("@tailwindcss/typography")],
+};

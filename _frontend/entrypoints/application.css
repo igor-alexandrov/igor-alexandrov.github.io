@@ -1,3 +1,5 @@
+@import "../stylesheets/prism.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,5 +11,12 @@
 }
 
 a {
-  @apply text-ruby hover:text-red-700
+  @apply text-ruby hover:text-red-700;
+}
+
+.article {
+  @apply mx-auto px-6 lg:px-8 bg-white;
+  @apply prose lg:prose-xl max-w-6xl w-full;
+  @apply prose-code:before:hidden prose-code:after:hidden prose-code:bg-amber-50 prose-code:p-1 prose-code:rounded-md;
+  @apply prose-pre:rounded-lg prose-pre:bg-white prose-pre:border prose-pre:border-gray-500;
 }

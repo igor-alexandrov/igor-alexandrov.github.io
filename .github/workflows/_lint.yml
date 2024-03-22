@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-    - uses: actions/checkout@v4
-    - uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: .ruby-version
-        bundler-cache: true
-    - name: RuboCop
-      run: bin/rubocop -f github
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+          bundler-cache: true
+      - name: RuboCop
+        run: bin/rubocop -f github

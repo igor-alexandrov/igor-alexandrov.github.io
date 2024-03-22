@@ -22,18 +22,19 @@
       rel="stylesheet"
     />
 
-    {% vite_client_tag %}
-    {% vite_javascript_tag application %}
-    {% vite_stylesheet_tag application %}
+    {% vite_client_tag %} {% vite_javascript_tag application %} {%
+    vite_stylesheet_tag application %}
   </head>
 
-  {% capture layout %}
-    {% if page.layout %}
-      layout-{{ page.layout }}
-    {% endif %}
+  {% capture layout %} {% if page.layout %} layout-{{ page.layout }} {% endif %}
   {% endcapture %}
 
-  <body data-controller="reveal" data-reveal-hidden-class="sidebar-opened" data-reveal-target="item" class="{{ layout }}">
+  <body
+    data-controller="reveal"
+    data-reveal-hidden-class="sidebar-opened"
+    data-reveal-target="item"
+    class="{{ layout }}"
+  >
     <div id="page" class="site">
       {% if page.url == "/" %}
 
@@ -43,9 +44,7 @@
           class="hero-wrap-bg"
           style="background-image: url({{ site.baseurl }}/assets/images/{{ site.cover_image }})"
         ></div>
-        {% endif %}
-
-        {% include header.html %}
+        {% endif %} {% include header.html %}
 
         <section class="hero outer fadeInDown delay_05s">
           <div class="inner">{% include author.html %}</div>
@@ -55,13 +54,8 @@
       </div>
       <!-- .hero-wrap -->
 
-      {% else %}
-        {% include header.html %}
-      {% endif %}
-
-      {{ content }}
-
-      {% if paginator.total_posts > site.paginate %} {% endif %}
+      {% else %} {% include header.html %} {% endif %} {{ content }} {% if
+      paginator.total_posts > site.paginate %} {% endif %}
 
       <footer id="colophon" class="site-footer outer">
         <div class="site-footer-inside">
@@ -76,7 +70,12 @@
             <a target="_blank" href="https://jekyllrb.com/">Jekyll</a>.
           </p>
           <p class="back-to-top">
-            <a id="top-button" class="top-button" data-controller="scroll-to" href="#page">
+            <a
+              id="top-button"
+              class="top-button"
+              data-controller="scroll-to"
+              href="#page"
+            >
               <span class="icon-arrow-up" aria-hidden="true"></span>
               <span class="screen-reader-text">Back to top</span>
             </a>
@@ -87,9 +86,12 @@
       <!-- .site-footer -->
     </div>
 
-    <div data-action="click->reveal#toggle" id="site-overlay" class="site-overlay"></div>
+    <div
+      data-action="click->reveal#toggle"
+      id="site-overlay"
+      class="site-overlay"
+    ></div>
 
-    {% include sidebar.html %}
-    {% include analytics.html %}
+    {% include sidebar.html %} {% include analytics.html %}
   </body>
 </html>

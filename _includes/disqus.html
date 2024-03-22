@@ -1,10 +1,6 @@
 {% if site.disqus %}
-<section class="comments-area">
-  <h2 class="comments-title">Comments</h2>
-
-  <div class="comments-inside">
-    <div id="disqus_thread"></div>
-  </div>
+<section>
+  <div id="disqus_thread"></div>
 
   <script type="text/javascript">
     var disqus_shortname = "{{site.disqus}}";
@@ -31,6 +27,8 @@
       >comments powered by Disqus.</a
     ></noscript
   >
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  <a href="http://disqus.com" class="dsq-brlink"
+    >comments powered by <span class="logo-disqus">Disqus</span></a
+  >
 </section>
 {% endif %}

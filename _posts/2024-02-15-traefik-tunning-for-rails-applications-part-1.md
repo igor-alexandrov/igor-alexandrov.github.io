@@ -65,10 +65,11 @@ traefik:
 ```
 
 Lets go line by line in `config/deploy.yml` file.
-* On line _5_ `api.dashboard: true` enables Traefik Dashboard, as it is disabled by default.
-* On line _7_ I defined a router that will serve the dashboard. Internal Traefik API service is called `api@internal`, I attached it do the `dashboard` router.
-* Than on line _9_ I defined a rule that tells Traefik to serve the dashboard on the `traefik.onetribe.team` domain. Rule can be based [on the path, the host, the headers, etc](https://doc.traefik.io/traefik/routing/routers/#rule).
-* Since I don't want to expose the dashboard to the public, I added a basic authentication middleware on lines _9_ and _10_. Traefik supports different authentication methods: [basic](https://doc.traefik.io/traefik/middlewares/http/basicauth/), [digest](https://doc.traefik.io/traefik/middlewares/http/digestauth/), [forward](https://doc.traefik.io/traefik/middlewares/http/forwardauth/), etc. I used basic authentication, as it is the easiest to configure.
+
+- On line _5_ `api.dashboard: true` enables Traefik Dashboard, as it is disabled by default.
+- On line _7_ I defined a router that will serve the dashboard. Internal Traefik API service is called `api@internal`, I attached it do the `dashboard` router.
+- Than on line _9_ I defined a rule that tells Traefik to serve the dashboard on the `traefik.onetribe.team` domain. Rule can be based [on the path, the host, the headers, etc](https://doc.traefik.io/traefik/routing/routers/#rule).
+- Since I don't want to expose the dashboard to the public, I added a basic authentication middleware on lines _9_ and _10_. Traefik supports different authentication methods: [basic](https://doc.traefik.io/traefik/middlewares/http/basicauth/), [digest](https://doc.traefik.io/traefik/middlewares/http/digestauth/), [forward](https://doc.traefik.io/traefik/middlewares/http/forwardauth/), etc. I used basic authentication, as it is the easiest to configure.
 
 Password can be encrypted with the `htpasswd` command, which is a [part of Apache toolkit](https://httpd.apache.org/docs/2.4/programs/htpasswd.html) and this is really amazing how software, which is 20 years old, is still in use. To encrypt a password for a new user, run the following command.
 
@@ -181,7 +182,6 @@ servers:
 #### Full Example
 
 The example below combines two middleware defined above and a middleware that is added by default by Kamal – Retry. The Retry middleware reissues requests a given number of times to a backend server if that server does not reply.
-
 
 ```yaml
 servers:
