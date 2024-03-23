@@ -22,6 +22,14 @@ a {
   @apply prose-pre:rounded-lg prose-pre:bg-white prose-pre:border prose-pre:border-gray-500;
 }
 
+.article__header {
+  @apply my-10 lg:my-20;
+}
+
 .btn-primary {
   @apply rounded-md bg-ruby-700 px-2.5 py-1.5 text-sm font-semibold text-white shadow-md hover:bg-ruby-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ruby-600;
+}
+
+.tag {
+  @apply before:content-['#'] lowercase
 }

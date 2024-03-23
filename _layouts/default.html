@@ -42,8 +42,16 @@
         <div class="inner">{% include author.html %}</div>
       </section>
     </div>
-    {% else %} {% include header.html %} {% endif %} {{ content }} {% if
-    paginator.total_posts > site.paginate %} {% endif %} {% include sidebar.html
-    %} {% include analytics.html %} {% include footer.html %}
+    {% else %}
+      {% include header.html %}
+    {% endif %}
+
+    {{ content }}
+
+    {% if paginator.total_posts > site.paginate %} {% endif %} {% include sidebar.html %}
+
+    {% include analytics.html %}
+
+    {% include footer.html %}
   </body>
 </html>

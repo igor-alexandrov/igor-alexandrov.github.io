@@ -3,34 +3,16 @@ layout: default
 ---
 
 <article class="line-numbers article">
-  <header class="my-10 sm:my-20">
-    <h1>{{ page.title }}</h1>
+  <header class="article__header">
+    <time class="block mb-10 uppercase text-gray-500" datetime="{{ page.date | date: " %Y-%m-%d" }}">
+      {{ page.date | date: "%B %-d, %Y" }}
+    </time>
+    <h1 class="pl-4 border-l-4 border-ruby-600">{{ page.title }}</h1>
   </header>
 
-  <div class="mx-auto">{{content}}</div>
-  <div>
-    {% if page.tags.size > 0 %}
-    <p class="post-tags">
-      {% for tag in page.tags %}
-      <a href="{{ site.baseurl }}/archive#{{ tag | cgi_escape }}" rel="tag"
-        >{{ tag }}</a
-      >
-      {% endfor %}
-    </p>
-    {% endif %}
-    <div>
-      <span class="post-share-title">Share:</span>
-      <a
-        target="_blank"
-        href="https://twitter.com/share?text={{ page.title | url_encode }}&amp;url={{ site.production_url }}{{ page.url | remove_first: '/' }}"
-        >Twitter</a
-      >
-      <a
-        target="_blank"
-        href="https://www.facebook.com/sharer/sharer.php?u={{ site.production_url }}{{ page.url | remove_first: '/' }}"
-        >Facebook</a
-      >
-    </div>
-  </div>
+  <div>{{content}}</div>
+
+  {% include tags_and_share.html %}
+
   {% include disqus.html %}
 </article>
