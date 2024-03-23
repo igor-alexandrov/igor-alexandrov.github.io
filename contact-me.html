@@ -1,31 +1,36 @@
 ---
-layout: page
+layout: default
 title: Contact Me
 twitter:
   card: summary
 ---
 
-{% if site.contact_page_description %}
-<p>{{ site.contact_page_description }}</p>
-{% endif %}
+<article class="article">
+  <header class="article__header">
+    <h1 class="pl-4 border-l-4 border-ruby-600">{{ page.title }}</h1>
+  </header>
 
-<section class="contact-form">
-  <form
-    action="https://formspree.io/{{ site.formspree_id }}"
-    method="post"
-    id="contact-form"
-  >
-    <div class="form-item">
-      <label class="form-label">Your Email <span>(required)</span></label>
-      <input
-        type="text"
-        name="email"
-        placeholder="Your email address..."
-        class="form-input"
-      />
+  <div class="mx-auto">
+    {% if site.contact_page_description %}
+      <p>
+        {{ site.contact_page_description }}
+      </p>
+    {% endif %}
+  </div>
+</article>
+
+<section class="max-w-6xl max-w-md">
+  <form action="https://formspree.io/{{ site.formspree_id }}" method="post" id="contact-form" class="grid grid-cols-1 gap-6">
+    <div class="block">
+      <label class="block">
+        <span>Your Email</span>
+        <span>(required)</span>
+        <input type="text" name="email" placeholder="Your email address..." class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"/>
+      </label>
+
     </div>
 
-    <div class="form-item">
+    <div class="block">
       <label class="form-label">Your Name <span>(required)</span></label>
       <input
         type="text"
