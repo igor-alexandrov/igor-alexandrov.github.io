@@ -15,8 +15,12 @@ a {
   @apply text-ruby-700 hover:text-ruby-500;
 }
 
+.container {
+  @apply mx-auto px-6 lg:px-8 max-w-6xl w-full bg-white;
+}
+
 .article {
-  @apply mx-auto px-6 lg:px-8 bg-white;
+  @apply mx-auto bg-white;
   @apply prose lg:prose-xl max-w-6xl w-full;
   @apply prose-code:before:hidden prose-code:after:hidden prose-code:bg-amber-50 prose-code:p-1 prose-code:rounded-md prose-code:font-ubuntu-mono;
   @apply prose-pre:rounded-lg prose-pre:bg-white prose-pre:border prose-pre:border-gray-500;

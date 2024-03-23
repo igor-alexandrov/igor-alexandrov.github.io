@@ -4,23 +4,23 @@ layout: default
 
 <article class="article">
   {% if page.featured_image %}
-  <header class="article__header grid lg:grid-cols-2">
-    <div>
-      <h1 class="pl-4 border-l-4 border-ruby-600">{{ page.title }}</h1>
-    </div>
+    <header class="article__header grid lg:grid-cols-2">
+      <div>
+        <h1 class="pl-4 border-l-4 border-ruby-600">{{ page.title }}</h1>
+      </div>
 
-    <div class="flex lg:justify-end">
-      <img
-        class="not-prose rounded-xl shadow-lg sm:max-h-64"
-        src="{{ site.baseurl }}{{ page.featured_image }}"
-        alt="{% if page.featured_image_alt %}{{ page.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"
-      />
-    </div>
-  </header>
+      <div class="flex lg:justify-end">
+        <img
+          class="not-prose rounded-xl shadow-lg sm:max-h-64"
+          src="{{ site.baseurl }}{{ page.featured_image }}"
+          alt="{% if page.featured_image_alt %}{{ page.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"
+        />
+      </div>
+    </header>
   {% else %}
-  <header class="article__header">
-    <h1 class="pl-4 border-l-4 border-ruby-600">{{ page.title }}</h1>
-  </header>
+    <header class="article__header">
+      <h1 class="pl-4 border-l-4 border-ruby-600">{{ page.title }}</h1>
+    </header>
   {% endif %}
   <div class="mx-auto">{{content}}</div>
 </article>

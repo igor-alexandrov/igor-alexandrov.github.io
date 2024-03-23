@@ -5,6 +5,7 @@ module.exports = {
     "./_layouts/**/page.html",
     "./_layouts/**/post.html",
     "./_includes/**/*.html",
+    "*.html"
   ],
   theme: {
     extend: {
@@ -41,5 +42,8 @@ module.exports = {
       }),
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require('@tailwindcss/forms'),
+  ],
 };
