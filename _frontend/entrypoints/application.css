@@ -30,10 +30,54 @@ a {
   @apply my-10 lg:my-20;
 }
 
-.btn-primary {
+.btn {
   @apply rounded-md bg-ruby-700 px-2.5 py-1.5 text-sm font-semibold text-white shadow-md hover:bg-ruby-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ruby-600;
+}
+
+.btn-xs {
+  @apply px-2 py-1 text-xs;
+}
+
+.btn-sm {
+  @apply px-2 py-1 text-sm
+}
+
+.btn-md {
+  @apply px-3 py-2 text-sm;
+}
+
+.btn-lg {
+  @apply px-3.5 py-2.5 text-sm;
+}
+
+.btn-wide {
+  @apply w-full;
 }
 
 .tag {
   @apply before:content-['#'] lowercase
+}
+
+.form__group {
+  @apply block flex flex-col-reverse w-full;
+}
+
+.form__label {
+  @apply font-bold;
+}
+
+.form__input[required=required] + .form__label {
+  @apply after:content-['*'];
+}
+
+/* .form__group:has(.form__input[required=required]) .form__label {
+  @apply after:content-['*'];
+} */
+
+.form__label::after {
+  @apply pl-1 text-ruby-700;
+}
+
+.form__input {
+  @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
 }
