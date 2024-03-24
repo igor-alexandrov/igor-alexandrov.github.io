@@ -210,5 +210,5 @@ div.code-toolbar > .toolbar > .toolbar-item > span:hover {
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > button {
-  @apply btn-primary;
+  @apply btn;
 }

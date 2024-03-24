@@ -948,6 +948,11 @@ stimulus-scroll-to@^4.1.0:
   resolved "https://registry.yarnpkg.com/stimulus-scroll-to/-/stimulus-scroll-to-4.1.0.tgz#22b24d768d673f029ab0f68100556e113075fa95"
   integrity sha512-bKltfECyU8y/ck8yXy77hlK/vv85igW7LPtZpgkUBFuAGz+Ou7EnMPpKrSJiYoK+TXS2COFilb/PGND/xISxJA==
 
+stimulus-textarea-autogrow@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/stimulus-textarea-autogrow/-/stimulus-textarea-autogrow-4.1.0.tgz#faa2f7952062c4508b1566478dc203af7f24f632"
+  integrity sha512-hYz+xN3VZiO+eLl+zok4yvhH+mW5WkvOJEExyVP3J97dWQzc/qPDFdAM1EDJvfUIuRzJVq/WJynqqQwiied5iw==
+
 stimulus@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/stimulus/-/stimulus-3.2.2.tgz#a2e955f43e12e2e5784b175d4df5517ef678aa68"
