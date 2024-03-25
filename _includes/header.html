@@ -8,9 +8,7 @@
     <div class="flex flex-auto justify-end lg:gap-x-8">
       <div class="hidden lg:flex gap-x-8">
         {% for link in site.navigation %}
-        <a href="{{ link.url }}" class="text-lg font-semibold text-gray-900"
-          >{{ link.text }}</a
-        >
+          <a href="{{ link.url }}" class="text-lg font-semibold text-gray-900">{{ link.text }}</a>
         {% endfor %}
       </div>
       <div class="flex">

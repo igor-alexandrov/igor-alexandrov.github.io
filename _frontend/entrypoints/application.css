@@ -54,8 +54,12 @@ a {
   @apply w-full;
 }
 
-.tag {
-  @apply before:content-['#'] lowercase
+.tags {
+  @apply flex justify-center space-x-4 flex-wrap
+}
+
+.tags__item {
+  @apply before:content-['#'] lowercase text-nowrap
 }
 
 .form__group {
