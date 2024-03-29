@@ -4,15 +4,21 @@ layout: default
 
 <article class="line-numbers article">
   <header class="article__header">
-    <time class="block mb-10 uppercase text-gray-500" datetime="{{ page.date | date: " %Y-%m-%d" }}">
-      {{ page.date | date: "%B %-d, %Y" }}
-    </time>
+    <span class="article__meta">
+      <time class="block mb-10 text-gray-500 uppercase text-sm" datetime="{{ page.date | date: " %Y-%m-%d" }}">
+        {{ page.date | date: "%B %-d, %Y" }}
+      </time>
+    </span>
     <h1 class="pl-4 border-l-4 border-ruby-600">{{ page.title }}</h1>
   </header>
 
   <div>{{content}}</div>
 
   {% include tags_and_share.html %}
+
+  <section class="md:flex md:items-center md:justify-between mt-10">
+
+  </section>
 
   {% include disqus.html %}
 </article>

@@ -14,19 +14,19 @@ twitter:
   <div class="mx-auto">
     <div class="tags">
       {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-      {% assign sortedTags = site_tags | split:',' | sort %}
+      {% assign sorted_tags = site_tags | split:',' | sort %}
 
-      {% for tag in sortedTags %}
+      {% for tag in sorted_tags %}
         <a class="tags__item" href="#{{ tag | cgi_escape }}">{{ tag }} </a>
       {% endfor %}
     </div>
   </div>
 </article>
 
-{% for tag in sortedTags %}
-  <div class="flex justify-start space-x-4">
-    <a>#</a>
-    <h2 class="" id="{{ tag | cgi_escape }}">{{ tag }}</h2>
+{% for tag in sorted_tags %}
+  <div class="flex justify-start space-x-1 mt-10 text-2xl">
+    <a href="#{{ tag | cgi_escape }}">#</a>
+    <h2 class="font-bold" id="{{ tag | cgi_escape }}">{{ tag }}</h2>
   </div>
 
   <article class="article">
@@ -34,7 +34,7 @@ twitter:
       {% for post in site.tags[tag] %}
       <li>
         <a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{ post.title }}</a>
-        <span class="post-meta"> — <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time></span>
+        <span class="article__meta"> — <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time></span>
       </li>
       {% endfor %}
     </ul>
