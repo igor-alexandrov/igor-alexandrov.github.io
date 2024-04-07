@@ -1,19 +1,21 @@
-<div class="pb-10 last:pb-0">
-  <h2>
-    {{ speaking-opportunity.name }}
-  </h2>
+<div class="speaking_opportunity">
+  <header class="speaking_opportunity__header">
+    <h2>
+      {{ speaking-opportunity.name }}
+    </h2>
 
-  <div class="opportunity__meta">
-    {% if speaking-opportunity.event_name %}
-    <span class="featured-badge">{{ speaking-opportunity.event_name }}</span>
-    / {% endif %}
-    <time datetime="{{ speaking-opportunity.date | date: '%Y-%m-%d' }}"
-      >{{ speaking-opportunity.date | date: "%B %-d, %Y" }}</time
-    >
-    {% if speaking-opportunity.location %} /
-    <span>{{ speaking-opportunity.location }}</span>
-    {% endif %}
-  </div>
+    <div class="speaking_opportunity__meta">
+      {% if speaking-opportunity.event_name %}
+      <span class="featured-badge">{{ speaking-opportunity.event_name }}</span>
+      / {% endif %}
+      <time datetime="{{ speaking-opportunity.date | date: '%Y-%m-%d' }}"
+        >{{ speaking-opportunity.date | date: "%B %-d, %Y" }}</time
+      >
+      {% if speaking-opportunity.location %} /
+      <span>{{ speaking-opportunity.location }}</span>
+      {% endif %}
+    </div>
+  </header>
 
   <div class="max-w-2xl">
     {% if speaking-opportunity.youtube_embed %}

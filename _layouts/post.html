@@ -4,12 +4,12 @@ layout: default
 
 <article class="line-numbers article">
   <header class="article__header">
+    <h1 class="pl-4 border-l-4 border-ruby-600">{{ page.title }}</h1>
     <span class="article__meta">
-      <time class="block mb-10 text-gray-500 uppercase text-sm" datetime="{{ page.date | date: " %Y-%m-%d" }}">
+      <time datetime="{{ page.date | date: " %Y-%m-%d" }}">
         {{ page.date | date: "%B %-d, %Y" }}
       </time>
     </span>
-    <h1 class="pl-4 border-l-4 border-ruby-600">{{ page.title }}</h1>
   </header>
 
   <div>{{content}}</div>

@@ -27,7 +27,7 @@ a {
 }
 
 .article__header {
-  @apply my-10 lg:my-20;
+  @apply my-10 lg:my-12;
 }
 
 .article__meta {
@@ -59,7 +59,7 @@ a {
 }
 
 .tags {
-  @apply flex justify-center space-x-4 flex-wrap
+  @apply flex justify-center md:justify-start space-x-4 flex-wrap
 }
 
 .tags__item {
@@ -88,4 +88,16 @@ a {
 
 .form__input {
   @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+}
+
+.speaking_opportunity {
+  @apply pb-10 last:pb-0
+}
+
+.speaking_opportunity__header {
+  @apply my-5 lg:my-6;
+}
+
+.speaking_opportunity__meta {
+  @apply text-gray-500 uppercase text-sm;
 }
