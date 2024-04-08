@@ -66,12 +66,7 @@ exclude:
   - Procfile.dev
   - Rakefile
 
-# # Required Plugins
-# plugins_dir:
-#   - jekyll_og_image
-#   - jekyll-seo-tag
-#   - jekyll-sitemap
-
+# Required Plugins
 plugins:
   - jekyll/vite
   - jekyll-paginate

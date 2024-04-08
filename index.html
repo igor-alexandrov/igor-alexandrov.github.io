@@ -15,16 +15,13 @@ twitter:
   </div>
 {% endif %}
 
-<!-- Posts Index -->
-<div class="outer">
-  {% if page.url == "/" %}
-    <div class="post-feed-title inner">Latest Articles</div>
-  {% endif %}
+{% if page.url == "/" %}
+  <div class="post-feed-title inner">Latest Articles</div>
+{% endif %}
 
-  {% for post in paginator.posts %}
-    {% include postbox.html %}
-  {% endfor %}
-</div>
+{% for post in paginator.posts %}
+  {% include postbox.html %}
+{% endfor %}
 
 {% include pagination.html %}
 

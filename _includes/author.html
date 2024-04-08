@@ -1,13 +1,11 @@
-{% if site.author %}
-  <p>
-    <img class="rounded-full w-40 border-2 border-ruby-600 shadow-xl" src="{{ site.baseurl }}/assets/images/{{ site.author.image }}" alt="{{ site.author.name }}'s Picture"/>
-  </p>
+<div class="h-60 flex items-center justify-center">
+  <img class="rounded-full w-40 border-2 border-ruby-600 shadow-xl" src="{{ site.baseurl }}/assets/images/{{ site.author.image }}" alt="{{ site.author.name }}'s Picture"/>
+</div>
 
-  <h2 class="hero-title">{{ site.author.greetings }}</h2>
+<h1 class="text-center">{{ site.author.greetings }}</h1>
 
-  <p class="hero-description">
-    {{ site.author.description }}
-  </p>
-{% endif %}
+<p class="text-center">
+  {{ site.author.description }}
+</p>
 
 {% include social-links.html %}
