@@ -30,18 +30,19 @@
 
   <body data-controller="reveal" class="flex flex-col bg-white font-lato">
     {% if page.url == "/" %}
-    <div class="hero-wrap">
-      {% if site.cover_image %}
-      <div
-        class="hero-wrap-bg"
-        style="background-image: url({{ site.baseurl }}/assets/images/{{ site.cover_image }})"
-      ></div>
-      {% endif %} {% include header.html %}
+      <div class="hero-wrap">
+        {% if site.cover_image %}
+          <div class="hero-wrap-bg" style="background-image: url({{ site.baseurl }}/assets/images/{{ site.cover_image }})"></div>
+        {% endif %}
 
-      <section class="hero outer fadeInDown delay_05s">
-        <div class="inner">{% include author.html %}</div>
-      </section>
-    </div>
+        {% include header.html %}
+
+        <section class="hero outer fadeInDown delay_05s">
+          <div class="inner">
+            {% include author.html %}
+          </div>
+        </section>
+      </div>
     {% else %}
       {% include header.html %}
     {% endif %}

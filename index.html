@@ -6,7 +6,6 @@ twitter:
 ---
 
 {% if page.url == "/" %}
-  <!-- Featured-->
   <div class="featured-posts outer">
     {% for post in site.posts %}
       {% if post.featured == true %}
@@ -22,13 +21,13 @@ twitter:
     <div class="post-feed-title inner">Latest Articles</div>
   {% endif %}
 
-  <div class="post-feed inner-wide">
-    {% for post in paginator.posts %}
-      {% include postbox.html %}
-    {% endfor %}
-  </div>
+  {% for post in paginator.posts %}
+    {% include postbox.html %}
+  {% endfor %}
 </div>
 
-<!-- Pagination-->
-{% include pagination.html %} {% if site.mailchimp_url %} {% include
-newsletter-box.html %} {% endif %}
+{% include pagination.html %}
+
+{% if site.mailchimp_url %}
+  {% include newsletter-box.html %}
+{% endif %}

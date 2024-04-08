@@ -31,7 +31,7 @@ a {
 }
 
 .article__meta {
-  @apply text-gray-500 uppercase text-sm;
+  @apply text-gray-500 uppercase text-sm mb-5;
 }
 
 .btn {
