@@ -27,18 +27,31 @@ a {
   @apply prose-pre:rounded-lg prose-pre:bg-white prose-pre:border prose-pre:border-gray-500;
 }
 
+.posts {
+  @apply space-y-10 lg:space-y-14;
+}
+
+.article__excerpt {
+  @apply mx-auto bg-white;
+  @apply prose lg:prose-xl max-w-6xl w-full;
+  @apply prose-h3:my-0 prose-p:my-4
+}
+
 .article__header {
   @apply mb-10 lg:mb-12;
 }
 
-.article-excerpt .article__header {
-  @apply mb-5 lg:mb-6;
+.article__header-condensed {
+  @apply mb-4;
 }
 
 .article__meta {
   @apply text-gray-500 uppercase text-sm mb-5 space-x-2;
 }
 
+.article__meta-condensed {
+  @apply mb-4
+}
 .article__meta > * {
   @apply after:content-['/'] last:after:content-[''] after:pl-2;
 }
