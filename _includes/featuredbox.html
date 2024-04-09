@@ -1,10 +1,10 @@
-<article class="article border-b border-gray-300">
-  <header class="post-header">
-    <div class="post-meta">
-      <span class="featured-badge">Featured</span> &sol; {{/if}}
-      <time class="published" datetime="{{ post.date | date: '%Y-%m-%d' }}"
-        >{{ post.date | date: "%B %-d, %Y" }}</time
-      >
+<article class="article prose-h2:mt-0 border-b border-gray-300">
+  <header class="article__header">
+    <div class="article__meta">
+      <span>Featured</span>
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+        {{ post.date | date: "%B %-d, %Y" }}
+      </time>
     </div>
 
     <h2>

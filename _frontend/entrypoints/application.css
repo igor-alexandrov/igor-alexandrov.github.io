@@ -31,7 +31,11 @@ a {
 }
 
 .article__meta {
-  @apply text-gray-500 uppercase text-sm mb-5;
+  @apply text-gray-500 uppercase text-sm mb-5 space-x-2;
+}
+
+.article__meta > * {
+  @apply after:content-['/'] last:after:content-[''] after:pl-2;
 }
 
 .btn {
