@@ -6,17 +6,15 @@ twitter:
 ---
 
 {% if page.url == "/" %}
-  <div class="featured-posts outer">
-    {% for post in site.posts %}
-      {% if post.featured == true %}
-        {% include featuredbox.html %}
-      {% endif %}
-    {% endfor %}
-  </div>
+  {% for post in site.posts %}
+    {% if post.featured == true %}
+      {% include featuredbox.html %}
+    {% endif %}
+  {% endfor %}
 {% endif %}
 
 {% if page.url == "/" %}
-  <div class="post-feed-title inner">Latest Articles</div>
+  <h2>Latest Articles</h2>
 {% endif %}
 
 {% for post in paginator.posts %}

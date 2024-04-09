@@ -1,13 +1,13 @@
-<article class="article prose-h2:mt-0">
+<article class="article article-excerpt prose-h3:my-0">
   <header class="article__header">
     <div class="article__meta">
       <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
         {{ post.date | date: "%B %-d, %Y" }}
       </time>
     </div>
-    <h2>
+    <h3>
       <a class="not-prose text-gray-900" href="{{ post.url | absolute_url }}" rel="bookmark">{{ post.title }}</a>
-    </h2>
+    </h3>
   </header>
 
   {% if post.featured_image_thumbnail %}

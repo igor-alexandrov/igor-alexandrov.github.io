@@ -21,13 +21,18 @@ a {
 
 .article {
   @apply mx-auto bg-white;
+  @apply my-10 lg:my-12;
   @apply prose lg:prose-xl max-w-6xl w-full;
   @apply prose-code:before:hidden prose-code:after:hidden prose-code:bg-amber-50 prose-code:p-1 prose-code:rounded-md prose-code:font-ubuntu-mono;
   @apply prose-pre:rounded-lg prose-pre:bg-white prose-pre:border prose-pre:border-gray-500;
 }
 
 .article__header {
-  @apply my-10 lg:my-12;
+  @apply mb-10 lg:mb-12;
+}
+
+.article-excerpt .article__header {
+  @apply mb-5 lg:mb-6;
 }
 
 .article__meta {
