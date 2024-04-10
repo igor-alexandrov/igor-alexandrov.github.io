@@ -123,3 +123,19 @@ a {
 .speaking_opportunity__meta {
   @apply text-gray-500 uppercase text-sm;
 }
+
+.pagination {
+  @apply isolate inline-flex -space-x-px rounded-md shadow-sm;
+}
+
+.pagination > * {
+  @apply relative inline-flex items-center;
+  @apply first:rounded-l-md last:rounded-r-md;
+  @apply py-2 px-4 first:px-2 last:px-2;
+  @apply ring-1 ring-inset ring-gray-300;
+  @apply text-sm first:text-gray-400 last:text-gray-400;
+}
+
+.pagination > a:not(.pagination__item-current) {
+  @apply hover:bg-gray-50;
+}

@@ -75,8 +75,8 @@ plugins:
   - jekyll-og-image
 
 # Pagination
-paginate: 5
-paginate_path: /page:num/
+paginate: 2
+paginate_path: /page-:num/
 
 # Permalinks
 permalink: /blog/:title

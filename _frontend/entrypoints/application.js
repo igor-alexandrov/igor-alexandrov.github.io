@@ -14,7 +14,7 @@ import Reveal from "stimulus-reveal-controller";
 import ScrollProgress from "stimulus-scroll-progress";
 import TextareaAutogrow from 'stimulus-textarea-autogrow'
 
-import { createIcons, Menu, Twitter, Github, Youtube, Linkedin } from 'lucide';
+import { createIcons, Menu, Twitter, Github, Youtube, Linkedin, ChevronLeft, ChevronRight } from 'lucide';
 
 const application = Application.start();
 
@@ -29,6 +29,8 @@ createIcons({
     Twitter,
     Github,
     Youtube,
-    Linkedin
+    Linkedin,
+    ChevronLeft,
+    ChevronRight
   }
 });
