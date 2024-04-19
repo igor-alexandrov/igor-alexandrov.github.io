@@ -20,11 +20,11 @@ a {
 }
 
 .container {
-  @apply divide-y-2 divide-ruby-600;
+  /* @apply divide-y-2 divide-ruby-600; */
 }
 
 .container > * {
-  @apply py-10 lg:py-12;
+  @apply mt-10 lg:mt-20;
 }
 
 .article {

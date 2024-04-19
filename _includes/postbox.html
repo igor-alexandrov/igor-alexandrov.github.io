@@ -38,7 +38,7 @@
       <p>{{ post.excerpt | strip_html }}</p>
     </div>
   {% else %}
-    <p>{{ post.excerpt | strip_html | truncatewords:40 }}</p>
+    <p>{{ post.excerpt | strip_html }}</p>
   {% endif %}
 
   <div class="tags">
