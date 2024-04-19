@@ -1,7 +1,6 @@
-<article class="article prose-h2:mt-0 border-b-2 border-ruby-600 py-10">
+<article class="article prose-h2:mt-0">
   <header class="article__header">
     <div class="article__meta">
-      <span>Featured</span>
       <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
         {{ post.date | date: "%B %-d, %Y" }}
       </time>
@@ -34,9 +33,9 @@
       {% endfor %} {% endif %}
     </div>
 
-    <p class="read-more">
-      <a class="btn btn-lg" href="{{ site.baseurl }}{{ post.url }}">Continue Reading</a>
-    </p>
+    <div class="read-more">
+      <a class="btn btn-lg inline-block" href="{{ site.baseurl }}{{ post.url }}">Continue Reading</a>
+    </div>
     {% else %}
       <p>{{ post.content }}</p>
     {% endif %}

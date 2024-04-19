@@ -24,9 +24,22 @@
         alt="{{ post.title }}"
       />
     </a>
-  {% endif %}
+  {% elsif post.youtube_embed %}
+    <div>
+      <iframe
+        class="aspect-[16/9] w-full lg:float-left lg:w-6/12 lg:mr-8 lg:mt-2"
+        src="{{ post.youtube_embed }}"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
 
-  <p>{{ post.excerpt | strip_html | truncatewords:40 }}</p>
+      <p>{{ post.excerpt | strip_html }}</p>
+    </div>
+  {% else %}
+    <p>{{ post.excerpt | strip_html | truncatewords:40 }}</p>
+  {% endif %}
 
   <div class="tags">
     {% if post.tags.size > 0 %}

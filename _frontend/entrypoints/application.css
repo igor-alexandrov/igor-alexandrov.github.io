@@ -15,8 +15,16 @@ a {
   @apply text-ruby-700 hover:text-ruby-500;
 }
 
-.container {
+.wrapper {
   @apply mx-auto px-6 lg:px-8 max-w-6xl w-full bg-white;
+}
+
+.container {
+  @apply divide-y-2 divide-ruby-600;
+}
+
+.container > * {
+  @apply py-10 lg:py-12;
 }
 
 .article {

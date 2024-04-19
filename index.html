@@ -5,25 +5,30 @@ twitter:
   card: summary
 ---
 
-{% if page.url == "/" %}
-  {% for post in site.posts %}
-    {% if post.featured == true %}
-      {% include featuredbox.html %}
+<div class="container">
+  {% if page.url == "/" %}
+    {% for post in site.posts %}
+      {% if post.featured == true %}
+        <section class="section">
+          <h2 class="section-header text-2xl uppercase text-gray-400">Featured Article</h2>
+          {% include featuredbox.html %}
+        </section>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  <section class="posts">
+    {% if page.url == "/" %}
+      <h2 class="section-header text-2xl uppercase text-gray-400">Latest Articles</h2>
     {% endif %}
-  {% endfor %}
-{% endif %}
 
-{% if page.url == "/" %}
-  <h2>Latest Articles</h2>
-{% endif %}
+    {% for post in paginator.posts %}
+      {% include postbox.html %}
+    {% endfor %}
 
-<div class="posts">
-  {% for post in paginator.posts %}
-    {% include postbox.html %}
-  {% endfor %}
+    {% include pagination.html %}
+  </section>
 </div>
-
-{% include pagination.html %}
 
 {% if site.mailchimp_url %}
   {% include newsletter-box.html %}

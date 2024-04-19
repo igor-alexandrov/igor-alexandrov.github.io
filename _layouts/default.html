@@ -42,13 +42,13 @@
       {% include header.html %}
     {% endif %}
 
-    <div class="container">
+    <div class="wrapper">
       {{ content }}
     </div>
 
-    {% if paginator.total_posts > site.paginate %} {% endif %} {% include sidebar.html %}
-
     {% include analytics.html %}
+
+    {% include sidebar.html %}
 
     {% include footer.html %}
   </body>
