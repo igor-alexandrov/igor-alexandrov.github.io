@@ -9,7 +9,7 @@ twitter:
   {% if page.url == "/" %}
     {% for post in site.posts %}
       {% if post.featured == true %}
-        <section class="section">
+        <section>
           <h2 class="section-header text-2xl lg:text-4xl uppercase text-gray-600 text-center border-b-2 border-ruby-600 pb-4 lg:pb-6">Featured Article</h2>
           {% include featuredbox.html %}
         </section>
@@ -29,7 +29,3 @@ twitter:
     {% include pagination.html %}
   </section>
 </div>
-
-{% if site.mailchimp_url %}
-  {% include newsletter-box.html %}
-{% endif %}

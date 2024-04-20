@@ -19,11 +19,7 @@ a {
   @apply mx-auto px-6 lg:px-8 max-w-6xl w-full bg-white;
 }
 
-.container {
-  /* @apply divide-y-2 divide-ruby-600; */
-}
-
-.container > * {
+.container > section {
   @apply mt-10 lg:mt-20;
 }
 
@@ -65,7 +61,11 @@ a {
 }
 
 .btn {
-  @apply rounded-full no-underline cursor-pointer bg-ruby-700 px-2.5 py-1.5 text-sm font-semibold text-white shadow-md hover:bg-ruby-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ruby-600;
+  @apply rounded-full no-underline cursor-pointer;
+  @apply px-2.5 py-1.5;
+  @apply bg-ruby-700 hover:bg-ruby-500 text-white hover:text-white shadow-md;
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ruby-600;
+  @apply text-sm font-semibold text-center;
 }
 
 .btn-xs {
@@ -77,7 +77,7 @@ a {
 }
 
 .btn-md {
-  @apply px-3 py-2;
+  @apply px-4 py-3 text-base;
 }
 
 .btn-lg {
@@ -88,12 +88,17 @@ a {
   @apply w-full;
 }
 
+.btn-readmore {
+  @apply px-4 py-3 text-base w-full inline-block;
+  @apply lg:px-9 lg:py-4 lg:text-lg lg:w-auto;
+}
+
 .tags {
-  @apply flex justify-center md:justify-start space-x-4 flex-wrap
+  @apply flex justify-center md:justify-start space-x-4 flex-wrap;
 }
 
 .tags__item {
-  @apply before:content-['#'] lowercase text-nowrap
+  @apply before:content-['#'] lowercase text-nowrap;
 }
 
 .form__group {
