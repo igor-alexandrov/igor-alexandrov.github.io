@@ -21,17 +21,17 @@
     {% endif %}
   {% endcapture %}
 
-  <body data-controller="reveal" class="flex flex-col bg-white font-lato">
+  <body data-controller="reveal" class="flex flex-col bg-white font-lato pointer-events-auto">
     {% if page.url == "/" %}
-      <div class="hero-wrap">
+      <div class="hero-wrap relative">
         {% if site.cover_image %}
-          <div class="hero-wrap-bg" style="background-image: url({{ site.baseurl }}/assets/images/{{ site.cover_image }})"></div>
+          <div class="bg-cover bg-center left-0 bottom-0 right-0 top-0 absolute opacity-15 -z-10" style="background-image: url({{ site.baseurl }}/assets/images/{{ site.cover_image }})"></div>
         {% endif %}
 
         {% include header.html %}
 
         {% if site.author %}
-          <section class="hero outer fadeInDown delay_05s">
+          <section class="hero outer fadeInDown">
             <div class="inner">
               {% include author.html %}
             </div>

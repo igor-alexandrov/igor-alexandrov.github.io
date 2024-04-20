@@ -157,3 +157,11 @@ a {
 .pagination > a.pagination__item-current {
   @apply bg-ruby-700 hover:bg-ruby-500 text-white focus:text-white;
 }
+
+.social-links {
+  @apply flex justify-center space-x-6 md:order-2;
+}
+
+.social-links__item {
+  @apply p-2 rounded-full hover:bg-ruby-600 text-gray-400 hover:text-white transition duration-150;
+}
