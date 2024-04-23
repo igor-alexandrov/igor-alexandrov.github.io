@@ -21,9 +21,9 @@
     {% endif %}
   {% endcapture %}
 
-  <body data-controller="reveal" class="flex flex-col bg-white font-lato pointer-events-auto">
+  <body data-controller="reveal" class="flex flex-col bg-white font-lato pointer-events-auto -center">
     {% if page.url == "/" %}
-      <div class="hero-wrap relative">
+      <div class="pb-10 relative border-b border-gray-200">
         {% if site.cover_image %}
           <div class="bg-cover bg-center left-0 bottom-0 right-0 top-0 absolute opacity-15 -z-10" style="background-image: url({{ site.baseurl }}/assets/images/{{ site.cover_image }})"></div>
         {% endif %}
@@ -31,8 +31,8 @@
         {% include header.html %}
 
         {% if site.author %}
-          <section class="hero outer fadeInDown">
-            <div class="inner">
+          <section>
+            <div class="wrapper">
               {% include author.html %}
             </div>
           </section>

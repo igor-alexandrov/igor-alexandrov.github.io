@@ -1,6 +1,12 @@
 <header>
   <nav class="mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-    <a href="{{ site.baseurl || '/' }}" class="text-2xl font-bold">{{ site.name }}</a>
+    {% if page.url == "/" %}
+      <h1>
+        <a href="{{ site.baseurl || '/' }}" class="text-2xl font-bold">{{ site.name }}</a>
+      </h1>
+    {% else %}
+      <a href="{{ site.baseurl || '/' }}" class="text-2xl font-bold">{{ site.name }}</a>
+    {% endif %}
 
     <div class="flex flex-auto justify-end lg:gap-x-8">
       <div class="hidden lg:flex gap-x-8">

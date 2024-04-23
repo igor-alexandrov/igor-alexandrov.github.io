@@ -16,7 +16,7 @@ a {
 }
 
 .wrapper {
-  @apply mx-auto px-6 lg:px-8 max-w-6xl w-full bg-white;
+  @apply mx-auto px-6 lg:px-8 max-w-6xl w-full ;
 }
 
 .container > section {
@@ -61,27 +61,27 @@ a {
 }
 
 .btn {
-  @apply rounded-full no-underline cursor-pointer;
-  @apply px-2.5 py-1.5;
+  @apply rounded-xl no-underline cursor-pointer;
+  @apply px-5 py-2.5;
   @apply bg-ruby-700 hover:bg-ruby-500 text-white hover:text-white shadow-md;
   @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ruby-600;
   @apply text-sm font-semibold text-center;
 }
 
 .btn-xs {
-  @apply px-2 py-1 text-xs;
+  @apply px-3 py-2 text-xs;
 }
 
 .btn-sm {
-  @apply px-2 py-1 text-sm
-}
-
-.btn-md {
-  @apply px-4 py-3 text-base;
+  @apply px-3 py-2 text-sm
 }
 
 .btn-lg {
-  @apply px-9 py-4 text-lg;
+  @apply px-5 py-3 text-base;
+}
+
+.btn-xl {
+  @apply px-6 py-3.5 text-base;
 }
 
 .btn-wide {
@@ -163,5 +163,9 @@ a {
 }
 
 .social-links__item {
-  @apply p-2 rounded-full hover:bg-ruby-600 text-gray-400 hover:text-white transition duration-150;
+  @apply p-2 rounded-full hover:bg-ruby-600 text-gray-600 hover:text-white transition;
+}
+
+.social-links__item--extended {
+  @apply lg:px-4;
 }
