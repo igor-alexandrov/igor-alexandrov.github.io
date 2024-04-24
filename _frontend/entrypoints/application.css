@@ -11,6 +11,10 @@
   }
 }
 
+body.sidebar--opened .page {
+  @apply -translate-x-[600px];
+}
+
 a {
   @apply text-ruby-700 hover:text-ruby-500;
 }

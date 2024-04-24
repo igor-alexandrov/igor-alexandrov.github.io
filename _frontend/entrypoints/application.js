@@ -10,7 +10,8 @@ import "~/prism";
 
 import { Application } from "@hotwired/stimulus";
 import ScrollTo from "stimulus-scroll-to";
-import Reveal from "stimulus-reveal-controller";
+// import Reveal from "stimulus-reveal-controller";
+import Reveal from "../controllers/reveal";
 import ScrollProgress from "stimulus-scroll-progress";
 import TextareaAutogrow from 'stimulus-textarea-autogrow'
 
