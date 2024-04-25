@@ -1,20 +1,28 @@
-<div class="hidden" data-reveal-target="item">
-  <div
-    data-action="click->reveal#toggle"
-    class="absolute inset-0 w-full h-full bg-gray-600 opacity-75"
-  ></div>
-  <aside id="slideover" class="absolute w-96 h-full top-0 right-0 bg-green-400">
+<div data-action="click->reveal#toggle" class="overlay"></div>
+<aside class="sidebar absolute w-1/3 bottom-0 top-0 right-0 bg-gray-500">
+  <div>
     <div>
-      <div>
-        <button
-          data-action="click->reveal#toggle"
-          id="sidebar-hide"
-          class="sidebar-toggle btn-icon"
-        >
-          <span class="screen-reader-text">Close Sidebar</span
-          ><span aria-hidden="true" class="icon-close"></span>
-        </button>
-      </div>
+      <button
+        data-action="click->reveal#toggle"
+        id="sidebar-hide"
+        class="sidebar-toggle btn-icon"
+      >
+        <span class="screen-reader-text">Close Sidebar</span
+        ><span aria-hidden="true" class="icon-close"></span>
+      </button>
+
+      <nav id="sidebar-navigation" class="widget site-navigation">
+        <h2 class="widget-title">Explore Site</h2>
+        <ul class="menu">
+          {% for link in site.navigation %}
+          <li class="menu-item">
+            <a href="{{ link.url }}">{{ link.text }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      {% include widgets.html %}
     </div>
-  </aside>
-</div>
+  </div>
+</aside>
