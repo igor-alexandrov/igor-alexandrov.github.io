@@ -1,0 +1,25 @@
+.sidebar {
+  @apply invisible;
+  @apply translate-x-full transition-all duration-500 ease-in-out delay-0;
+  @apply absolute bottom-0 top-0 right-0 bg-gray-600;
+  @apply w-full lg:w-1/3;
+}
+
+body.sidebar--opened .sidebar {
+  @apply visible;
+  @apply translate-x-0;
+  @apply z-50;
+}
+
+body.sidebar--opened .overlay {
+  @apply visible opacity-70;
+  @apply z-30;
+}
+
+.sidebar .tags {
+  @apply justify-center;
+}
+
+.sidebar .tags__item {
+  @apply text-white text-lg;
+}
