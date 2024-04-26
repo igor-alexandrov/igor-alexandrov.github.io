@@ -10,17 +10,16 @@ import "~/prism";
 
 import { Application } from "@hotwired/stimulus";
 import ScrollTo from "stimulus-scroll-to";
-// import Reveal from "stimulus-reveal-controller";
-import Reveal from "../controllers/reveal";
+import SlideOver from "../controllers/slide-over-controller";
 import ScrollProgress from "stimulus-scroll-progress";
 import TextareaAutogrow from 'stimulus-textarea-autogrow'
 
-import { createIcons, Menu, Twitter, Github, Youtube, Linkedin, ChevronLeft, ChevronRight, CircleArrowRight } from 'lucide';
+import { createIcons, Menu, Twitter, Github, Youtube, Linkedin, ChevronLeft, ChevronRight, CircleArrowRight, X } from 'lucide';
 
 const application = Application.start();
 
 application.register("scroll-to", ScrollTo);
-application.register("reveal", Reveal);
+application.register("slide-over", SlideOver);
 application.register("scroll-progress", ScrollProgress);
 application.register('textarea-autogrow', TextareaAutogrow);
 
@@ -33,6 +32,7 @@ createIcons({
     Linkedin,
     ChevronLeft,
     ChevronRight,
-    CircleArrowRight
+    CircleArrowRight,
+    X
   }
 });

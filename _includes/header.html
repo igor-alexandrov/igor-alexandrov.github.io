@@ -9,16 +9,16 @@
     {% endif %}
 
     <div class="flex flex-auto justify-end lg:gap-x-8">
-      <div class="hidden lg:flex gap-x-8">
+      <div class="hidden lg:flex gap-x-8 items-center">
         {% for link in site.navigation %}
           <a href="{{ link.url }}" class="text-lg font-semibold text-gray-900">{{ link.text }}</a>
         {% endfor %}
       </div>
-      <div class="flex">
+      <div>
         <button
           type="button"
-          class="text-gray-700"
-          data-action="click->reveal#toggle"
+          class="p-2.5 rounded-full hover:bg-ruby-600 text-gray-600 hover:text-white transition"
+          data-action="click->slide-over#toggle"
         >
           <span class="sr-only">Open menu</span>
           <i data-lucide="menu"></i>

@@ -15,15 +15,13 @@
   @apply relative;
   @apply z-[1];
   @apply transition-all duration-500 ease-in-out delay-0;
-  /* @apply w-full; */
 }
 
 .sidebar {
   @apply invisible;
-  /* @apply z-10; */
-  @apply translate-x-full;
-  /* @apply w-0; */
-  @apply transition-all duration-500 ease-in-out delay-0;
+  @apply translate-x-full transition-all duration-500 ease-in-out delay-0;
+  @apply absolute bottom-0 top-0 right-0 bg-gray-600;
+  @apply w-full lg:w-1/3;
 }
 
 .overlay {
@@ -37,8 +35,7 @@ body.sidebar--opened {
 }
 
 body.sidebar--opened .page {
-  @apply -translate-x-1/3;
-  /* z-index: 9998; */
+  @apply -translate-x-full lg:-translate-x-1/3;
   @apply left-0 top-0;
   @apply pointer-events-none
 }
@@ -53,8 +50,6 @@ body.sidebar--opened .overlay {
   @apply visible opacity-70;
   @apply z-30;
 }
-
-
 
 a {
   @apply text-ruby-700 hover:text-ruby-500;
@@ -133,6 +128,10 @@ a {
   @apply w-full;
 }
 
+.btn-rounded {
+  @apply p-2.5 rounded-full;
+}
+
 .btn-readmore {
   @apply px-4 py-3 text-base w-full inline-block;
   @apply lg:px-9 lg:py-4 lg:text-lg lg:w-auto;
@@ -208,7 +207,7 @@ a {
 }
 
 .social-links__item {
-  @apply p-2 rounded-full hover:bg-ruby-600 text-gray-600 hover:text-white transition;
+  @apply p-2.5 rounded-full hover:bg-ruby-600 text-gray-600 hover:text-white transition;
 }
 
 .social-links__item--extended {
