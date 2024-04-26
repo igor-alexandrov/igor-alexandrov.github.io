@@ -1,15 +1,12 @@
 # Site setings
 name: "Ruby & Beyond"
-description: "Ruby/Crystal developer, Open Source contributor, JetRockets CTO and co-founder, and a proud father."
 meta_description: "Igor Alexandrov – Ruby/Crystal developer, Open Source contributor, JetRockets CTO and co-founder, and a proud father."
 # logo: "assets/images/logo.png"
 favicon: "assets/images/favicon.ico"
 timezone: Asia/Tbilisi
 url: https://igor.works
 disqus: "igor-alexandrov"
-# mailchimp_url: "//justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117"
 cover_image: bc_3.jpg
-# Add your GA Tracking Id
 ga_analytics: G-XFQY6HN501
 page_excerpts: true
 
@@ -19,7 +16,7 @@ author:
   image: "igor.jpeg"
   greetings: "Ruby & Beyond"
   description: "Hello, 👋. My name is Igor Alexandrov.<br/>I am CTO of JetRockets and a software engineer with more than 15 years of experience."
-  bio: "Igor is a Ruby/Rails and Crystal engineer, Open Source contributor, JetRockets CTO and co-founder, and a proud father."
+  bio: "I am a Ruby/Rails and Crystal engineer, Open Source contributor, JetRockets CTO, and co-founder. I have been working with Ruby since 2008 and with Rails since 2009, and my overall commercial experience in programming is 20 years. I started working with Rails when it was at version 2.2 and never stopped since then."
   twitter: "@igor_alexandrov"
 
 # Contact form setings
@@ -41,7 +38,6 @@ github: "igor-alexandrov"
 # pinterest: "username"
 linkedin: "igor-alexandrov"
 youtube: "@RubyAndBeyond"
-# producthunt: "@username"
 
 # Navigation
 navigation:

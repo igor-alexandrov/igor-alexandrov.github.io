@@ -1,28 +1,25 @@
 <div data-action="click->slide-over#toggle" class="overlay"></div>
 <aside class="sidebar">
-  <div class="overflow-auto h-full relative">
-    <div class="p-6">
-      <button
-        type="button"
-        class="btn btn-rounded"
-        data-action="click->slide-over#toggle"
-      >
-        <span class="sr-only">Open menu</span>
-        <i data-lucide="x"></i>
-      </button>
+  <div class="overflow-auto h-full relative p-6">
+    <button
+      type="button"
+      class="btn btn-rounded absolute right-6 top-6"
+      data-action="click->slide-over#toggle"
+    >
+      <span class="sr-only">Close dialog</span>
+      <i data-lucide="x"></i>
+    </button>
 
-      <nav id="sidebar-navigation" class="widget site-navigation">
-        <h2 class="widget-title">Explore Site</h2>
-        <ul class="menu">
-          {% for link in site.navigation %}
-          <li class="menu-item">
-            <a href="{{ link.url }}">{{ link.text }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
+    <nav id="sidebar-navigation" class="widget site-navigation">
+      <ul class="menu">
+        {% for link in site.navigation %}
+        <li class="menu-item">
+          <a href="{{ link.url }}">{{ link.text }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
 
-      {% include widgets.html %}
-    </div>
+    {% include widgets.html %}
   </div>
 </aside>

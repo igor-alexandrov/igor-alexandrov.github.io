@@ -10,7 +10,7 @@ twitter:
     {% for post in site.posts %}
       {% if post.featured == true %}
         <section>
-          <h2 class="section-header text-2xl lg:text-4xl uppercase text-gray-600 text-center border-b-2 border-ruby-600 pb-4 lg:pb-6">Featured Article</h2>
+          <h2 class="text-2xl lg:text-4xl uppercase text-gray-600 text-center border-b-2 border-ruby-600 pb-4 lg:pb-6">Featured Article</h2>
           {% include featuredbox.html %}
         </section>
       {% endif %}
@@ -19,7 +19,7 @@ twitter:
 
   <section class="posts">
     {% if page.url == "/" %}
-      <h2 class="section-header text-2xl lg:text-4xl uppercase text-gray-600 text-center border-b-2 border-ruby-600 pb-4 lg:pb-6">Latest Articles</h2>
+      <h2 class="text-2xl lg:text-4xl uppercase text-gray-600 text-center border-b-2 border-ruby-600 pb-4 lg:pb-6">Latest Articles</h2>
     {% endif %}
 
     {% for post in paginator.posts %}
