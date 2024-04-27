@@ -21,14 +21,6 @@ body.sidebar--opened .overlay {
   @apply text-white hover:text-ruby-500;
 }
 
-.sidebar .tags {
-  @apply justify-center;
-}
-
-.sidebar .tags__item {
-  @apply text-lg;
-}
-
 .sidebar section {
   @apply mt-5 lg:mt-10;
 }
@@ -59,4 +51,12 @@ body.sidebar--opened .overlay {
 
 .sidebar .recent-article__title {
   @apply text-lg font-semibold;
+}
+
+.sidebar-section__content-tags {
+  @apply flex justify-center space-x-4 flex-wrap;
+}
+
+.sidebar .tags__item {
+  @apply text-lg text-center;
 }
