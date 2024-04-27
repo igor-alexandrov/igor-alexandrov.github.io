@@ -33,10 +33,30 @@ body.sidebar--opened .overlay {
   @apply mt-5 lg:mt-10;
 }
 
-.slide-over-section__header {
-  @apply text-lg text-center border-b border-ruby-600 pb-2 mb-4 uppercase;
+.sidebar-section__header {
+  @apply text-lg text-center border-b border-ruby-600 pb-2 uppercase;
 }
 
-.slide-over-section__recent {
+.sidebar-section__content {
+  @apply mt-6;
+}
+
+.sidebar-section__content-about {
+  @apply text-gray-300;
+}
+
+.sidebar-section__content-recent {
   @apply space-y-5;
+}
+
+.sidebar .recent-article__meta {
+  @apply text-gray-300 uppercase text-xs mb-1 space-x-2;
+}
+
+.sidebar .recent-article__meta > * {
+  @apply after:content-['/'] last:after:content-[''] after:pl-2;
+}
+
+.sidebar .recent-article__title {
+  @apply text-lg font-semibold;
 }
