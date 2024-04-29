@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "../stylesheets/prism.css";
+@import "../stylesheets/header.css";
 @import "../stylesheets/sidebar.css";
 
 @tailwind base;
@@ -82,6 +83,17 @@ a {
 .article__meta > * {
   @apply after:content-['/'] last:after:content-[''] after:pl-2;
 }
+
+.article_header__title {
+  @apply pb-2;
+}
+
+.article__header::after {
+  /* @apply pl-4 border-l-2 border-ruby-600; */
+  @apply content-[''];
+  @apply block w-32 h-1 bg-ruby-600 mt-2;
+}
+
 
 .btn {
   @apply rounded-xl no-underline cursor-pointer;

@@ -29,16 +29,25 @@ body.sidebar--opened .overlay {
   @apply mt-5 lg:mt-10;
 }
 
-.sidebar-section:first-child {
+/* .sidebar-section:first-child {
   @apply mt-0;
-}
+} */
 
 .sidebar-section__header {
-  @apply text-lg text-center border-b border-ruby-600 pb-2 uppercase;
+  @apply text-lg text-left pb-2 uppercase font-semibold;
+}
+
+.sidebar-section__header::after {
+  @apply content-[''];
+  @apply block w-16 h-[2px] bg-ruby-600 mt-2;
 }
 
 .sidebar-section__content {
   @apply mt-6;
+}
+
+.sidebar-section__content-navigation {
+  @apply text-lg font-semibold;
 }
 
 .sidebar-section__content-about {

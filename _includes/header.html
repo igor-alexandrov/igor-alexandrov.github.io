@@ -1,25 +1,27 @@
-<header>
-  <nav class="mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8 relative" aria-label="Global">
+<header class="header">
+  <nav class="header__nav" aria-label="Global">
+    {% assign root = site.baseurl | append: '/' %}
+
     {% if page.url == "/" %}
-      <h1>
-        <a href="{{ site.baseurl || '/' }}" class="text-2xl font-bold">{{ site.name }}</a>
-      </h1>
+      <a href="{{ root }}" class="nav__site_name">
+        <h1>{{ site.name }}</h1>
+      </a>
     {% else %}
-      <a href="{{ site.baseurl || '/' }}" class="text-2xl font-bold">{{ site.name }}</a>
+      <a href="{{ root }}" class="nav__site_name">{{ site.name }}</a>
     {% endif %}
 
-    <div class="flex flex-auto justify-end lg:gap-x-8">
-      <div class="hidden lg:flex gap-x-8 items-center">
+    <div class="nav__container">
+      <div class="nav__menu">
         {% for link in site.navigation %}
-          <a href="{{ link.url }}" class="text-lg font-semibold text-gray-900">{{ link.text }}</a>
+          {% if page.url == link.url %}
+            <a href="{{ link.url }}" class="nav__link nav__link-current">{{ link.text }}</a>
+          {% else %}
+            <a href="{{ link.url }}" class="nav__link">{{ link.text }}</a>
+          {% endif %}
         {% endfor %}
       </div>
       <div>
-        <button
-          type="button"
-          class="p-2.5 rounded-full hover:bg-ruby-600 text-gray-600 hover:text-white transition"
-          data-action="click->slide-over#toggle"
-        >
+        <button type="button" class="nav__burger" data-action="click->slide-over#toggle">
           <span class="sr-only">Open menu</span>
           <i data-lucide="menu"></i>
         </button>
