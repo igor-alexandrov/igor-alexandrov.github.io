@@ -21,8 +21,16 @@ body.sidebar--opened .overlay {
   @apply text-white hover:text-ruby-500;
 }
 
-.sidebar section {
+.sidebar-container {
+  @apply p-6;
+}
+
+.sidebar-section {
   @apply mt-5 lg:mt-10;
+}
+
+.sidebar-section:first-child {
+  @apply mt-0;
 }
 
 .sidebar-section__header {
