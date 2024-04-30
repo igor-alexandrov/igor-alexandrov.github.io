@@ -4,13 +4,13 @@ layout: default
 
 <article class="line-numbers article" itemscope itemtype="https://schema.org/Article">
   <header class="article__header">
-    <div class="header__meta">
+    <div class="article__meta">
       <time itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}" datetime="{{ page.date | date: "%Y-%m-%d" }}">
         {{ page.date | date: "%B %-d, %Y" }}
       </time>
     </div>
 
-    <h1 class="header__title" itemprop="headline">{{ page.title }}</h1>
+    <h1 class="article__title" itemprop="headline">{{ page.title }}</h1>
   </header>
 
   <section class="article__content">{{content}}</section>
@@ -18,12 +18,7 @@ layout: default
   <section class="article__footer">
     {% include page/tags.html %}
     {% include page/share.html %}
+    {% include page/read_more.html %}
     {% include page/disqus.html %}
   </section>
-
-  <section class="md:flex md:items-center md:justify-between mt-10">
-
-  </section>
-
-
 </article>

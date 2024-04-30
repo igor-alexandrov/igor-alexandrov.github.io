@@ -1,5 +1,5 @@
 {% if page.tags.size > 0 %}
-  <div class="article__tags">
+  <div class="tags tags-article">
     {% for tag in page.tags %}
       <a class="tags__item" href="{{ site.baseurl }}/archive#{{ tag | cgi_escape }}" rel="tag">{{ tag }}</a>
     {% endfor %}

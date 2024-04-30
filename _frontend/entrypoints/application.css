@@ -3,6 +3,9 @@
 @import "../stylesheets/header.css";
 @import "../stylesheets/sidebar.css";
 @import "../stylesheets/article.css";
+@import "../stylesheets/tags.css";
+@import "../stylesheets/read_more.css";
+@import "../stylesheets/comments.css";
 
 @tailwind base;
 @tailwind components;
