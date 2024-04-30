@@ -111,14 +111,6 @@ a {
   @apply lg:px-9 lg:py-4 lg:text-lg lg:w-auto;
 }
 
-.tags {
-  @apply flex justify-center md:justify-start space-x-4 flex-wrap;
-}
-
-.tags__item {
-  @apply before:content-['#'] lowercase text-nowrap;
-}
-
 .form__group {
   @apply block flex flex-col-reverse w-full;
 }

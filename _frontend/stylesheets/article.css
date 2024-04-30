@@ -13,11 +13,31 @@
   @apply block w-32 h-1 bg-ruby-600 mt-2;
 }
 
-.article_header__meta {
+.header__meta {
   @apply text-gray-500 uppercase text-sm mb-5 space-x-2;
 }
 
-.article_header__title {
+.header__title {
   /* @apply pb-2; */
   @apply leading-tight;
+}
+
+.article__footer {
+  @apply grid grid-cols-1 lg:grid-cols-2 mt-10 gap-10;
+}
+
+.article__tags {
+  @apply flex justify-center md:justify-start space-x-4 flex-wrap;
+}
+
+.tags__item {
+  @apply before:content-['#'] lowercase text-nowrap;
+}
+
+.article__share {
+  @apply flex justify-center md:justify-end space-x-4;
+}
+
+.article__comments {
+  @apply lg:col-span-2;
 }
