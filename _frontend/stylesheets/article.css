@@ -1,0 +1,23 @@
+.article {
+  @apply mx-auto bg-white;
+  @apply my-10 lg:my-12;
+  @apply prose lg:prose-xl max-w-6xl w-full;
+  @apply prose-code:before:hidden prose-code:after:hidden prose-code:bg-amber-50 prose-code:p-1 prose-code:rounded-md prose-code:font-ubuntu-mono;
+  @apply prose-pre:rounded-lg prose-pre:bg-white prose-pre:border prose-pre:border-gray-500;
+  @apply prose-h1:mb-0;
+}
+
+.article__header::after {
+  /* @apply pl-4 border-l-2 border-ruby-600; */
+  @apply content-[''];
+  @apply block w-32 h-1 bg-ruby-600 mt-2;
+}
+
+.article_header__meta {
+  @apply text-gray-500 uppercase text-sm mb-5 space-x-2;
+}
+
+.article_header__title {
+  /* @apply pb-2; */
+  @apply leading-tight;
+}

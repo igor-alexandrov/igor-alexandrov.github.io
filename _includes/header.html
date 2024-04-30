@@ -13,7 +13,7 @@
     <div class="nav__container">
       <div class="nav__menu">
         {% for link in site.navigation %}
-          {% if page.url == link.url %}
+          {% if page.url == link.url or link.url contains '/archive' and page.url contains '/blog/' %}
             <a href="{{ link.url }}" class="nav__link nav__link-current">{{ link.text }}</a>
           {% else %}
             <a href="{{ link.url }}" class="nav__link">{{ link.text }}</a>

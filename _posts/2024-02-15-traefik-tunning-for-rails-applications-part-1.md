@@ -1,5 +1,5 @@
 ---
-title: Traefik Tuning for Rails Applications (part 1)
+title: Traefik Tuning for Rails Applications (part 1)
 layout: post
 tags:
   - Rails
