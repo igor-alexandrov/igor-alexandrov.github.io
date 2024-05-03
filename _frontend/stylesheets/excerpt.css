@@ -17,7 +17,7 @@
   @apply text-gray-900;
 }
 
-.excerpt__content {
+.excerpt__content-video {
   @apply min-h-80;
 }
 

@@ -10,22 +10,30 @@
     </h3>
   </header>
 
-  <div class="excerpt__content">
-    {% if post.featured_image_thumbnail %}
+  {% if post.featured_image_thumbnail %}
+    <div class="excerpt__content">
       <a href="{{ post.url }}">
         <img
           src="{% if post.featured_image_thumbnail contains ' :// ' %}{{ post.featured_image_thumbnail }}{% else %}{{ post.featured_image_thumbnail | absolute_url }}{% endif %}"
           alt="{{ post.title }}"
         />
       </a>
-    {% elsif post.featured_image %}
+
+      <p class="">{{ post.excerpt | strip_html }}</p>
+    </div>
+  {% elsif post.featured_image %}
+    <div class="excerpt__content">
       <a href="{{ post.url }}">
         <img
           src="{% if post.featured_image contains ' :// ' %}{{ post.featured_image }}{% else %}{{ post.featured_image | absolute_url }}{% endif %}"
           alt="{{ post.title }}"
         />
       </a>
-    {% elsif post.youtube_embed %}
+
+      <p class="">{{ post.excerpt | strip_html }}</p>
+    </div>
+  {% elsif post.youtube_embed %}
+    <div class="excerpt__content excerpt__content-video">
       <iframe
         class="aspect-[16/9] w-full lg:float-left lg:w-6/12 lg:mr-8 lg:mt-2"
         src="{{ post.youtube_embed }}"
@@ -36,10 +44,12 @@
       ></iframe>
 
       <p class="">{{ post.excerpt | strip_html }}</p>
-    {% else %}
+    </div>
+  {% else %}
+    <div class="excerpt__content">
       <p>{{ post.excerpt | strip_html }}</p>
-    {% endif %}
-  </div>
+    </div>
+  {% endif %}
 
   <div class="excerpt__tags tags">
     {% if post.tags.size > 0 %}
