@@ -7,18 +7,18 @@
   @apply prose-h1:mb-0;
 }
 
+.article__header {
+  @apply mb-10 lg:mb-12;
+}
+
 .article__header::after {
   /* @apply pl-4 border-l-2 border-ruby-600; */
   @apply content-[''];
   @apply block w-32 h-1 bg-ruby-600 mt-2;
 }
 
-.article__meta {
-  @apply text-gray-500 uppercase text-sm mb-5 space-x-2;
-}
-
 .article__title {
-  /* @apply pb-2; */
+  @apply mt-5;
   @apply leading-tight;
 }
 

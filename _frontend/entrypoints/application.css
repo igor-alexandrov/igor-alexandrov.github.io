@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import "../stylesheets/prism.css";
 @import "../stylesheets/header.css";
+@import "../stylesheets/btn.css";
 @import "../stylesheets/sidebar.css";
 @import "../stylesheets/article.css";
+@import "../stylesheets/excerpt.css";
 @import "../stylesheets/tags.css";
 @import "../stylesheets/read_more.css";
 @import "../stylesheets/comments.css";
+@import "../stylesheets/prism.css";
 
 @tailwind base;
 @tailwind components;
@@ -55,64 +57,22 @@ a {
   @apply space-y-10 lg:space-y-14;
 }
 
-.article__excerpt {
-  @apply mx-auto bg-white;
-  @apply prose lg:prose-xl max-w-6xl w-full;
-  @apply prose-h3:my-0 prose-p:my-4
+.section__title {
+  @apply text-2xl lg:text-4xl uppercase text-gray-600 text-center border-b-2 border-ruby-600 pb-4 lg:pb-6;
 }
 
-.article__header {
-  @apply mb-10 lg:mb-12;
+.meta {
+  @apply text-gray-500 uppercase text-sm space-x-2;
 }
 
-.article__header-condensed {
-  @apply mb-4;
-}
-
-.article__meta-condensed {
-  @apply mb-4
-}
-.article__meta > * {
+.meta > * {
   @apply after:content-['/'] last:after:content-[''] after:pl-2;
 }
 
+/* .article__meta-condensed {
+  @apply mb-4
+} */
 
-.btn {
-  @apply rounded-xl no-underline cursor-pointer;
-  @apply px-5 py-2.5;
-  @apply bg-ruby-700 hover:bg-ruby-500 text-white hover:text-white shadow-md;
-  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ruby-600;
-  @apply text-sm font-semibold text-center;
-}
-
-.btn-xs {
-  @apply px-3 py-2 text-xs;
-}
-
-.btn-sm {
-  @apply px-3 py-2 text-sm
-}
-
-.btn-lg {
-  @apply px-5 py-3 text-base;
-}
-
-.btn-xl {
-  @apply px-6 py-3.5 text-base;
-}
-
-.btn-wide {
-  @apply w-full;
-}
-
-.btn-rounded {
-  @apply p-2.5 rounded-full;
-}
-
-.btn-readmore {
-  @apply px-4 py-3 text-base w-full inline-block;
-  @apply lg:px-9 lg:py-4 lg:text-lg lg:w-auto;
-}
 
 .form__group {
   @apply block flex flex-col-reverse w-full;
