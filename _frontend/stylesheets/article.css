@@ -23,7 +23,7 @@
 }
 
 .article__footer {
-  @apply grid grid-cols-1 lg:grid-cols-2 mt-10 gap-6 lg:gap-12;
+  @apply grid grid-cols-1 lg:grid-cols-2 mt-10 gap-6 lg:gap-20;
 }
 
 .article__share {

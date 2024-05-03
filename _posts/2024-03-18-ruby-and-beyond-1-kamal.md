@@ -11,6 +11,6 @@ hidden: false
 youtube_embed: https://www.youtube.com/embed/4vkYwfCkj3c?si=HOd99y0NlL6GUieK
 ---
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+In this episode, I explore Basecamp's Kamal codebase. Since this is the first video on the channel, I try to explain why I decided to start it, what motivates me, and what I plan to record in the future.
 
 <!--more-->

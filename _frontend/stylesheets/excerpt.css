@@ -6,19 +6,19 @@
 }
 
 .excerpt__header {
-  @apply mb-10 ;
-}
-
-.excerpt__header-condensed {
-  @apply mb-4;
+  @apply mb-6 ;
 }
 
 .excerpt__title {
-  @apply mt-5;
+  @apply mt-2;
 }
 
 .excerpt__title > a {
   @apply text-gray-900;
+}
+
+.excerpt__content {
+  @apply min-h-80;
 }
 
 .excerpt__tags {

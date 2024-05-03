@@ -7,6 +7,8 @@
 @import "../stylesheets/tags.css";
 @import "../stylesheets/read_more.css";
 @import "../stylesheets/comments.css";
+@import "../stylesheets/forms.css";
+@import "../stylesheets/pagination.css";
 @import "../stylesheets/prism.css";
 
 @tailwind base;
@@ -73,31 +75,6 @@ a {
   @apply mb-4
 } */
 
-
-.form__group {
-  @apply block flex flex-col-reverse w-full;
-}
-
-.form__label {
-  @apply font-bold;
-}
-
-.form__input[required=required] + .form__label {
-  @apply after:content-['*'];
-}
-
-/* .form__group:has(.form__input[required=required]) .form__label {
-  @apply after:content-['*'];
-} */
-
-.form__label::after {
-  @apply pl-1 text-ruby-700;
-}
-
-.form__input {
-  @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
-}
-
 .speaking_opportunity {
   @apply pb-10 last:pb-0
 }
@@ -108,27 +85,6 @@ a {
 
 .speaking_opportunity__meta {
   @apply text-gray-500 uppercase text-sm;
-}
-
-.pagination {
-  @apply mt-10 isolate inline-flex -space-x-px rounded-md shadow-sm;
-}
-
-.pagination > * {
-  @apply relative inline-flex items-center;
-  @apply first:rounded-l-md last:rounded-r-md;
-  @apply py-2 px-4 first:px-2 last:px-2;
-  @apply ring-1 ring-inset ring-gray-300;
-  @apply font-semibold text-sm text-gray-900 first:text-gray-400 last:text-gray-400;
-}
-
-.pagination > a:not(.pagination__item-current) {
-  @apply hover:bg-gray-50;
-  @apply focus:outline-offset-0 hover:text-ruby-500;
-}
-
-.pagination > a.pagination__item-current {
-  @apply bg-ruby-700 hover:bg-ruby-500 text-white focus:text-white;
 }
 
 .social-links {

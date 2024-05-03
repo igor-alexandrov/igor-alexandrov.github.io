@@ -13,7 +13,36 @@ layout: default
     <h1 class="article__title" itemprop="headline">{{ page.title }}</h1>
   </header>
 
-  <section class="article__content">{{content}}</section>
+  <section class="article__content">
+    {% if page.featured_image_thumbnail %}
+      <a href="{{ post.url }}">
+        <img
+          src="{% if post.featured_image_thumbnail contains ' :// ' %}{{ post.featured_image_thumbnail }}{% else %}{{ post.featured_image_thumbnail | absolute_url }}{% endif %}"
+          alt="{{ post.title }}"
+        />
+      </a>
+    {% elsif page.featured_image %}
+      <a href="{{ post.url }}">
+        <img
+          src="{% if post.featured_image contains ' :// ' %}{{ post.featured_image }}{% else %}{{ post.featured_image | absolute_url }}{% endif %}"
+          alt="{{ post.title }}"
+        />
+      </a>
+    {% elsif page.youtube_embed %}
+      <div>
+        <iframe
+          class="aspect-[16/9] w-full"
+          src="{{ page.youtube_embed }}"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    {% endif %}
+
+    {{content}}
+  </section>
 
   <section class="article__footer">
     {% include page/tags.html %}
