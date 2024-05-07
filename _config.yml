@@ -41,8 +41,8 @@ youtube: "@RubyAndBeyond"
 
 # Navigation
 navigation:
-  - text: Speaking Opportunities
-    url: /speaking-opportunities
+  - text: Public Speeches
+    url: /public-speeches
   # - text: What to Learn
   #   url: /what-to-learn
   - text: About

@@ -6,7 +6,7 @@ layout: default
   {% if page.featured_image %}
     <header class="article__header grid lg:grid-cols-2">
       <div>
-        <h1 class="pl-4 border-l-4 border-ruby-600">{{ page.title }}</h1>
+        <h1 class="article__title">{{ page.title }}</h1>
       </div>
 
       <div class="flex lg:justify-end">
@@ -19,8 +19,10 @@ layout: default
     </header>
   {% else %}
     <header class="article__header">
-      <h1 class="pl-4 border-l-4 border-ruby-600">{{ page.title }}</h1>
+      <h1 class="article__title">{{ page.title }}</h1>
     </header>
   {% endif %}
-  <div class="mx-auto">{{content}}</div>
+  <div class="container mx-auto">
+    {{content}}
+  </div>
 </article>

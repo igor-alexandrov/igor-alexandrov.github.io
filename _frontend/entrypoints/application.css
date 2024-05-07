@@ -9,6 +9,7 @@
 @import "../stylesheets/comments.css";
 @import "../stylesheets/forms.css";
 @import "../stylesheets/pagination.css";
+@import "../stylesheets/public_speech.css";
 @import "../stylesheets/prism.css";
 
 @tailwind base;
@@ -69,22 +70,6 @@ a {
 
 .meta > * {
   @apply after:content-['/'] last:after:content-[''] after:pl-2;
-}
-
-/* .article__meta-condensed {
-  @apply mb-4
-} */
-
-.speaking_opportunity {
-  @apply pb-10 last:pb-0
-}
-
-.speaking_opportunity__header {
-  @apply my-5 lg:my-6;
-}
-
-.speaking_opportunity__meta {
-  @apply text-gray-500 uppercase text-sm;
 }
 
 .social-links {
