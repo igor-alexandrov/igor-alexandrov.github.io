@@ -5,7 +5,6 @@ meta_description: "Igor Alexandrov – Ruby/Crystal developer, Open Source contr
 favicon: "assets/images/favicon.ico"
 timezone: Asia/Tbilisi
 url: https://igor.works
-disqus: "igor-alexandrov"
 cover_image: bc_3.jpg
 simple_analytics: true
 page_excerpts: true
