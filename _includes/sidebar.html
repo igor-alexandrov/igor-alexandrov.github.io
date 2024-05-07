@@ -8,7 +8,11 @@
 
     <div class="sidebar-container">
       <nav class="sidebar-section lg:hidden">
-        <div class="sidebar-section__header">{{ site.name }}</div>
+        {% assign root = site.baseurl | append: '/' %}
+        <div class="sidebar-section__header">
+          <a href="{{ root }}">{{ site.name }}</a>
+        </div>
+
         <ul class="sidebar-section__content sidebar-section__content-navigation">
           {% for link in site.navigation %}
           <li class="menu-item">
