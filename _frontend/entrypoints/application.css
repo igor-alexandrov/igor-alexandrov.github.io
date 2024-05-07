@@ -1,24 +1,87 @@
-@import '~/stylesheets/_variables.css';
-@import '~/stylesheets/_reset.css';
-@import '~/stylesheets/_general.css';
-@import '~/stylesheets/_structure.css';
-@import '~/stylesheets/_header.css';
-@import '~/stylesheets/_posts.css';
-@import '~/stylesheets/_pages.css';
-@import '~/stylesheets/_speaking-opportunities.css';
-@import '~/stylesheets/_comments.css';
-@import '~/stylesheets/_pagination.css';
-@import '~/stylesheets/_sidebar.css';
-@import '~/stylesheets/_widgets.css';
-@import '~/stylesheets/_footer.css';
-@import '~/stylesheets/_media-queries.css';
-@import '~/stylesheets/_prism.css';
-/* @import '~/stylesheets/_monokay.css'; */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/* .post-content pre {
-  font-size: 0.75em;
-} */
+@import "tailwindcss/base";
 
-pre[class*="language-"] {
-  font-size: 0.75em;
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "../stylesheets/header.css";
+@import "../stylesheets/sidebar.css";
+@import "../stylesheets/article.css";
+@import "../stylesheets/excerpt.css";
+@import "../stylesheets/tags.css";
+@import "../stylesheets/read_more.css";
+@import "../stylesheets/comments.css";
+@import "../stylesheets/forms.css";
+@import "../stylesheets/pagination.css";
+@import "../stylesheets/public_speech.css";
+@import "../stylesheets/btn.css";
+@import "../stylesheets/prism.css";
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+.page {
+  @apply relative;
+  @apply z-[1];
+  @apply transition-all duration-500 ease-in-out delay-0;
+}
+
+.overlay {
+  @apply invisible;
+  @apply absolute inset-0 w-full h-full;
+  @apply bg-white;
+}
+
+body.sidebar--opened {
+  @apply overflow-hidden;
+}
+
+body.sidebar--opened .page {
+  @apply -translate-x-full lg:-translate-x-1/3;
+  @apply left-0 top-0;
+  @apply pointer-events-none
+}
+
+a {
+  @apply text-ruby-700 hover:text-ruby-500;
+}
+
+.wrapper {
+  @apply mx-auto px-6 lg:px-8 max-w-6xl w-full ;
+}
+
+.container > section {
+  @apply mt-10 lg:mt-20;
+}
+
+.posts {
+  @apply space-y-10 lg:space-y-14;
+}
+
+.section__title {
+  @apply text-2xl lg:text-4xl uppercase text-gray-600 text-center border-b-2 border-ruby-600 pb-4 lg:pb-6;
+}
+
+.meta {
+  @apply text-gray-500 uppercase text-sm space-x-2;
+}
+
+.meta > * {
+  @apply after:content-['/'] last:after:content-[''] after:pl-2;
+}
+
+.social-links {
+  @apply flex justify-center space-x-6 md:order-2;
+}
+
+.social-links__item {
+  @apply p-2.5 rounded-full hover:bg-ruby-600 text-gray-600 hover:text-white transition;
+}
+
+.social-links__item--extended {
+  @apply lg:px-4;
 }

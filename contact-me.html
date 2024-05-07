@@ -1,68 +1,49 @@
 ---
-layout: page
+layout: default
 title: Contact Me
 twitter:
   card: summary
 ---
 
+<article class="article">
+  <header class="article__header">
+    <h1 class="article__title">{{ page.title }}</h1>
+  </header>
 
-{% if site.contact_page_description %}
-<p>{{ site.contact_page_description }}</p>
-{% endif %}
+  <div class="mx-auto">
+    {% if site.contact_page_description %}
+      <p>
+        {{ site.contact_page_description }}
+      </p>
+    {% endif %}
+  </div>
+</article>
 
-<section class="contact-form">
-  <form
-    action="https://formspree.io/{{ site.formspree_id }}"
-    method="post"
-    id="contact-form"
-  >
-    <div class="form-item">
-      <label class="form-label">Your Email <span>(required)</span></label>
-      <input
-        type="text"
-        name="email"
-        placeholder="Your email address..."
-        class="form-input"
-      />
+<section class="max-w-6xl max-w-lg">
+  <form action="https://formspree.io/{{ site.formspree_id }}" method="post" id="contact-form" class="grid grid-cols-1 gap-6">
+    <div class="flex justify-between gap-x-6">
+      <div class="form__group">
+        <input id=formspree-email type="text" name="email" placeholder="Your email address…" required="required" class="form__input"/>
+        <label for=formspree-email class="form__label">Your Email</label>
+      </div>
+
+      <div class="form__group">
+        <input id=formspree-name type="text" name="name" placeholder="Your name…" required="required" class="form__input"/>
+        <label for=formspree-name class="form__label">Your Name</label>
+      </div>
     </div>
 
-    <div class="form-item">
-      <label class="form-label">Your Name <span>(required)</span></label>
-      <input
-        type="text"
-        name="name"
-        placeholder="Your name..."
-        class="form-input"
-      />
-    </div>
-
-    <div class="form-item">
-      <label class="form-label"
-        >Your Message <span>(required)</span></label
-      >
-      <textarea
-        name="message"
-        placeholder="Your message..."
-        class="form-textarea"
-      ></textarea>
+    <div class="form__group">
+      <textarea id=formspree-message name="message" placeholder="Your message…" required="required" class="form__input" rows="6" data-controller="textarea-autogrow"></textarea>
+      <label for=formspree-message class="form__label">Your Message</label>
     </div>
 
     <input type="hidden" name="_next" value="/thank-you" />
-    <input
-      type="hidden"
-      name="_subject"
-      value="Contact form submission"
-    />
-    <input
-      type="text"
-      name="_gotcha"
-      style="display: none"
-      class="contact-form__gotcha"
-      val=""
-    />
+    <input type="hidden" name="_subject" value="Contact form submission" />
+    <input type="text" name="_gotcha" style="display: none" class="contact-form__gotcha" val=""/>
 
     <div class="form-item">
-      <input type="submit" value="Send Message" class="button" />
+      <input type="submit" value="Send Message" class="btn btn-lg btn-wide" />
     </div>
   </form>
 </section>

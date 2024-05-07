@@ -1,0 +1,32 @@
+@layer components {
+  .excerpt {
+    @apply mx-auto bg-white;
+    @apply mt-10 lg:mt-12;
+    @apply prose lg:prose-xl max-w-6xl w-full;
+    @apply prose-h2:my-0 prose-h3:my-0;
+  }
+
+  .excerpt__header {
+    @apply mb-6 ;
+  }
+
+  .excerpt__title {
+    @apply mt-2;
+  }
+
+  .excerpt__title > a {
+    @apply text-gray-900;
+  }
+
+  .excerpt__content-video {
+    @apply min-h-80;
+  }
+
+  .excerpt__tags {
+    @apply mt-4;
+  }
+
+  .excerpt__readmore {
+    @apply mt-8;
+  }
+}

@@ -1,14 +1,19 @@
+<div data-action="click->slide-over#toggle" class="overlay"></div>
 <aside class="sidebar">
-  <div class="sidebar-scrollable">
-    <div class="sidebar-inside">
-      <button data-action="click->reveal#toggle" id="sidebar-hide" class="sidebar-toggle btn-icon">
-        <span class="screen-reader-text">Close Sidebar</span
-        ><span aria-hidden="true" class="icon-close"></span>
-      </button>
+  <div class="overflow-auto h-full">
+    <button type="button" class="btn btn-rounded fixed right-6 top-6" data-action="click->slide-over#toggle">
+      <span class="sr-only">Close dialog</span>
+      <i data-lucide="x"></i>
+    </button>
 
-      <nav id="sidebar-navigation" class="widget site-navigation">
-        <h2 class="widget-title">Explore Site</h2>
-        <ul class="menu">
+    <div class="sidebar-container">
+      <nav class="sidebar-section lg:hidden">
+        {% assign root = site.baseurl | append: '/' %}
+        <div class="sidebar-section__header">
+          <a href="{{ root }}">{{ site.name }}</a>
+        </div>
+
+        <ul class="sidebar-section__content sidebar-section__content-navigation">
           {% for link in site.navigation %}
           <li class="menu-item">
             <a href="{{ link.url }}">{{ link.text }}</a>

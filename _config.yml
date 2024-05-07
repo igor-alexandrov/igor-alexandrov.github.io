@@ -1,30 +1,28 @@
 # Site setings
 name: "Ruby & Beyond"
-description: "Ruby/Crystal developer, Open Source contributor, JetRockets CTO and co-founder, and a proud father."
 meta_description: "Igor Alexandrov – Ruby/Crystal developer, Open Source contributor, JetRockets CTO and co-founder, and a proud father."
 # logo: "assets/images/logo.png"
 favicon: "assets/images/favicon.ico"
 timezone: Asia/Tbilisi
 url: https://igor.works
 disqus: "igor-alexandrov"
-# mailchimp_url: "//justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117"
 cover_image: bc_3.jpg
-# Add your GA Tracking Id
 ga_analytics: G-XFQY6HN501
+page_excerpts: true
 
 # Author
 author:
   name: "Igor Alexandrov"
   image: "igor.jpeg"
   greetings: "Ruby & Beyond"
-  description: "My name is Igor Alexandrov.<br/>I am CTO of JetRockets and a software engineer with more than 15 years of experience."
-  bio: "Igor is a Ruby/Rails and Crystal engineer, Open Source contributor, JetRockets CTO and co-founder, and a proud father."
+  description: "Hello, 👋. My name is Igor Alexandrov.<br/>I am CTO of JetRockets and a software engineer with more than 15 years of experience."
+  bio: "I am a Ruby/Rails and Crystal engineer, Open Source contributor, JetRockets CTO, and co-founder. I have been working with Ruby since 2008 and with Rails since 2009, and my overall commercial experience in programming is 20 years. I started working with Rails when it was at version 2.2 and never stopped since then."
   twitter: "@igor_alexandrov"
 
 # Contact form setings
 email: igor.alexandrov@gmail.com
 formspree_id: mqkrenkd
-contact_page_description: "If you have any questions or just want to say \"Hi 👋\", please feel free to drop me a line. I will try my best to respond as soon as possible!"
+contact_page_description: 'If you have any questions or just want to say "Hi 👋", please feel free to drop me a line. I will try my best to respond as soon as possible!'
 thankyou_page_description: "Your message has been successfully sent. I will contact you very soon!"
 
 # Social links
@@ -39,12 +37,12 @@ github: "igor-alexandrov"
 # instagram: "username"
 # pinterest: "username"
 linkedin: "igor-alexandrov"
-# producthunt: "@username"
+youtube: "@RubyAndBeyond"
 
 # Navigation
 navigation:
-  - text: Speaking Opportunities
-    url: /speaking-opportunities
+  - text: Public Speeches
+    url: /public-speeches
   # - text: What to Learn
   #   url: /what-to-learn
   - text: About
@@ -64,12 +62,7 @@ exclude:
   - Procfile.dev
   - Rakefile
 
-# # Required Plugins
-# plugins_dir:
-#   - jekyll_og_image
-#   - jekyll-seo-tag
-#   - jekyll-sitemap
-
+# Required Plugins
 plugins:
   - jekyll/vite
   - jekyll-paginate
@@ -79,14 +72,14 @@ plugins:
 
 # Pagination
 paginate: 5
-paginate_path: /page:num/
+paginate_path: /page-:num/
 
 # Permalinks
 permalink: /blog/:title
 
 # Other
 markdown: kramdown
-# highlighter: rouge
+highlighter: nil
 # kramdown:
 #   input: GFM
 

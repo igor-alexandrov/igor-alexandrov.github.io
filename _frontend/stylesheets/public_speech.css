@@ -1,0 +1,23 @@
+@layer components {
+  .public_speeches {
+    @apply space-y-10 lg:space-y-14;
+  }
+
+  .public_speech__header {
+    @apply mb-5 lg:mb-6;
+  }
+
+  .public_speech__title {
+    @apply mt-2;
+    @apply leading-tight;
+  }
+
+  .public_speech__meta {
+    @apply text-gray-500 uppercase text-sm;
+  }
+
+  .public_speech__content {
+    @apply max-w-2xl;
+    @apply space-y-10;
+  }
+}

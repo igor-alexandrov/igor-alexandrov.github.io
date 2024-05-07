@@ -1,0 +1,29 @@
+@layer components {
+  .header__nav {
+    @apply mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8 relative;
+  }
+
+  .nav__site_name {
+    @apply text-2xl font-bold;
+  }
+
+  .nav__container {
+    @apply flex flex-auto justify-end lg:gap-x-8;
+  }
+
+  .nav__link {
+    @apply text-lg font-semibold text-gray-900;
+  }
+
+  .nav__link-current {
+    @apply border-b-2 border-ruby-500;
+  }
+
+  .nav__menu {
+    @apply hidden lg:flex gap-x-8 items-center;
+  }
+
+  .nav__burger {
+    @apply p-2.5 rounded-full hover:bg-ruby-600 text-gray-600 hover:text-white transition;
+  }
+}

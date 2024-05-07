@@ -1,0 +1,65 @@
+<footer class="mt-20 lg:mt-20">
+  <div class="mx-auto max-w-6xl px-6 lg:px-8">
+    <div class="py-6 md:py-12 md:flex md:items-center md:justify-between border-t-2 border-ruby-600">
+      <div class="social-links">
+        {% if site.twitter %}
+          <a
+            href="https://twitter.com/{{ site.twitter.username }}"
+            class="social-links__item"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="sr-only">X</span>
+            <i data-lucide="twitter"></i>
+          </a>
+        {% endif %}
+
+        {% if site.github %}
+          <a
+            href="https://github.com/{{ site.github }}"
+            class="social-links__item"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="sr-only">GitHub</span>
+            <i data-lucide="github"></i>
+          </a>
+        {% endif %}
+
+        {% if site.youtube %}
+          <a
+            href="https://youtube.com/{{ site.youtube }}"
+            class="social-links__item"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="sr-only">YouTube</span>
+            <i data-lucide="youtube"></i>
+          </a>
+        {% endif %}
+
+        {% if site.linkedin %}
+          <a
+            href="https://www.linkedin.com/in/{{ site.linkedin }}"
+            class="social-links__item"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="sr-only">LinkedIn</span>
+            <i data-lucide="linkedin"></i>
+          </a>
+        {% endif %}
+      </div>
+
+
+      <div class="mt-8 md:order-1 md:mt-0 flex flex-col md:flex-row justify-between md:gap-x-8">
+        <p class="text-center text-xs leading-5 uppercase">
+          <a href="#">{{ site.name }}</a> &copy; {{ site.time | date: '%Y' }}
+        </p>
+        <p class="text-center text-xs leading-5 uppercase">
+          Powered by <a target="_blank" href="https://jekyllrb.com/">Jekyll</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

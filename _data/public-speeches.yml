@@ -1,0 +1,69 @@
+- date: 2024-04-30
+  name: Can Ruby be the first language for beginners?
+  event_name: Хекслет (Hexlet)
+  location: Online
+  youtube_embed: https://www.youtube.com/embed/eE4XSKkcgro
+
+- date: 2024-02-22
+  name: Exploring Basecamp's Campfire Code
+  event_name: JetRockets and OBLSK
+  location: Online
+  youtube_embed: https://www.youtube.com/embed/HrMV-QYt8t0?si=WzaVLVJh5dC1kFTf
+
+- date: 2023-08-30
+  name: Igor Alexandrov, Wiselinks
+  event_name: GemRuby Show
+  location: Online
+  # transistor_embed: https://share.transistor.fm/e/e4dd9e5d
+  # apple_podcasts_embed: https://embed.podcasts.apple.com/us/podcast/gemruby-show-igor-alexandrov-wiselink/id1704028866
+  spotify_embed: https://open.spotify.com/embed/episode/7kLy7cVqbdOy2X2pvTSlQ2?utm_source=generator&theme=0
+
+- date: 2021-11-16
+  name: Стоит ли программистам работать в JetRockets
+  event_name: Хекслет (Hexlet)
+  location: Online
+  youtube_embed: https://www.youtube.com/embed/JU5qcof-CKg?si=gQ0hxNvhk5FNvKAs
+
+- date: 2021-07-08
+  name: How to migrate from Ruby to Crystal 1.0
+  event_name: Crystal 1.0 Conference
+  location: Online
+  link: https://crystal-lang.org/events/2021-crystal-1.0/
+  youtube_embed: https://www.youtube.com/embed/pN-nJZv5aME?si=yscXGI1P8ez5bga2
+
+- date: 2020-02-29
+  name: Crystal for Rubists
+  event_name: Saint P Ruby Meetup 2020
+  location: Saint Petersburg, Russia
+  link: https://kommunity.com/saintpruby/events/rubyday-2020
+  youtube_embed: https://www.youtube.com/embed/H3SafkpBQ_w?si=_L6oKKDUTiGjtIia&amp;start=399
+
+- date: 2020-02-06
+  name: Как жить в ритме Твери и работать в ритме Нью-Йорка
+  event_name: Запуск Завтра
+  location: Online
+  transistor_embed: https://share.transistor.fm/e/b8d1e10f
+
+- date: 2019-09-28
+  name: Not the Rails Way
+  event_name: RubyRussia 2019
+  location: Moscow, Russia
+  link: https://rubyrussia.club/en/
+  youtube_embed: https://www.youtube.com/embed/1W0SsXA8DXA?si=n__pdGHPszm8WeyB&amp;start=1
+
+- date: 2018-08-28
+  name: Not the Rails Way
+  event_name: Moscow Ruby Meetup #7
+  location: Moscow, Russia
+  youtube_embed: https://www.youtube.com/embed/-MiA8V80qAQ?si=J10Xq7wJ6r-6ObmX
+  slideshare_embed: https://www.slideshare.net/slideshow/embed_code/key/l6T5wC1YkNBk82?startSlide=1
+
+- date: 2013-06-14
+  name: Биллинг в SaaS-системах на Rails
+  event_name: DevConf 2013
+  location: Moscow, Russia
+
+- date: 2013-09-21
+  name: Биллинг в SaaS-системах на Rails
+  event_name: RubySPB 2013
+  location: Saint Petersburg, Russia

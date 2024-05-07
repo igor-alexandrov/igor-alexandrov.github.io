@@ -2,29 +2,25 @@
 layout: default
 ---
 
-<div id="content" class="site-content fadeInDown delay_075s">
-  <main id="main" class="site-main outer">
-    <article class="page-full inner">
-      {% if page.featured_image %}
-      <div class="page-hero">
-        <header class="page-header">
-          <h1 class="page-title">{{ page.title }}</h1>
-        </header>
+<article class="article">
+  {% if page.featured_image %}
+    <header class="article__header grid lg:grid-cols-2">
+      <h1 class="article__title">{{ page.title }}</h1>
+
+      <div class="flex lg:justify-end">
         <img
+          class="not-prose rounded-xl shadow-lg sm:max-h-64"
           src="{{ site.baseurl }}{{ page.featured_image }}"
           alt="{% if page.featured_image_alt %}{{ page.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"
         />
       </div>
-      {% else %}
-        <header class="page-header">
-          <h1 class="page-title">{{ page.title }}</h1>
-        </header>
-      {% endif %}
-
-      <div class="page-content">{{content}}</div>
-
-    </article>
-
-    {% if site.mailchimp_url %} {% include newsletter-box.html %} {% endif %}
-  </main>
-</div>
+    </header>
+  {% else %}
+    <header class="article__header">
+      <h1 class="article__title">{{ page.title }}</h1>
+    </header>
+  {% endif %}
+  <div class="container mx-auto">
+    {{content}}
+  </div>
+</article>

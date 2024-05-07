@@ -53,14 +53,12 @@ jobs:
       - name: Update apt
         env:
           DEBIAN_FRONTEND: noninteractive
-        run:
-          sudo apt-get update -qq
+        run: sudo apt-get update -qq
 
       - name: Install libvips
         env:
           DEBIAN_FRONTEND: noninteractive
-        run:
-          sudo apt-get install --fix-missing libvips
+        run: sudo apt-get install --fix-missing libvips
 
       - name: Setup Pages
         id: pages

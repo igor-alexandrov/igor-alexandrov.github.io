@@ -1,0 +1,70 @@
+<div class="public_speech">
+  <header class="public_speech__header">
+    <div class="meta">
+      {% if public-speech.event_name %}
+        <span>{{ public-speech.event_name }}</span>
+      {% endif %}
+
+      <time datetime="{{ public-speech.date | date: '%Y-%m-%d' }}">
+        {{ public-speech.date | date: "%B %-d, %Y" }}
+      </time>
+
+      {% if public-speech.location %}
+        <span>{{ public-speech.location }}</span>
+      {% endif %}
+    </div>
+
+    <h3 class="public_speech__title">
+      {{ public-speech.name }}
+    </h2>
+  </header>
+
+  <div class="public_speech__content">
+    {% if public-speech.youtube_embed %}
+      <iframe
+        class="aspect-[16/9] w-full"
+        loading="lazy"
+        src="{{ public-speech.youtube_embed }}"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    {% endif %}
+
+    {% if public-speech.slideshare_embed %}
+      <iframe
+        class="aspect-[16/9] w-full"
+        loading="lazy"
+        src="{{ public-speech.slideshare_embed }}"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    {% endif %}
+
+    {% if public-speech.transistor_embed %}
+      <iframe
+        class="aspect-[16/9] w-full"
+        loading="lazy"
+        frameborder="no"
+        scrolling="no"
+        seamless
+        src="{{public-speech.transistor_embed}}"
+      ></iframe>
+    {% endif %}
+
+    {% if public-speech.spotify_embed %}
+      <iframe
+        class="aspect-[16/9] w-full"
+        loading="lazy"
+        src="https://open.spotify.com/embed/episode/7kLy7cVqbdOy2X2pvTSlQ2?utm_source=generator&theme=0"
+        frameBorder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+    {% endif %}
+  </div>
+</div>

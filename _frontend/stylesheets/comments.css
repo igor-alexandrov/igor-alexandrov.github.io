@@ -1,0 +1,11 @@
+@layer components {
+  .comments__title {
+    @apply pb-2;
+    @apply text-xl lg:text-2xl uppercase text-gray-700 text-center;
+    @apply border-b-2 border-ruby-600;
+  }
+
+  .comments__disqus {
+    @apply mt-10;
+  }
+}
