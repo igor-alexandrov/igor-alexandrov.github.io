@@ -1,8 +1,5 @@
 {% if site.ga_analytics %}
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_analytics }}"
-></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_analytics }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
@@ -11,8 +8,7 @@
   gtag("js", new Date());
   gtag("config", "{{ site.ga_analytics }}");
 </script>
-{ elsif site.simple_analytics }
-  <!-- 100% privacy-first analytics -->
+{% elsif site.simple_analytics %}
   <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 {% endif %}
