@@ -1,5 +1,13 @@
 <div class="h-60 flex items-center justify-center ">
-  <img class="rounded-full w-40 border-2 border-ruby-600 shadow-lg" src="{{ site.baseurl }}/assets/images/{{ site.author.image }}" alt="{{ site.author.name }}'s Picture"/>
+
+  {% if site.author.webp %}
+    <picture class="rounded-full w-40 border-2 border-ruby-600 shadow-lg">
+      <source class="rounded-full" srcset="{{ site.baseurl }}/assets/images/{{ site.author.webp }}" type="image/webp">
+      <img class="rounded-full" src="{{ site.baseurl }}/assets/images/{{ site.author.image }}" alt="{{ site.author.name }}'s Picture"/>
+    </picture>
+  {% else %}
+    <img class="rounded-full w-40 border-2 border-ruby-600 shadow-lg" src="{{ site.baseurl }}/assets/images/{{ site.author.image }}" alt="{{ site.author.name }}'s Picture"/>
+  {% endif %}
 </div>
 
 <p class="text-center text-xl leading-10 text-gray-700">

@@ -14,6 +14,7 @@ page_excerpts: true
 author:
   name: "Igor Alexandrov"
   image: "igor.jpeg"
+  webp: "igor.webp"
   greetings: "Ruby & Beyond"
   description: "Hello, 👋. My name is Igor Alexandrov.<br/>I am CTO of JetRockets and a software engineer with more than 15 years of experience."
   bio: "I am a Ruby/Rails and Crystal engineer, Open Source contributor, JetRockets CTO, and co-founder. I have been working with Ruby since 2008 and with Rails since 2009, and my overall commercial experience in programming is 20 years. I started working with Rails when it was at version 2.2 and never stopped since then."
@@ -29,7 +30,6 @@ thankyou_page_description: "Your message has been successfully sent. I will cont
 twitter:
   username: "igor_alexandrov"
   card: summary_large_image
-# facebook: "username"
 github: "igor-alexandrov"
 # codepen: "username"
 # dribbble: "username"
