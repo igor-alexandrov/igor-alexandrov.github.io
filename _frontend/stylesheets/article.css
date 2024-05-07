@@ -11,15 +11,14 @@
   @apply mb-10 lg:mb-12;
 }
 
-.article__header::after {
-  /* @apply pl-4 border-l-2 border-ruby-600; */
-  @apply content-[''];
-  @apply block w-32 h-1 bg-ruby-600 mt-2;
-}
-
 .article__title {
   @apply mt-5;
   @apply leading-tight;
+}
+
+.article__title::after {
+  @apply content-[''];
+  @apply block w-32 h-1 bg-ruby-600 mt-2;
 }
 
 .article__footer {
