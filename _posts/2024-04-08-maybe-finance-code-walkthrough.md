@@ -1,5 +1,5 @@
 ---
-title: Ruby & Beyond – Maybe, open-source personal finance app
+title: Maybe – open-source personal finance app
 layout: post
 tags:
   - Ruby
