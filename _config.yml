@@ -7,7 +7,7 @@ timezone: Asia/Tbilisi
 url: https://igor.works
 disqus: "igor-alexandrov"
 cover_image: bc_3.jpg
-ga_analytics: G-XFQY6HN501
+simple_analytics: true
 page_excerpts: true
 
 # Author

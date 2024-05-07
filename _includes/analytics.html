@@ -11,4 +11,8 @@
   gtag("js", new Date());
   gtag("config", "{{ site.ga_analytics }}");
 </script>
+{ elsif site.simple_analytics }
+  <!-- 100% privacy-first analytics -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 {% endif %}
