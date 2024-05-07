@@ -1,36 +1,38 @@
-.btn {
-  @apply rounded-xl no-underline cursor-pointer;
-  @apply px-5 py-2.5;
-  @apply bg-ruby-700 hover:bg-ruby-500 text-white hover:text-white shadow-md;
-  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ruby-600;
-  @apply text-sm font-semibold text-center;
-}
+@layer components {
+  .btn {
+    @apply rounded-xl no-underline cursor-pointer;
+    @apply px-5 py-2.5;
+    @apply bg-ruby-700 hover:bg-ruby-500 text-white hover:text-white shadow-md;
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ruby-600;
+    @apply text-sm font-semibold text-center;
+  }
 
-.btn-xs {
-  @apply px-3 py-2 text-xs;
-}
+  .btn-xs {
+    @apply px-3 py-2 text-xs;
+  }
 
-.btn-sm {
-  @apply px-3 py-2 text-sm
-}
+  .btn-sm {
+    @apply px-3 py-2 text-sm
+  }
 
-.btn-lg {
-  @apply px-5 py-3 text-base;
-}
+  .btn-lg {
+    @apply px-5 py-3 text-base;
+  }
 
-.btn-xl {
-  @apply px-6 py-3.5 text-base;
-}
+  .btn-xl {
+    @apply px-6 py-3.5 text-base;
+  }
 
-.btn-wide {
-  @apply w-full;
-}
+  .btn-wide {
+    @apply w-full;
+  }
 
-.btn-rounded {
-  @apply p-2.5 rounded-full;
-}
+  .btn-rounded {
+    @apply p-2.5 rounded-full;
+  }
 
-.btn-readmore {
-  @apply px-4 py-3 text-base w-full inline-block;
-  @apply lg:px-9 lg:py-4 lg:text-lg lg:w-auto;
+  .btn-readmore {
+    @apply px-4 py-3 text-base w-full inline-block;
+    @apply lg:px-9 lg:py-4 lg:text-lg lg:w-auto;
+  }
 }
