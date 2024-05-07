@@ -23,6 +23,7 @@
     {% if public-speech.youtube_embed %}
       <iframe
         class="aspect-[16/9] w-full"
+        loading="lazy"
         src="{{ public-speech.youtube_embed }}"
         title="YouTube video player"
         frameborder="0"
@@ -34,6 +35,7 @@
     {% if public-speech.slideshare_embed %}
       <iframe
         class="aspect-[16/9] w-full"
+        loading="lazy"
         src="{{ public-speech.slideshare_embed }}"
         title="YouTube video player"
         frameborder="0"
@@ -45,6 +47,7 @@
     {% if public-speech.transistor_embed %}
       <iframe
         class="aspect-[16/9] w-full"
+        loading="lazy"
         frameborder="no"
         scrolling="no"
         seamless
@@ -55,6 +58,7 @@
     {% if public-speech.spotify_embed %}
       <iframe
         class="aspect-[16/9] w-full"
+        loading="lazy"
         src="https://open.spotify.com/embed/episode/7kLy7cVqbdOy2X2pvTSlQ2?utm_source=generator&theme=0"
         frameBorder="0"
         allowfullscreen=""
