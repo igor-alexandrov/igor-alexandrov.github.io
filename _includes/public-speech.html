@@ -23,6 +23,7 @@
     {% if public-speech.youtube_embed %}
       <iframe
         class="aspect-[16/9] w-full"
+        loading="lazy"
         src="{{ public-speech.youtube_embed }}"
         title="{{ public-speech.name }}"
         frameborder="0"
@@ -35,6 +36,7 @@
     {% if public-speech.slideshare_embed %}
       <iframe
         class="aspect-[16/9] w-full"
+        loading="lazy"
         src="{{ public-speech.slideshare_embed }}"
         title="{{ public-speech.name }}"
         frameborder="0"
@@ -46,6 +48,7 @@
     {% if public-speech.transistor_embed %}
       <iframe
         class="aspect-[16/9] w-full"
+        loading="lazy"
         height="180"
         frameborder="no"
         scrolling="no"
@@ -57,6 +60,7 @@
     {% if public-speech.spotify_embed %}
       <iframe
         class="aspect-[16/9] w-full"
+        loading="lazy"
         src="{{public-speech.spotify_embed}}"
         frameBorder="0"
         allowfullscreen=""
@@ -67,6 +71,7 @@
     {% if public-speech.apple_podcasts_embed %}
       <iframe
         class="aspect-[16/9] w-full"
+        loading="lazy"
         allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
         frameborder="0"
         height="175"
