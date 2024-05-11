@@ -4,6 +4,7 @@ layout: post
 tags:
   - HTML
   - TIL
+  - Performance
 featured: false
 hidden: false
 ---
