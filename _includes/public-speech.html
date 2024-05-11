@@ -23,9 +23,8 @@
     {% if public-speech.youtube_embed %}
       <iframe
         class="aspect-[16/9] w-full"
-        loading="lazy"
         src="{{ public-speech.youtube_embed }}"
-        title="YouTube video player"
+        title="{{ public-speech.name }}"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -36,9 +35,8 @@
     {% if public-speech.slideshare_embed %}
       <iframe
         class="aspect-[16/9] w-full"
-        loading="lazy"
         src="{{ public-speech.slideshare_embed }}"
-        title="Slideshare"
+        title="{{ public-speech.name }}"
         frameborder="0"
         allowfullscreen
       ></iframe>
@@ -49,7 +47,6 @@
       <iframe
         class="aspect-[16/9] w-full"
         height="180"
-        loading="lazy"
         frameborder="no"
         scrolling="no"
         seamless
@@ -60,7 +57,6 @@
     {% if public-speech.spotify_embed %}
       <iframe
         class="aspect-[16/9] w-full"
-        loading="lazy"
         src="{{public-speech.spotify_embed}}"
         frameBorder="0"
         allowfullscreen=""

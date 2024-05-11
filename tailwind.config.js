@@ -5,6 +5,7 @@ module.exports = {
     "./_layouts/**/page.html",
     "./_layouts/**/post.html",
     "./_includes/**/*.html",
+    "./demos/**/*.html",
     "*.html"
   ],
   theme: {
