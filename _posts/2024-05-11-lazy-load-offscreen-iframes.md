@@ -20,11 +20,11 @@ I prepared two demo pages to show you how it works. They both load the same YouT
 
 I faced the problem with iframe embeds when was working on the (public speeches page)[/public-speeches]. The initial result that I got was not satisfying. The Lighthouse audit showed that the page was not optimized.
 
-{% include image-caption.html imageurl="/assets/images/posts/2024-05-09/loading-eager.png" title="Lighthouse results with eager loading" caption="Lighthouse results with eager loading" %}
+{% include image-caption.html imageurl="/assets/images/posts/2024-05-11/loading-eager.png" title="Lighthouse results with eager loading" caption="Lighthouse results with eager loading" %}
 
 With the lazy loading attribute, the page performance improved significantly. The Lighthouse audit showed that the page was optimized.
 
-{% include image-caption.html imageurl="/assets/images/posts/2024-05-09/loading-lazy.png" title="Lighthouse results with lazy loading" caption="Lighthouse results with lazy loading" %}
+{% include image-caption.html imageurl="/assets/images/posts/2024-05-11/loading-lazy.png" title="Lighthouse results with lazy loading" caption="Lighthouse results with lazy loading" %}
 
 The best part is that it's super easy to implement. Just add the `loading="lazy"` attribute to the `<iframe>` tag. [All major browsers](https://caniuse.com/loading-lazy-attr) support this attribute, so you don't need to worry about compatibility. Important to mention that the `loading="lazy"` attribute support for iframes added in Firefox only in version 121, that [has been released](https://www.mozilla.org/en-US/firefox/121.0/releasenotes/) in December 2023.
 
@@ -40,7 +40,7 @@ The best part is that it's super easy to implement. Just add the `loading="lazy"
 
 The first and the most important reason is performance. Lazy loading of iframes can significantly improve the loading speed of your website. It's especially important for pages with a lot of iframes. The second reason is that it can save your users' data. Iframes are usually used to embed videos, audious, slides maps, or other external content. Lazy loading can help to reduce the amount of data that is loaded when the page is opened.
 
-{% include image-caption.html imageurl="/assets/images/posts/2024-05-09/page-size.png" title="Page size with/without lazy loading" caption="Page size with/without lazy loading" width="600px" %}
+{% include image-caption.html imageurl="/assets/images/posts/2024-05-11/page-size.png" title="Page size with/without lazy loading" caption="Page size with/without lazy loading" width="600px" %}
 
 Iframe lazy loading can improve you [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp) metric as well as [First Input Delay (FID)](https://web.dev/articles/fid) and [First Contentful Paint (FCP)](https://web.dev/articles/fcp).
 
