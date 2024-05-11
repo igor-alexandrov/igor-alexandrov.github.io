@@ -15,8 +15,8 @@
   event_name: GemRuby Show
   location: Online
   # transistor_embed: https://share.transistor.fm/e/e4dd9e5d
-  # apple_podcasts_embed: https://embed.podcasts.apple.com/us/podcast/gemruby-show-igor-alexandrov-wiselink/id1704028866
-  spotify_embed: https://open.spotify.com/embed/episode/7kLy7cVqbdOy2X2pvTSlQ2?utm_source=generator&theme=0
+  # spotify_embed: https://open.spotify.com/embed/episode/7kLy7cVqbdOy2X2pvTSlQ2?utm_source=generator&theme=0
+  youtube_embed: https://www.youtube-nocookie.com/embed/ReOihtTiBGY?si=lO9YUkowMRyIxnsd
 
 - date: 2021-11-16
   name: Стоит ли программистам работать в JetRockets
