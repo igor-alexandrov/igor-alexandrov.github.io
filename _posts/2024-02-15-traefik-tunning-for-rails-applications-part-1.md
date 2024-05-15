@@ -6,7 +6,7 @@ tags:
   - Traefik
   - Kamal
 featured: true
-hidden: true
+hidden: false
 ---
 
 For many years Nginx has been a default solution to serve as a reverse proxy for Rails applications. However, with the release of Kamal, the Rails community opened Traefik as a new reverse proxy solution. Within my 15 years of experience with Rails, I created an almost perfect configuration for Nginx that migrated through all my projects. With Traefik, I had to start from scratch.
