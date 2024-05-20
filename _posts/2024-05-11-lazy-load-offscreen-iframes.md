@@ -19,11 +19,11 @@ The implementation of lazy-loading for `<iframe>` elements involves delaying the
 
 I prepared two demo pages to show you how it works. They both load the same YouTube video, but [the first one](/demos/iframe-loading-lazy) uses the `<iframe loading="lazy">` attribute and [the second one](/demos/iframe-loading-eager) doesn't.
 
-I faced the problem with iframe embeds when was working on the (public speeches page)[/public-speeches]. The initial result that I got was not satisfying. The Lighthouse audit showed that the page was not optimized.
+I faced the problem with iframe embeds when was working on the (public speeches page)[/public-speeches]. This page has a bunch of different embeds: YouTube, Slideshare, Transistor and others. The initial result that I got was not satisfying. The Lighthouse audit showed that the page was not optimized.
 
 {% include image-caption.html imageurl="/assets/images/posts/2024-05-11/loading-eager.png" title="Lighthouse results without eager loading" caption="Lighthouse results without eager loading" %}
 
-With the lazy loading attribute, the page performance improved significantly. The Lighthouse audit showed that the page was optimized.
+With the lazy loading attribute, the page performance improved significantly.
 
 {% include image-caption.html imageurl="/assets/images/posts/2024-05-11/loading-lazy.png" title="Lighthouse results with lazy loading" caption="Lighthouse results with lazy loading" %}
 
