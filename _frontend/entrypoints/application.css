@@ -36,11 +36,11 @@
   @apply bg-white;
 }
 
-body.sidebar--opened {
+body.sidebar-opened {
   @apply overflow-hidden;
 }
 
-body.sidebar--opened .page {
+body.sidebar-opened .page {
   @apply -translate-x-full lg:-translate-x-1/3;
   @apply left-0 top-0;
   @apply pointer-events-none
