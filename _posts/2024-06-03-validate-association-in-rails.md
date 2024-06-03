@@ -89,9 +89,9 @@ The `inventory` association is created, but the `delivery` is not valid. The err
 
 The problem is that instead of validating the `inventory` association the code validates the `inventory_id`. And the `inventory_id` is not present.
 
-## Today you learned!
+## Today you learned
 
-This is something you should remember when you validate associations in Rails. **Always validate the association, not the foreign key**.
+When you validate associations in Rails – **always validate the association, not the foreign key**.
 
 ```ruby
 # app/models/work/delivery.rb
