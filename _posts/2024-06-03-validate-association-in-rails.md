@@ -105,4 +105,3 @@ class Work::Delivery < ApplicationRecord
   end
 end
 ```
-
