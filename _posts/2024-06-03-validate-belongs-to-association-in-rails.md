@@ -1,5 +1,5 @@
 ---
-title: Validate belongs_to association presence in Rails
+title: Validate belongs_to association in Rails
 layout: post
 tags:
   - Rails
