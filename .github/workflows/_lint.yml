@@ -26,4 +26,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: prettier --check '**/*.html'
+      - uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+      - run: yarn prettier --check '**/*.html'
