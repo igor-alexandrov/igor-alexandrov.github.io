@@ -23,7 +23,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Prettify
-        uses: creyD/prettier_action@v4.3
+      - name: Prettier
+        uses: actionsx/prettier@v2
         with:
-          prettier_options: --write **/*.html
+          # prettier CLI arguments.
+          args: --check **/*.html
