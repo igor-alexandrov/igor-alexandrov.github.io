@@ -1,6 +1,10 @@
 <figure class="grid grid-cols-1 justify-items-center">
-  <img src="{{ include.imageurl }}" alt="{{ include.title }}" width="{{ include.width | default: '100%' }}" />
+  <img
+    src="{{ include.imageurl }}"
+    alt="{{ include.title }}"
+    width="{{ include.width | default: '100%' }}"
+  />
   {% if include.caption %}
-    <figcaption class="block caption-text">{{ include.caption }}</figcaption>
+  <figcaption class="caption-text block">{{ include.caption }}</figcaption>
   {% endif %}
 </figure>

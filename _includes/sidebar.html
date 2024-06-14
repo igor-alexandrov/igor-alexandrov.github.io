@@ -1,7 +1,11 @@
 <div data-action="click->slide-over#toggle" class="overlay"></div>
 <div class="sidebar">
-  <div class="overflow-auto h-full">
-    <button type="button" class="btn btn-rounded fixed right-6 top-6" data-action="click->slide-over#toggle">
+  <div class="h-full overflow-auto">
+    <button
+      type="button"
+      class="btn btn-rounded fixed right-6 top-6"
+      data-action="click->slide-over#toggle"
+    >
       <span class="sr-only">Close dialog</span>
       <i data-lucide="x"></i>
     </button>
@@ -13,7 +17,9 @@
           <a href="{{ root }}">{{ site.name }}</a>
         </div>
 
-        <ul class="sidebar-section__content sidebar-section__content-navigation">
+        <ul
+          class="sidebar-section__content sidebar-section__content-navigation"
+        >
           {% for link in site.navigation %}
           <li class="menu-item">
             <a href="{{ link.url }}">{{ link.text }}</a>

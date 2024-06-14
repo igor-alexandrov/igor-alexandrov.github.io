@@ -1,27 +1,30 @@
 <header class="header">
   <nav class="header__nav" aria-label="Global">
-    {% assign root = site.baseurl | append: '/' %}
-
-    {% if page.url == "/" %}
-      <a href="{{ root }}" class="nav__site_name">
-        <h1>{{ site.name }}</h1>
-      </a>
+    {% assign root = site.baseurl | append: '/' %} {% if page.url == "/" %}
+    <a href="{{ root }}" class="nav__site_name">
+      <h1>{{ site.name }}</h1>
+    </a>
     {% else %}
-      <a href="{{ root }}" class="nav__site_name">{{ site.name }}</a>
+    <a href="{{ root }}" class="nav__site_name">{{ site.name }}</a>
     {% endif %}
 
     <div class="nav__container">
       <div class="nav__menu">
-        {% for link in site.navigation %}
-          {% if page.url == link.url or link.url contains '/archive' and page.url contains '/blog/' %}
-            <a href="{{ link.url }}" class="nav__link nav__link-current">{{ link.text }}</a>
-          {% else %}
-            <a href="{{ link.url }}" class="nav__link">{{ link.text }}</a>
-          {% endif %}
-        {% endfor %}
+        {% for link in site.navigation %} {% if page.url == link.url or link.url
+        contains '/archive' and page.url contains '/blog/' %}
+        <a href="{{ link.url }}" class="nav__link nav__link-current"
+          >{{ link.text }}</a
+        >
+        {% else %}
+        <a href="{{ link.url }}" class="nav__link">{{ link.text }}</a>
+        {% endif %} {% endfor %}
       </div>
       <div>
-        <button type="button" class="nav__burger" data-action="click->slide-over#toggle">
+        <button
+          type="button"
+          class="nav__burger"
+          data-action="click->slide-over#toggle"
+        >
           <span class="sr-only">Open menu</span>
           <i data-lucide="menu"></i>
         </button>

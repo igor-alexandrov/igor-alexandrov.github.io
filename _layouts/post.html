@@ -2,52 +2,55 @@
 layout: default
 ---
 
-<article class="line-numbers article" itemscope itemtype="https://schema.org/Article">
+<article
+  class="line-numbers article"
+  itemscope
+  itemtype="https://schema.org/Article"
+>
   <header class="article__header">
-    <div class="meta">
-      <time itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}" datetime="{{ page.date | date: "%Y-%m-%d" }}">
-        {{ page.date | date: "%B %-d, %Y" }}
-      </time>
-    </div>
-
+    <div class="meta"></div>
+    <time
+      itemprop="datePublished"
+      content="{{ page.date | date: '%Y-%m-%d' }}"
+      datetime="{{ page.date | date: '%Y-%m-%d' }}"
+    >
+      {{ page.date | date: "%B %-d, %Y" }}
+    </time>
     <h1 class="article__title" itemprop="headline">{{ page.title }}</h1>
   </header>
 
   <section class="article__content">
     {% if page.featured_image_thumbnail %}
-      <a href="{{ post.url }}">
-        <img
-          src="{% if post.featured_image_thumbnail contains ' :// ' %}{{ post.featured_image_thumbnail }}{% else %}{{ post.featured_image_thumbnail | absolute_url }}{% endif %}"
-          alt="{{ post.title }}"
-        />
-      </a>
+    <a href="{{ post.url }}">
+      <img
+        src="{% if post.featured_image_thumbnail contains ' :// ' %}{{ post.featured_image_thumbnail }}{% else %}{{ post.featured_image_thumbnail | absolute_url }}{% endif %}"
+        alt="{{ post.title }}"
+      />
+    </a>
     {% elsif page.featured_image %}
-      <a href="{{ post.url }}">
-        <img
-          src="{% if post.featured_image contains ' :// ' %}{{ post.featured_image }}{% else %}{{ post.featured_image | absolute_url }}{% endif %}"
-          alt="{{ post.title }}"
-        />
-      </a>
+    <a href="{{ post.url }}">
+      <img
+        src="{% if post.featured_image contains ' :// ' %}{{ post.featured_image }}{% else %}{{ post.featured_image | absolute_url }}{% endif %}"
+        alt="{{ post.title }}"
+      />
+    </a>
     {% elsif page.youtube_embed %}
-      <div>
-        <iframe
-          class="aspect-[16/9] w-full"
-          loading="lazy"
-          src="{{ page.youtube_embed }}"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-    {% endif %}
-
-    {{content}}
+    <div>
+      <iframe
+        class="aspect-[16/9] w-full"
+        loading="lazy"
+        src="{{ page.youtube_embed }}"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+    {% endif %} {{content}}
   </section>
 
   <section class="article__footer">
-    {% include page/tags.html %}
-    {% include page/share.html %}
-    {% include page/read_more.html %}
+    {% include page/tags.html %} {% include page/share.html %} {% include
+    page/read_more.html %}
   </section>
 </article>

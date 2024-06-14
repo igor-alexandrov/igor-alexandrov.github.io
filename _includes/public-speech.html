@@ -2,7 +2,7 @@
   <header class="public_speech__header">
     <div class="meta">
       {% if public-speech.event_name %}
-        <span>{{ public-speech.event_name }}</span>
+      <span>{{ public-speech.event_name }}</span>
       {% endif %}
 
       <time datetime="{{ public-speech.date | date: '%Y-%m-%d' }}">
@@ -10,78 +10,73 @@
       </time>
 
       {% if public-speech.location %}
-        <span>{{ public-speech.location }}</span>
+      <span>{{ public-speech.location }}</span>
       {% endif %}
     </div>
 
-    <h3 class="public_speech__title">
-      {{ public-speech.name }}
-    </h2>
+    <h3 class="public_speech__title">{{ public-speech.name }}</h3>
   </header>
 
   <div class="public_speech__content">
     {% if public-speech.youtube_embed %}
-      <iframe
-        class="aspect-[16/9] w-full"
-        loading="lazy"
-        src="{{ public-speech.youtube_embed }}"
-        title="{{ public-speech.name }}"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-    {% endif %}
+    <iframe
+      class="aspect-[16/9] w-full"
+      loading="lazy"
+      src="{{ public-speech.youtube_embed }}"
+      title="{{ public-speech.name }}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    {% endif %} {% if public-speech.slideshare_embed %}
+    <iframe
+      class="aspect-[16/9] w-full"
+      loading="lazy"
+      src="{{ public-speech.slideshare_embed }}"
+      title="{{ public-speech.name }}"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
 
-    {% if public-speech.slideshare_embed %}
-      <iframe
-        class="aspect-[16/9] w-full"
-        loading="lazy"
-        src="{{ public-speech.slideshare_embed }}"
-        title="{{ public-speech.name }}"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
-
-    {% endif %}
-
-    {% if public-speech.transistor_embed %}
-      <iframe
-        class="aspect-[16/9] w-full"
-        loading="lazy"
-        height="180"
-        frameborder="no"
-        scrolling="no"
-        seamless
-        src="{{public-speech.transistor_embed}}"
-        title="{{ public-speech.name }}"
-      ></iframe>
-    {% endif %}
-
-    {% if public-speech.spotify_embed %}
-      <iframe
-        class="aspect-[16/9] w-full"
-        loading="lazy"
-        src="{{public-speech.spotify_embed}}"
-        title="{{ public-speech.name }}"
-        frameBorder="0"
-        allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      ></iframe>
-    {% endif %}
-
-    {% if public-speech.apple_podcasts_embed %}
-      <iframe
-        class="aspect-[16/9] w-full"
-        loading="lazy"
-        allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-        frameborder="0"
-        height="175"
-        style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-        src={{public-speech.apple_podcasts_embed}}
-        title="{{ public-speech.name }}"
-      ></iframe>
+    {% endif %} {% if public-speech.transistor_embed %}
+    <iframe
+      class="aspect-[16/9] w-full"
+      loading="lazy"
+      height="180"
+      frameborder="no"
+      scrolling="no"
+      seamless
+      src="{{public-speech.transistor_embed}}"
+      title="{{ public-speech.name }}"
+    ></iframe>
+    {% endif %} {% if public-speech.spotify_embed %}
+    <iframe
+      class="aspect-[16/9] w-full"
+      loading="lazy"
+      src="{{public-speech.spotify_embed}}"
+      title="{{ public-speech.name }}"
+      frameborder="0"
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    ></iframe>
+    {% endif %} {% if public-speech.apple_podcasts_embed %}
+    <iframe
+      class="aspect-[16/9] w-full"
+      loading="lazy"
+      allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+      frameborder="0"
+      height="175"
+      style="
+        width: 100%;
+        max-width: 660px;
+        overflow: hidden;
+        border-radius: 10px;
+      "
+      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+      src="{{public-speech.apple_podcasts_embed}}"
+      title="{{ public-speech.name }}"
+    ></iframe>
     {% endif %}
   </div>
 </div>

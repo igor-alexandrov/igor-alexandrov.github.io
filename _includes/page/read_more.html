@@ -1,49 +1,63 @@
 {% if page.previous.url or page.next.url %}
-  <section class="article__read_more read_more">
-    <div class="read_more__list">
-      {% if page.previous.url %}
-        <div class="read_more__item">
-          <div class="read_more__meta">
-            <time datetime="{{ page.previous.date | date: '%Y-%m-%d' }}">
-              {{ page.previous.date | date: "%B %-d, %Y" }}
-            </time>
-          </div>
+<section class="article__read_more read_more">
+  <div class="read_more__list">
+    {% if page.previous.url %}
+    <div class="read_more__item">
+      <div class="read_more__meta">
+        <time datetime="{{ page.previous.date | date: '%Y-%m-%d' }}">
+          {{ page.previous.date | date: "%B %-d, %Y" }}
+        </time>
+      </div>
 
-          <a class="read_more__link" href="{{ page.previous.url | prepend: site.baseurl }}">{{ page.previous.title }}</a>
+      <a
+        class="read_more__link"
+        href="{{ page.previous.url | prepend: site.baseurl }}"
+        >{{ page.previous.title }}</a
+      >
 
-          {% if page.previous.tags.size > 0 %}
-            <div class="tags">
-              {% for tag in page.previous.tags %}
-                <a class="tags__item" href="{{ site.baseurl }}/archive#{{ tag | cgi_escape }}" rel="tag">
-                  {{ tag }}
-                </a>
-              {% endfor %}
-            </div>
-          {% endif %}
-        </div>
-      {% endif %}
-
-      {% if page.next.url %}
-        <div class="read_more__item">
-          <div class="read_more__meta">
-            <time datetime="{{ page.next.date | date: '%Y-%m-%d' }}">
-              {{ page.next.date | date: "%B %-d, %Y" }}
-            </time>
-          </div>
-
-          <a class="read_more__link" href="{{ page.next.url | prepend: site.baseurl }}">{{ page.next.title }}</a>
-
-          {% if page.next.tags.size > 0 %}
-            <div class="tags">
-              {% for tag in page.next.tags %}
-                <a class="tags__item" href="{{ site.baseurl }}/archive#{{ tag | cgi_escape }}" rel="tag">
-                  {{ tag }}
-                </a>
-              {% endfor %}
-            </div>
-          {% endif %}
-        </div>
+      {% if page.previous.tags.size > 0 %}
+      <div class="tags">
+        {% for tag in page.previous.tags %}
+        <a
+          class="tags__item"
+          href="{{ site.baseurl }}/archive#{{ tag | cgi_escape }}"
+          rel="tag"
+        >
+          {{ tag }}
+        </a>
+        {% endfor %}
+      </div>
       {% endif %}
     </div>
-  </section>
+    {% endif %} {% if page.next.url %}
+    <div class="read_more__item">
+      <div class="read_more__meta">
+        <time datetime="{{ page.next.date | date: '%Y-%m-%d' }}">
+          {{ page.next.date | date: "%B %-d, %Y" }}
+        </time>
+      </div>
+
+      <a
+        class="read_more__link"
+        href="{{ page.next.url | prepend: site.baseurl }}"
+        >{{ page.next.title }}</a
+      >
+
+      {% if page.next.tags.size > 0 %}
+      <div class="tags">
+        {% for tag in page.next.tags %}
+        <a
+          class="tags__item"
+          href="{{ site.baseurl }}/archive#{{ tag | cgi_escape }}"
+          rel="tag"
+        >
+          {{ tag }}
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</section>
 {% endif %}

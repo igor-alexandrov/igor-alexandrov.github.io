@@ -6,15 +6,28 @@ twitter:
 ---
 
 <p>
-  This page lists my public speeches, talks, podcasts, and interviews as a Ruby programmer, co-founder, and CTO of a consulting company. Topics include, but are not limited to, technology, programming, leadership, and entrepreneurship. I've spoken at conferences, meetups, and podcasts worldwide, and I'm always looking for new opportunities to share my experiences and knowledge with others. Please [contact me](contact-me) via the form or reach me in the social networks.
+  This page lists my public speeches, talks, podcasts, and interviews as a Ruby
+  programmer, co-founder, and CTO of a consulting company. Topics include, but
+  are not limited to, technology, programming, leadership, and entrepreneurship.
+  I've spoken at conferences, meetups, and podcasts worldwide, and I'm always
+  looking for new opportunities to share my experiences and knowledge with
+  others. Please [contact me](contact-me) via the form or reach me in the social
+  networks.
 </p>
 
 <p>
-  Besides the list below, you can also check my own <a href="https://youtube.com/{{ site.youtube }}" target="_blank" rel="noopener"> YouTube channel</a> for more videos.
+  Besides the list below, you can also check my own
+  <a
+    href="https://youtube.com/{{ site.youtube }}"
+    target="_blank"
+    rel="noopener"
+  >
+    YouTube channel</a
+  >
+  for more videos.
 </p>
 
 <section class="public_speeches">
-  {% for public-speech in site.data.public-speeches %}
-    {% include public-speech.html %}
-  {% endfor %}
+  {% for public-speech in site.data.public-speeches %} {% include
+  public-speech.html %} {% endfor %}
 </section>

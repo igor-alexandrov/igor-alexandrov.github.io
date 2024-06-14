@@ -1,59 +1,53 @@
 <!doctype html>
-<html lang="en" class="overflow-hidden h-full">
+<html lang="en" class="h-full overflow-hidden">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     {% include head-seo.html %}
 
-    <link rel="shortcut icon" href="{{ site.url }}/{{ site.baseurl }}{{ site.favicon }}" type="image/png"/>
+    <link
+      rel="shortcut icon"
+      href="{{ site.url }}/{{ site.baseurl }}{{ site.favicon }}"
+      type="image/png"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    {% vite_client_tag %}
-    {% vite_javascript_tag application %}
-    {% vite_stylesheet_tag application %}
+    {% vite_client_tag %} {% vite_javascript_tag application %}
+    {%vite_stylesheet_tag application %}
   </head>
-  {% capture layout %}
-    {% if page.layout %}
-      layout-{{ page.layout }}
-    {% endif %}
+
+  {% capture layout %} {% if page.layout %} layout-{{ page.layout }} {% endif %}
   {% endcapture %}
 
-  <body data-controller="slide-over" class="overflow-auto h-full flex flex-col bg-white font-lato pointer-events-auto -center">
+  <body
+    data-controller="slide-over"
+    class="-center pointer-events-auto flex h-full flex-col overflow-auto bg-white font-lato"
+  >
     <div class="page">
       {% if page.url == "/" %}
-        <div class="pb-10 relative border-b border-gray-200">
-          {% if site.cover_image %}
-            <div class="bg-cover bg-center left-0 bottom-0 right-0 top-0 absolute opacity-15" style="background-image: url({{ site.baseurl }}/assets/images/{{ site.cover_image }})"></div>
-          {% endif %}
-
-          {% include header.html %}
-
-          {% if site.author %}
-            <section class="relative">
-              <div class="wrapper">
-                {% include author.html %}
-              </div>
-            </section>
-          {% endif %}
-        </div>
-      {% else %}
-        {% include header.html %}
-      {% endif %}
-
-      <div class="wrapper">
-        {{ content }}
+      <div class="relative border-b border-gray-200 pb-10">
+        {% if site.cover_image %}
+        <div
+          class="absolute bottom-0 left-0 right-0 top-0 bg-cover bg-center opacity-15"
+          style="background-image: url({{ site.baseurl }}/assets/images/{{ site.cover_image }})"
+        ></div>
+        {% endif %} {% include header.html %} {% if site.author %}
+        <section class="relative">
+          <div class="wrapper">{% include author.html %}</div>
+        </section>
+        {% endif %}
       </div>
+      {% else %} {% include header.html %} {% endif %}
+
+      <div class="wrapper">{{ content }}</div>
 
       {% include footer.html %}
     </div>
 
-    {% if jekyll.environment == "production" %}
-      {% include analytics.html %}
-    {% endif %}
-
-    {% include sidebar.html %}
+    {% if jekyll.environment == "production" %} {% include analytics.html %} {%
+    endif %} {% include sidebar.html %}
   </body>
 </html>

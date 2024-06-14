@@ -1,12 +1,23 @@
-<div class="h-60 flex items-center justify-center ">
-
+<div class="flex h-60 items-center justify-center">
   {% if site.author.webp %}
-    <picture class="rounded-full w-40 border-2 border-ruby-600 shadow-lg">
-      <source class="rounded-full" srcset="{{ site.baseurl }}/assets/images/{{ site.author.webp }}" type="image/webp">
-      <img class="rounded-full" src="{{ site.baseurl }}/assets/images/{{ site.author.image }}" alt="{{ site.author.name }}'s Picture"/>
-    </picture>
+  <picture class="w-40 rounded-full border-2 border-ruby-600 shadow-lg">
+    <source
+      class="rounded-full"
+      srcset="{{ site.baseurl }}/assets/images/{{ site.author.webp }}"
+      type="image/webp"
+    />
+    <img
+      class="rounded-full"
+      src="{{ site.baseurl }}/assets/images/{{ site.author.image }}"
+      alt="{{ site.author.name }}'s Picture"
+    />
+  </picture>
   {% else %}
-    <img class="rounded-full w-40 border-2 border-ruby-600 shadow-lg" src="{{ site.baseurl }}/assets/images/{{ site.author.image }}" alt="{{ site.author.name }}'s Picture"/>
+  <img
+    class="w-40 rounded-full border-2 border-ruby-600 shadow-lg"
+    src="{{ site.baseurl }}/assets/images/{{ site.author.image }}"
+    alt="{{ site.author.name }}'s Picture"
+  />
   {% endif %}
 </div>
 
@@ -16,54 +27,48 @@
 
 <div class="social-links mt-10">
   {% if site.twitter %}
-    <a
-      href="https://twitter.com/{{ site.twitter.username }}"
-      class="social-links__item social-links__item--extended"
-      target="_blank"
-      rel="noopener"
-    >
-      <span class="sr-only">X</span>
-      <i class="inline" data-lucide="twitter"></i>
-      <span class="hidden lg:inline">{{ site.twitter.username }}</span>
-    </a>
-  {% endif %}
-
-  {% if site.github %}
-    <a
-      href="https://github.com/{{ site.github }}"
-      class="social-links__item social-links__item--extended"
-      target="_blank"
-      rel="noopener"
-    >
-      <span class="sr-only">GitHub</span>
-      <i class="inline" data-lucide="github"></i>
-      <span class="hidden lg:inline">{{ site.github }}</span>
-    </a>
-  {% endif %}
-
-  {% if site.youtube %}
-    <a
-      href="https://youtube.com/{{ site.youtube }}"
-      class="social-links__item social-links__item--extended"
-      target="_blank"
-      rel="noopener"
-    >
-      <span class="sr-only">YouTube</span>
-      <i class="inline" data-lucide="youtube"></i>
-      <span class="hidden lg:inline">{{ site.youtube }}</span>
-    </a>
-  {% endif %}
-
-  {% if site.linkedin %}
-    <a
-      href="https://www.linkedin.com/in/{{ site.linkedin }}"
-      class="social-links__item social-links__item--extended"
-      target="_blank"
-      rel="noopener"
-    >
-      <span class="sr-only">LinkedIn</span>
-      <i class="inline" data-lucide="linkedin"></i>
-      <span class="hidden lg:inline">{{ site.linkedin }}</span>
-    </a>
+  <a
+    href="https://twitter.com/{{ site.twitter.username }}"
+    class="social-links__item social-links__item--extended"
+    target="_blank"
+    rel="noopener"
+  >
+    <span class="sr-only">X</span>
+    <i class="inline" data-lucide="twitter"></i>
+    <span class="hidden lg:inline">{{ site.twitter.username }}</span>
+  </a>
+  {% endif %} {% if site.github %}
+  <a
+    href="https://github.com/{{ site.github }}"
+    class="social-links__item social-links__item--extended"
+    target="_blank"
+    rel="noopener"
+  >
+    <span class="sr-only">GitHub</span>
+    <i class="inline" data-lucide="github"></i>
+    <span class="hidden lg:inline">{{ site.github }}</span>
+  </a>
+  {% endif %} {% if site.youtube %}
+  <a
+    href="https://youtube.com/{{ site.youtube }}"
+    class="social-links__item social-links__item--extended"
+    target="_blank"
+    rel="noopener"
+  >
+    <span class="sr-only">YouTube</span>
+    <i class="inline" data-lucide="youtube"></i>
+    <span class="hidden lg:inline">{{ site.youtube }}</span>
+  </a>
+  {% endif %} {% if site.linkedin %}
+  <a
+    href="https://www.linkedin.com/in/{{ site.linkedin }}"
+    class="social-links__item social-links__item--extended"
+    target="_blank"
+    rel="noopener"
+  >
+    <span class="sr-only">LinkedIn</span>
+    <i class="inline" data-lucide="linkedin"></i>
+    <span class="hidden lg:inline">{{ site.linkedin }}</span>
+  </a>
   {% endif %}
 </div>
