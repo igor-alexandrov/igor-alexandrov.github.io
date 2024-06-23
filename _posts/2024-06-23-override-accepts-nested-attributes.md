@@ -11,7 +11,7 @@ hidden: false
 
 Among other great features of ActiveRecord in Rails, I find `accepts_nested_attributes_for` is one of the most useful. It was introduced in [Rails 2.3](https://guides.rubyonrails.org/2_3_release_notes.html#nested-attributes) and allows you to save attributes on associated records through the parent.
 
-I assume that you know what `accepts_nested_attributes_for` does in Rails. If not, please read the [official documentation](https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html).
+If you are not familiar with `accepts_nested_attributes_for` method, I suggest you read the [official documentation](https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html) before reading this article.
 
 There are some options that you can pass to `accepts_nested_attributes_for` method. Lets quickly go through them.
 
