@@ -49,14 +49,14 @@ end
 # Table name: inventories
 #
 #  id                    :bigint           not null, primary key
-#  barcode_data          :string           not null
+#  barcode_data          :string
 #
 # Indexes
 #
 #  index_inventories_on_barcode_data       (barcode_data) UNIQUE
 ```
 
-Example above consists of three models where `Work` has an `Inventory`. Inventory model has a `barcode_data` column which is unique, but can be blank. To make this example easier, I didn't include other `Inventory` attributes, which also can identify it. There are also tables and models to track barcode history, but they are also not relevant to this example.
+Example above consists of two models where `Work` has an `Inventory`. Inventory model has a `barcode_data` column which is unique, but can be blank. To make this example easier, I didn't include other `Inventory` attributes, some of them can also can identify it. There are also tables and models to track barcode history, but they are also not relevant to this example.
 
 Now, I want to create a new work with inventory and `barcode_data`. Below is the list of params that will be passed to `Work.create` method.
 
@@ -95,6 +95,7 @@ class Work < ApplicationRecord
   end
 end
 ```
+
 That's it. Now, when I pass the same set of params to `Work.create` method, it will find the existing inventory record by `barcode_data` and update it.
 
 ## Today you learned
