@@ -4,7 +4,7 @@ layout: post
 tags:
   - Rails
   - Ruby
-  - Today-You-Learned
+  - Today You Learned
 featured: false
 hidden: false
 ---
