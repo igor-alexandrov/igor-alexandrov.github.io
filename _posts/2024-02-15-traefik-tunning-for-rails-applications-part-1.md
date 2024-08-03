@@ -5,7 +5,7 @@ tags:
   - Rails
   - Traefik
   - Kamal
-featured: true
+featured: false
 hidden: false
 ---
 
