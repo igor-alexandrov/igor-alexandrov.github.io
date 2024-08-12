@@ -4,7 +4,7 @@ layout: post
 tags:
   - Rails
   - Ruby
-featured: true
+featured: false
 hidden: false
 ---
 
