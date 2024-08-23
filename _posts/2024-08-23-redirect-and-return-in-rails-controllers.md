@@ -69,6 +69,50 @@ AbstractController::DoubleRenderError in TimeOffsController#new
 Render and/or redirect were called multiple times in this action.
 ```
 
+## UPD. Difference between `&&` and `and`
+
+Above in the post, I posted the link to the table of operator precedence in Ruby. Both `&&` and `and` are logical operators in Ruby, but they have different precedence, `&&` has higher precedence than `and`. This difference in precedence can lead to unexpected behavior when they are used in complex expressions.
+
+``` ruby
+# Using &&
+a = true && false
+b = false && true
+
+puts a # => false
+puts b # => false
+
+# Using and
+c = true and false
+d = false and true
+
+puts c # => true
+puts d # => false
+```
+
+Pretty interesting, right?
+
+In the first case `&&`, the assignment happens after evaluating the expression, so `a` and `b` are both assigned the result of the logical operation `false`.
+
+In the second case `and`, the assignment happens before the logical operation because `and` has lower precedence than `=`. So `c` is first assigned true, and then the logical and operation is evaluated, which does not affect the assignment.
+
+Let's take a look at the another example.
+
+``` ruby
+# Using &&
+a = b = false && true
+puts a # => false
+puts b # => false
+
+# Using and
+c = d = false and true
+puts c # => false
+puts d # => false
+```
+With `&&`, both `a` and `b` are assigned the result of `false && true`, which is `false`.
+With and, `d = false` is evaluated first (due to and's lower precedence), and then `c = d` is assigned.
+
+You should be careful when using `and` and `&&` in complex expressions. It is better to use `&&` for logical operations, while `and` can be used to control flow.
+
 ## Conclusions
 
 Despite the fact my post was about Ruby operator precedence, there were people who suggested that it is better to use `before_action` for such kind of checks. I agree. I will try to be more explicit in my future posts and will provide more context.
