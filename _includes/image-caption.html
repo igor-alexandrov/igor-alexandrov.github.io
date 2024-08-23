@@ -2,7 +2,7 @@
   <img
     src="{{ include.imageurl }}"
     alt="{{ include.title }}"
-    width="{{ include.width | default: '100%' }}"
+    style="max-width: {{ include.width | default: '100%' }}"
   />
   {% if include.caption %}
   <figcaption class="caption-text block">{{ include.caption }}</figcaption>
