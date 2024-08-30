@@ -5,7 +5,7 @@ tags:
   - Ruby
   - Rails
   - Today You Learned
-featured: true
+featured: false
 hidden: false
 ---
 
