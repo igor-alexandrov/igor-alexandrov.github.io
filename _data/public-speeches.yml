@@ -24,6 +24,12 @@
   # spotify_embed: https://open.spotify.com/embed/episode/7kLy7cVqbdOy2X2pvTSlQ2?utm_source=generator&theme=0
   youtube_embed: https://www.youtube-nocookie.com/embed/ReOihtTiBGY?si=lO9YUkowMRyIxnsd
 
+- date: 2021-12-01
+  name: Как работать на стартапы из Долины
+  event_name: Кода Кода
+  location: Online
+  apple_podcasts_embed: https://embed.podcasts.apple.com/us/podcast/%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B0%D1%8E%D1%82%D1%81%D1%8F-%D0%BA%D0%B0%D0%BA-%D1%82%D0%BE-%D0%B0%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0%D0%BD%D0%B5%D1%86-%D0%B8-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9-%D0%B8%D0%BB%D0%B8-%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%82%D1%8C/id1551786898?i=1000543566757
+
 - date: 2021-11-16
   name: Стоит ли программистам работать в JetRockets
   event_name: Хекслет (Hexlet)
