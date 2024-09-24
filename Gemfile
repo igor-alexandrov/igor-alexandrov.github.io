@@ -15,6 +15,7 @@ gem "rubocop-rails-omakase", require: false
 
 group :jekyll_plugins do
   gem "jekyll-admin"
+  gem 'jekyll-target-blank'
   gem "jekyll-paginate"
   gem "jekyll-seo-tag"
   gem "jekyll-sitemap"
