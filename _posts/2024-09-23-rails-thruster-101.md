@@ -5,6 +5,7 @@ tags:
   - Ruby
   - Rails
   - DevOps
+  - kamal
 featured: true
 hidden: false
 ---
