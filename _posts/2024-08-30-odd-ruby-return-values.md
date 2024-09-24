@@ -5,7 +5,7 @@ tags:
   - Ruby
   - Rails
   - Today You Learned
-featured: true
+featured: false
 hidden: false
 ---
 
@@ -73,4 +73,3 @@ Yes, I believe that at the beginning of your career, it is crucial to understand
 ## Conclusions
 
 Today you learned, or, I hope, you remembered, that every expression in Ruby has a value. Conditional statements in Ruby are expressions that return `nil` if the conditional is `false`.
-
