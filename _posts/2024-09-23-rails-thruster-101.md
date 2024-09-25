@@ -25,7 +25,7 @@ This is where Thruster comes into play. It wraps the Puma instance and efficient
 Thruster also provides GZip compression which was available in Traefik [via middleware](https://doc.traefik.io/traefik/middlewares/http/compress/), but won't exist in kamal-proxy. GZip compression plays a crucial role in optimizing web performance by significantly reducing the size of files transmitted between a server and a client. By compressing assets like HTML, CSS, and JavaScript, GZIP decreases bandwidth usage and accelerates the loading times of web pages, providing users with a faster, more seamless browsing experience. This not only enhances user satisfaction but also improves search engine rankings, as faster websites tend to rank higher in search results. Additionally, reducing the size of data transfers lightens the load on servers, allowing them to handle more requests efficiently and lowering hosting costs.
 
 A reasonable question would be “Why I cannot do a GZIP compression in Rails?”.
-Technically, you can with [Rack::Deflater](https://github.com/rack/rack/blob/main/lib/rack/deflater.rb). However, GZip compression within Ruby is inefficient because it is CPU-intensive and can block performance, reducing the server’s ability to handle requests.
+Technically, you can with [Rack::Deflater](https://github.com/rack/rack/blob/main/lib/rack/deflater.rb). But since Thruster is already responsible for serving public assets, it can also efficiently handle compression.
 
 Besides a compression, Thruster also provides a basic HTTP caching of public assets and HTTP/2 support.
 
