@@ -1,4 +1,4 @@
-<figure class="not-prose grid grid-cols-1 justify-items-center py-2 my-8">
+<figure class="not-prose my-8 grid grid-cols-1 justify-items-center py-2">
   <img
     src="{{ include.imageurl }}"
     alt="{{ include.title }}"
@@ -6,7 +6,7 @@
   />
 
   {% if include.caption %}
-  <figcaption class="block text-center text-sm text-gray-600 mt-2">
+  <figcaption class="mt-2 block text-center text-sm text-gray-600">
     {{ include.caption }}
   </figcaption>
   {% endif %}
