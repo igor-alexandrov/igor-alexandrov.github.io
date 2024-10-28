@@ -15,29 +15,8 @@
     </h3>
   </header>
 
-  {% if post.featured_image_thumbnail %}
-  <div class="excerpt__content">
-    <a href="{{ post.url }}">
-      <img
-        src="{% if post.featured_image_thumbnail contains ' :// ' %}{{ post.featured_image_thumbnail }}{% else %}{{ post.featured_image_thumbnail | absolute_url }}{% endif %}"
-        alt="{{ post.title }}"
-      />
-    </a>
 
-    <p class="">{{ post.excerpt | strip_html }}</p>
-  </div>
-  {% elsif post.featured_image %}
-  <div class="excerpt__content">
-    <a href="{{ post.url }}">
-      <img
-        src="{% if post.featured_image contains ' :// ' %}{{ post.featured_image }}{% else %}{{ post.featured_image | absolute_url }}{% endif %}"
-        alt="{{ post.title }}"
-      />
-    </a>
-
-    <p class="">{{ post.excerpt | strip_html }}</p>
-  </div>
-  {% elsif post.youtube_embed %}
+  {% if post.youtube_embed %}
   <div class="excerpt__content excerpt__content-video">
     <iframe
       class="aspect-[16/9] w-full lg:float-left lg:mr-8 lg:mt-2 lg:w-6/12"

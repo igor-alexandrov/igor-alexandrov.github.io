@@ -20,20 +20,14 @@ layout: default
   </header>
 
   <section class="article__content">
-    {% if page.featured_image_thumbnail %}
-    <a href="{{ post.url }}">
+    {% if page.featured_image %}
+    <div class="flex justify-center items-center my-16">
       <img
-        src="{% if post.featured_image_thumbnail contains ' :// ' %}{{ post.featured_image_thumbnail }}{% else %}{{ post.featured_image_thumbnail | absolute_url }}{% endif %}"
-        alt="{{ post.title }}"
+        class="not-prose sm:max-h-48"
+        src="{{ page.featured_image | prepend: site.baseurl }}"
+        alt="{% if page.featured_image_alt %}{{ page.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"
       />
-    </a>
-    {% elsif page.featured_image %}
-    <a href="{{ post.url }}">
-      <img
-        src="{% if post.featured_image contains ' :// ' %}{{ post.featured_image }}{% else %}{{ post.featured_image | absolute_url }}{% endif %}"
-        alt="{{ post.title }}"
-      />
-    </a>
+    </div>
     {% elsif page.youtube_embed %}
     <div>
       <iframe

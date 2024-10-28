@@ -6,7 +6,7 @@ tags:
   - Rails
   - DevOps
   - kamal
-featured: true
+featured: false
 hidden: false
 ---
 

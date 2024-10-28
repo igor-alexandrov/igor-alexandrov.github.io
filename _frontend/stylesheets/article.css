@@ -6,6 +6,8 @@
     @apply prose-code:before:hidden prose-code:after:hidden prose-code:bg-amber-50 prose-code:p-1 prose-code:rounded-md prose-code:font-ubuntu-mono;
     @apply prose-pre:rounded-lg prose-pre:bg-white prose-pre:border prose-pre:border-gray-500;
     @apply prose-h1:mb-0;
+    @apply prose-figure:px-10 prose-figure:pt-4 prose-figure:pb-8 prose-figure:bg-amber-50;
+    @apply prose-figcaption:text-black prose-figcaption:font-bold;
   }
 
   .article__header {
