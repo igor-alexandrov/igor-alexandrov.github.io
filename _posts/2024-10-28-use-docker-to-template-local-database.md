@@ -209,6 +209,6 @@ Elapsed time: 46 seconds
 Only 46 seconds and are ready to go. Start the Rails app again and work on your feature. Each time you will need to reset the database to the template simply run `./bin/docker-db-use-template.sh safari` again.
 
 ## Conclusions
-There are two main takeaways from this post. The first is that you should try to be as effective as possible. When I see that some task takes a lot of time, I try to find a way to speed it up. It is true for my work as developer, CTO and even true for my personal life. Time is the most valuable resource that we have.
+There are two main takeaways from this post. The first is that you should try to be as effective as possible. When I see that some task takes a lot of time, I try to find a way to speed it up. It is true for my work as developer, CTO, and even true for my personal life. Time is the most valuable resource that we have.
 
-The second is that creating a tooling aroud your daily tasks can save you a lot of time. I have a lot of scripts that I use every day. They are not perfect, but they do the job. I am happy to share them with you. If you have any questions or suggestions, feel free to reach me out on [X](https://x.com/igor_alexandrov).
+The second is that creating a tooling around your daily tasks can save you a lot of time. I have many scripts that I use every day. They are not perfect, but they do the job. I am excited to share them with you. For any clarifications or suggestions, feel free to reach me out on [X](https://x.com/igor_alexandrov).
