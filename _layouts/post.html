@@ -23,7 +23,7 @@ layout: default
     {% if page.featured_image %}
     <div class="my-16 flex items-center justify-center">
       <img
-        class="not-prose sm:max-h-48"
+        class="not-prose max-h-48"
         src="{{ page.featured_image | prepend: site.baseurl }}"
         alt="{% if page.featured_image_alt %}{{ page.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"
       />
