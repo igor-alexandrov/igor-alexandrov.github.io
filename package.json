@@ -7,7 +7,7 @@
     "@shopify/prettier-plugin-liquid": "^1.5.0",
     "prettier": "3.2.4",
     "prettier-plugin-tailwindcss": "^0.6.4",
-    "vite": "^5.1.8",
+    "vite": "^5.4.12",
     "vite-plugin-ruby": "^5.0.0"
   },
   "dependencies": {
