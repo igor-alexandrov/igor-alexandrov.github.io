@@ -2,10 +2,10 @@
   <nav class="header__nav" aria-label="Global">
     {% assign root = site.baseurl | append: '/' %} {% if page.url == "/" %}
     <a href="{{ root }}" class="nav__site_name">
-      <h1>{{ site.name }}</h1>
+      <h1>{{ site.title }}</h1>
     </a>
     {% else %}
-    <a href="{{ root }}" class="nav__site_name">{{ site.name }}</a>
+    <a href="{{ root }}" class="nav__site_name">{{ site.title }}</a>
     {% endif %}
 
     <div class="nav__container">
