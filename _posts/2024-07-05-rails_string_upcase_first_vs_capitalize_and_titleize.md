@@ -13,6 +13,8 @@ What comes in your mind when you have a task to make the first letter of a strin
 
 In one of my recent projects, we've been asked to ensure first capital letter in first and last name of a user. Sounds simple right? We've used Rails 7.1 normalization API together with `String#titleize`.
 
+<!--more-->
+
 ```ruby
 normalizes :first_name, with: ->(value) { value.capitalize }
 normalizes :last_name, with: ->(value) { value.capitalize }

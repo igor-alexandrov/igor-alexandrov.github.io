@@ -13,6 +13,8 @@ Among other great features of ActiveRecord in Rails, I find `accepts_nested_attr
 
 If you are not familiar with `accepts_nested_attributes_for` method, I suggest you read the [official documentation](https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html) before reading this article.
 
+<!--more-->
+
 There are some options that you can pass to `accepts_nested_attributes_for` method. Lets quickly go through them.
 
 1. `:update_only` - If you want to update the existing record only and not create new one, you can pass `update_only: true` to the method. This works only for one-to-one association.

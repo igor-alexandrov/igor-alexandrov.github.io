@@ -8,6 +8,7 @@ url: https://igor.works
 cover_image: bc_3.jpg
 simple_analytics: true
 page_excerpts: true
+excerpt_separator: <!--more-->
 
 # Author
 author:
@@ -25,16 +26,10 @@ formspree_id: mqkrenkd
 contact_page_description: 'If you have any questions or just want to say "Hi 👋", please feel free to drop me a line. I will try my best to respond as soon as possible!'
 thankyou_page_description: "Your message has been successfully sent. I will contact you very soon!"
 
-# Social links
 twitter:
   username: "igor_alexandrov"
   card: summary_large_image
 github: "igor-alexandrov"
-# codepen: "username"
-# dribbble: "username"
-# medium: "@username"
-# instagram: "username"
-# pinterest: "username"
 linkedin: "igor-aleksandrov"
 youtube: "@RubyAndBeyond"
 
@@ -69,6 +64,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-og-image
   - jekyll-target-blank
+  - jekyll-toc
 
 # Pagination
 paginate: 5
@@ -82,6 +78,10 @@ markdown: kramdown
 highlighter: nil
 # kramdown:
 #   input: GFM
+
+toc:
+  max_level: 3
+  list_class: ""
 
 og_image:
   output_dir: "/assets/og"
@@ -100,11 +100,6 @@ og_image:
   border_bottom:
     width: 20
     fill:
-      # - "#3D68C9"
-      # - "#FCB216"
-      # - "#FFFFFF"
-      # - "#ED1A3A"
-      # - "#60BB48"
       - "#65ADFF"
       - "#AD74B4"
       - "#EBB7A7"

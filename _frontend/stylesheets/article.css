@@ -24,6 +24,14 @@
     @apply block w-32 h-1 bg-ruby-600 mt-2;
   }
 
+  .article__toc {
+    /* @apply my-14 lg:my-16; */
+  }
+
+  .article__container {
+    @apply flex flex-col flex-col-reverse;
+  }
+
   .article__footer {
     @apply grid grid-cols-1 lg:grid-cols-2 mt-10 gap-6 lg:gap-20;
   }

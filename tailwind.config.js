@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        lato: ['"Lato"', "sans-serif"],
+        inter: ['"Inter"', "sans-serif"],
         "ubuntu-mono": ['"Ubuntu Mono"', "monospace"],
       },
       colors: {

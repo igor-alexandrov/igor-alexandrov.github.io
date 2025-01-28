@@ -5,12 +5,14 @@ tags:
   - Docker
   - DevOps
   - Captain Speaks
-featured: true
+featured: false
 hidden: false
 featured_image: /assets/images/docker-mark-blue.png
 ---
 
 How often do you reset your local development database? Depending on the task I am working on, I can do this even ten times a day. The reasons can be different. You or your teammate pushed an irreversible migration, which is of course not the best practice, but happens in the real life. Or you simply corrupted the data while implementing some new functionality.
+
+<!--more-->
 
 ## TL;DR
 

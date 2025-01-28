@@ -19,8 +19,7 @@ layout: default
     <h1 class="article__title" itemprop="headline">{{ page.title }}</h1>
   </header>
 
-  <section class="article__content">
-    {% if page.featured_image %}
+  {% if page.featured_image %}
     <div class="my-16 flex items-center justify-center">
       <img
         class="not-prose max-h-48"
@@ -40,8 +39,23 @@ layout: default
         allowfullscreen
       ></iframe>
     </div>
-    {% endif %} {{content}}
-  </section>
+  {% endif %}
+
+  {% if page.toc %}
+    <div class="article__container">
+      <section class="article__content">
+        {{content}}
+      </section>
+
+      <section class="article__toc">
+        {% toc %}
+      </section>
+    </div>
+  {% else %}
+    <section class="article__content">
+      {{content}}
+    </section>
+  {% endif %}
 
   <section class="article__footer">
     {% include page/tags.html %} {% include page/share.html %} {% include

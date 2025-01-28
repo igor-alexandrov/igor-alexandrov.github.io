@@ -8,6 +8,8 @@ tags:
 
 On October 5th, Rails 7.1 has been released. In this article, I will show you how I upgraded one of our projects, OneTribe (https://onetribe.team/), to the new major release within one day of my holidays.
 
+<!--more-->
+
 ## Prerequisites
 
 OneTribe runs Ruby 3.2.2 and Rails 7.0.7, we host code on a GitHub and deploy with GitHub Actions and Kamal. I showed how to do this in my previous article: https://jetrockets.com/blog/how-to-use-basecamp-s-kamal-with-aws-and-github.

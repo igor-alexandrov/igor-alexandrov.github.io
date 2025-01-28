@@ -14,6 +14,8 @@ While we are waiting for the Rails World 2024 conference to start and Kamal 2 to
 
 In March 2024 Basecamp team released [Thruster](https://github.com/basecamp/thruster/) a small, Go-based proxy server for Rails. While the original idea of Thruster was to provide an ability to build production-ready Rails applications from a single container for the ONCE project, it will fit perfectly to the Kamal ecosystem.
 
+<!--more-->
+
 ## Isn't it a redundancy?
 
 Wait? Another proxy server? Why do we need it? Allow me to explain.

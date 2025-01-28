@@ -9,9 +9,10 @@ tags:
 
 In an age where attention spans are fleeting and choices abundant, the success of any online platform hinges on its ability to provide seamless, swift, and engaging interactions. In fact, [40% of visitors](https://www.browserstack.com/guide/how-fast-should-a-website-load) will leave a website if it takes longer than three seconds to load.
 
+With just a one second delay potentially causing a significant drop in user engagement, conversion rates, and overall satisfaction, it’s imperative that web developers prioritize immediacy. This rings especially true for Ruby on Rails applications, the backbone of many dynamic websites and web services.
+
 <!--more-->
 
-With just a one second delay potentially causing a significant drop in user engagement, conversion rates, and overall satisfaction, it’s imperative that web developers prioritize immediacy. This rings especially true for Ruby on Rails applications, the backbone of many dynamic websites and web services.
 In JetRocket we care about our applications performance a lot. Performance in my opinion is not only a server response time. Of course responses should always be fast, but deployments, tests and application front-end should also run on maximum speed. Within almost 15 years of our history we collected a quite vast collection of tools and techniques that help us to provide the best performance to our clients projects.
 
 ## Database Problems & Tools

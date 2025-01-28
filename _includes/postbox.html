@@ -27,11 +27,11 @@
       allowfullscreen
     ></iframe>
 
-    <p class="">{{ post.excerpt | strip_html }}</p>
+    {{ post.excerpt }}
   </div>
   {% else %}
   <div class="excerpt__content">
-    <p>{{ post.excerpt | strip_html }}</p>
+    {{ post.excerpt }}
   </div>
   {% endif %}
 

@@ -10,6 +10,8 @@ hidden: false
 
 On August 9th, [Rails 7.2 was released](https://edgeguides.rubyonrails.org/7_2_release_notes.html), bringing a host of new features and improvements to the framework. Ten months ago, I demonstrated [how to upgrade a Rails application from 7.0 to 7.1](https://igor.works/blog/upgrading-rails-application-from-70-to-71), which was well-received by the community. Today, I will take you through the process of upgrading OneTribe from Rails 7.1 to 7.2. This upgrade not only ensures compatibility with the latest Rails enhancements but also allows me to better understand new Rails functionalities and performance optimizations. Let’s dive into the upgrade process and explore what Rails 7.2 has to offer.
 
+<!--more-->
+
 ## Prerequisites
 
 OneTribe runs Ruby 3.3.4 and Rails 7.1.3, which is good because Rails 7.2 requires Ruby 3.1.0 or newer. Nothing changed in code hosting and deployment, we still use GitHub and GitHub Actions with Kamal.
