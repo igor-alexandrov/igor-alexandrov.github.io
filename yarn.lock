@@ -297,20 +297,20 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.31.0.tgz#7a2d89a82cf0388d60304964217dd7beac6de645"
   integrity sha512-ul8rnCsUumNln5YWwz0ted2ZHFhzhRRnkpBZ+YRuHoRAlUji9KChpOUOndY7uykrPEPXVbHLlsdo6v5yXo/TXw==
 
-"@shopify/liquid-html-parser@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@shopify/liquid-html-parser/-/liquid-html-parser-2.0.3.tgz#fcf22fc8e8dcee7d0db98dfc9fdae36d8e00d24a"
-  integrity sha512-aIkZ5TJWG7/ztd1sZm5XNpBNTG3B+Q0gv3WN/QahmNQzm2wmKYSHiRLOA8JALAnOGTmH0uqOJ7jzdqoATcZSxw==
+"@shopify/liquid-html-parser@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@shopify/liquid-html-parser/-/liquid-html-parser-2.3.0.tgz#664c39ba123aaa67d31ec4a00fa87809695e3fbf"
+  integrity sha512-n8oTg/G5z27Qm+fXhIe5b1jXmfnhLgwjeakctGFu6tqIg3RJlJlUugknJD9hN4n9AWl1KzkXpG0JVD6Im1t7Xw==
   dependencies:
     line-column "^1.0.2"
     ohm-js "^16.3.0"
 
 "@shopify/prettier-plugin-liquid@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@shopify/prettier-plugin-liquid/-/prettier-plugin-liquid-1.5.0.tgz#6ced460aeb446c918ed995fc9f7df82ccbf44ceb"
-  integrity sha512-CuWjUnBCvq/RTmubEa5RfwW2oP2gYfTXaJ39t4apAYm//1v5Ftvv1bbhEnoEZwCjPshaAJLhSzP9dvCel4cebw==
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@shopify/prettier-plugin-liquid/-/prettier-plugin-liquid-1.7.0.tgz#b90ec892380cfe78469194020d4589ab6cc065b2"
+  integrity sha512-k1NcKgO1mMulw4KTJ2yQru5h6DFz8M9SnmfWU/KqOdWvuFFpqeqb/EiEaY+1nBGNHVyLhGrMmEJamqQ/9cFiVg==
   dependencies:
-    "@shopify/liquid-html-parser" "^2.0.3"
+    "@shopify/liquid-html-parser" "^2.3.0"
     html-styles "^1.0.0"
 
 "@tailwindcss/aspect-ratio@^0.4.2":

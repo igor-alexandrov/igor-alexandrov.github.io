@@ -28,8 +28,9 @@
       href="{{ site.baseurl }}/archive#{{ tag | cgi_escape }}"
       rel="tag"
     >
-      {{ tag }}
+      {{- tag -}}
     </a>
+
     {% endfor %} {% endif %}
   </div>
 
