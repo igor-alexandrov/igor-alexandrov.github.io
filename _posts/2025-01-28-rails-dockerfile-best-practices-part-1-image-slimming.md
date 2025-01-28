@@ -1,5 +1,6 @@
 ---
 title: "Rails Dockerfile Best Practices – Part 1: Image Slimming"
+description: Discover effective techniques used in the Rails Dockerfile for slimming images, improving build times, and enhancing performance. Perfect for developers looking to optimize their Docker setup in Rails projects.
 layout: post
 tags:
   - Docker

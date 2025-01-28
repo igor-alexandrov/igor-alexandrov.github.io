@@ -1,24 +1,24 @@
 # Site setings
-name: "Ruby & Beyond"
-meta_description: "Igor Alexandrov – Ruby/Crystal developer, Open Source contributor, JetRockets CTO and co-founder, and a proud father."
+title: "Ruby & Beyond"
+description: "Igor Aleksandrov – Ruby engineer, Open Source contributor, JetRockets CTO and co-founder, Docker Captain and a proud father."
 # logo: "assets/images/logo.png"
 favicon: "assets/images/favicon.ico"
 timezone: Asia/Tbilisi
 url: https://igor.works
 cover_image: bc_3.jpg
 simple_analytics: true
-page_excerpts: true
+page_excerpts: false
 excerpt_separator: <!--more-->
 
 # Author
 author:
-  name: "Igor Alexandrov"
+  name: "Igor Aleksandrov"
   image: "igor.jpeg"
   webp: "igor.webp"
   greetings: "Ruby & Beyond"
-  description: "Hello, 👋. My name is Igor Alexandrov.<br/>I am CTO of JetRockets and a software engineer with more than 15 years of experience."
-  bio: "I am a Ruby/Rails and Crystal engineer, Open Source contributor, JetRockets CTO, and co-founder. I have been working with Ruby since 2008 and with Rails since 2009, and my overall commercial experience in programming is 20 years. I started working with Rails when it was at version 2.2 and never stopped since then."
-  twitter: "@igor_alexandrov"
+  description: "Hello, 👋. My name is Igor Aleksandrov.<br/>I am CTO of JetRockets, Docker Captain and a software engineer with more than 15 years of experience."
+  bio: "I am a Ruby/Rails engineer, Open Source contributor, JetRockets CTO, and Docker Captain. I have been working with Ruby since 2008 and with Rails since 2009, and my overall commercial experience in programming is 20 years. I started working with Rails when it was at version 2.2 and never stopped since then."
+  twitter: "igor_alexandrov"
 
 # Contact form setings
 email: igor.alexandrov@gmail.com
@@ -55,6 +55,11 @@ exclude:
   - vite.config.ts
   - Procfile.dev
   - Rakefile
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
 # Required Plugins
 plugins:
