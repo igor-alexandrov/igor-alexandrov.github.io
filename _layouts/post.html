@@ -20,41 +20,33 @@ layout: default
   </header>
 
   {% if page.featured_image %}
-    <div class="my-16 flex items-center justify-center">
-      <img
-        class="not-prose max-h-48"
-        src="{{ page.featured_image | prepend: site.baseurl }}"
-        alt="{% if page.featured_image_alt %}{{ page.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"
-      />
-    </div>
-    {% elsif page.youtube_embed %}
-    <div>
-      <iframe
-        class="aspect-[16/9] w-full"
-        loading="lazy"
-        src="{{ page.youtube_embed }}"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-    </div>
-  {% endif %}
+  <div class="my-16 flex items-center justify-center">
+    <img
+      class="not-prose max-h-48"
+      src="{{ page.featured_image | prepend: site.baseurl }}"
+      alt="{% if page.featured_image_alt %}{{ page.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"
+    />
+  </div>
+  {% elsif page.youtube_embed %}
+  <div>
+    <iframe
+      class="aspect-[16/9] w-full"
+      loading="lazy"
+      src="{{ page.youtube_embed }}"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  {% endif %} {% if page.toc %}
+  <div class="article__container">
+    <section class="article__content">{{content}}</section>
 
-  {% if page.toc %}
-    <div class="article__container">
-      <section class="article__content">
-        {{content}}
-      </section>
-
-      <section class="article__toc">
-        {% toc %}
-      </section>
-    </div>
+    <section class="article__toc">{% toc %}</section>
+  </div>
   {% else %}
-    <section class="article__content">
-      {{content}}
-    </section>
+  <section class="article__content">{{content}}</section>
   {% endif %}
 
   <section class="article__footer">

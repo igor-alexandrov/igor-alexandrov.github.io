@@ -1,15 +1,10 @@
 <figure>
-  <blockquote>
-    {{ include.blockquote }}
-  </blockquote>
+  <blockquote>{{ include.blockquote }}</blockquote>
 
   <figcaption>
-    {{ include.attribution }}
-    —
+    {{ include.attribution }} —
     <cite>
-      <a href="{{ include.url }}">
-        {{ include.title }}
-      </a>
+      <a href="{{ include.url }}"> {{ include.title }} </a>
     </cite>
   </figcaption>
 </figure>
