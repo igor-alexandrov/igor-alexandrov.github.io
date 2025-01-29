@@ -437,4 +437,4 @@ Instead of squashing layers, it is recommended to use multi-stage builds. Rails 
 
 ## Conclusions
 
-Optimizing Docker images, just like any other optimization, **cannot be done once and forgotten**. It is an ongoing process that requires regular checks and improvements. I tried to cover the basics, but they are very important to know and understand. In the next articles, I will cover more advanced techniques and tools that can help to make your Docker builds faster and more efficient.
+Optimizing Docker images, just like any other optimization, **cannot be done once and forgotten**. It is an ongoing process that requires regular checks and improvements. I tried to cover the basics, but they are critical to know and understand. In the next articles, I will cover more advanced techniques and tools that can help to make your Docker builds faster and more efficient.
