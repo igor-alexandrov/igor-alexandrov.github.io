@@ -13,9 +13,9 @@ featured_image: /assets/images/docker-mark-blue.png
 toc: true
 ---
 
-This article is a part of series of posts where I will walk through the each and every line of the Rails default `Dockerfile` and explain the best practices and optimizations.
+This article is a part of a series of posts where I will walk through every line of the Rails default `Dockerfile` and explain the best practices and optimizations.
 
-Docker images can be optimized in different ways that include, but are not limited to image size reduction, build performance optimization, security and maintainability best practices, and application-specific optimizations. In the first article, I will touch only image size reduction optimization and explain why they are important.
+Docker images can be optimized in different ways that include, but are not limited to, image size reduction, build performance optimization, security, and maintainability best practices, and application-specific optimizations. In the first article, I will touch only image size reduction optimization and explain why they are important.
 
 <!--more-->
 
