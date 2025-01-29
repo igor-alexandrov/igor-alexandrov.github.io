@@ -302,8 +302,6 @@ original           latest    f1363df79c8a   16 minutes ago   356MB
 
 The image without cleaning is 19 MB bigger than the one with cleaning, this is a **5% increase in size**.
 
-rm -rf /var/lib/apt/lists/* TO SAME LAYER AS apt-get installs
-
 ### The worst scenario
 
 What if all four optimizations mentioned above are not applied? Let's create a new `Dockerfile` [without any optimizations](/assets/files/posts/2025-01-28/without-optimizations.dockerfile) and build the image.
