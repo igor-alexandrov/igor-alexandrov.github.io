@@ -1,5 +1,6 @@
 ---
 title: Validate belongs_to association in Rails
+description: Learn how to properly validate belongs_to associations in Ruby on Rails with this in-depth guide by Igor Aleksandrov. Discover best practices, common pitfalls, and efficient techniques to ensure data integrity in your Rails applications.
 layout: post
 tags:
   - Rails

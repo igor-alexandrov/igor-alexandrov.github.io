@@ -1,5 +1,6 @@
 ---
 title: Rails Thruster 101
+description: Unlock the power of Rails Thruster with this beginner-friendly guide by Igor Aleksandrov. Learn how to supercharge your Ruby on Rails applications with optimized performance, and streamlined deployments. Perfect for developers looking to enhance their Rails applications.
 layout: post
 tags:
   - Ruby

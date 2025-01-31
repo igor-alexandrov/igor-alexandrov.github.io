@@ -1,5 +1,6 @@
 ---
 title: 18 Tools and Techniques to Improve Rails Application Performance
+description: Boost your Ruby on Rails application's speed and efficiency with these 18 essential tools and techniques! In this comprehensive guide by Igor Aleksandrov, discover performance optimization strategies to enhance scalability, reduce load times, and improve user experience.
 layout: post
 tags:
   - Ruby

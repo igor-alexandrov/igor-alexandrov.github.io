@@ -1,5 +1,6 @@
 ---
 title: Traefik Tuning for Rails Applications (part 1)
+description: Optimize your Ruby on Rails application with Traefik! In Part 1 of this in-depth guide by Igor Aleksandrov, learn essential tuning techniques to enhance performance, security, and scalability. Discover best practices for configuring Traefik as a reverse proxy for Rails apps.
 layout: post
 tags:
   - Rails

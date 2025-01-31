@@ -1,5 +1,6 @@
 ---
 title: Evolution of GitHub Action for Kamal
+description: Discover the evolution of a GitHub Action for Kamal in this insightful blog post by Igor Aleksandrov. Learn how to streamline your deployment workflow, automate tasks, and optimize your CI/CD pipeline with Kamal and GitHub Actions.
 layout: post
 tags:
   - Ruby

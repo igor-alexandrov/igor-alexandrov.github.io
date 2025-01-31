@@ -1,5 +1,6 @@
 ---
 title: Happy Birthday, Rails! 🎉
+description: Celebrate the legacy of Ruby on Rails with Igor Aleksandrov in this special birthday tribute! Explore the framework’s impact, evolution, and why it remains a favorite among developers.
 layout: post
 tags:
   - Rails
