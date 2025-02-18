@@ -4,12 +4,12 @@ source "https://rubygems.org"
 
 # This will help ensure the proper Jekyll version is running.
 gem "jekyll", "~> 4.4.0"
-gem "jekyll-vite"
+gem "jekyll-vite", "~> 3.0.4"
 gem "rack"
 
 gem "ruby-vips"
 
-gem "rackup", "~> 1.0.0"
+gem "rackup"
 
 gem "rubocop-rails-omakase", require: false
 

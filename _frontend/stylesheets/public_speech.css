@@ -1,4 +1,4 @@
-@layer components {
+/* @layer components { */
   .public_speeches {
     @apply space-y-10 lg:space-y-14;
   }
@@ -20,4 +20,4 @@
     @apply max-w-2xl;
     @apply space-y-10;
   }
-}
+/* } */
