@@ -1,4 +1,4 @@
-@layer components {
+/* @layer components { */
   .tags {
     @apply flex space-x-4 flex-wrap;
   }
@@ -10,4 +10,4 @@
   .tags__item {
     @apply before:content-['#'] lowercase text-nowrap;
   }
-}
+/* } */

@@ -1,4 +1,4 @@
-@layer components {
+/* @layer components { */
   .excerpt {
     @apply mx-auto bg-white;
     @apply mt-10 lg:mt-12;
@@ -35,4 +35,4 @@
   /* .excerpt__readmore {
     @apply mt-4;
   } */
-}
+/* } */

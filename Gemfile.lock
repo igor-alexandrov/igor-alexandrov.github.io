@@ -42,7 +42,7 @@ GEM
     http_parser.rb (0.8.0)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
-    jekyll (4.4.0)
+    jekyll (4.4.1)
       addressable (~> 2.4)
       base64 (~> 0.2)
       colorator (~> 1.0)
@@ -67,8 +67,8 @@ GEM
       ruby-vips (~> 2.2.0)
       zeitwerk (~> 2.6)
     jekyll-paginate (1.1.0)
-    jekyll-sass-converter (3.0.0)
-      sass-embedded (~> 1.54)
+    jekyll-sass-converter (3.1.0)
+      sass-embedded (~> 1.75)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
@@ -79,12 +79,13 @@ GEM
     jekyll-toc (0.19.0)
       jekyll (>= 3.9)
       nokogiri (~> 1.12)
-    jekyll-vite (3.0.3)
+    jekyll-vite (3.0.4)
       jekyll (>= 3, < 5)
+      rackup (~> 0.2)
       vite_ruby (~> 3.2)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    json (2.9.1)
+    json (2.10.1)
     kramdown (2.5.1)
       rexml (>= 3.3.9)
     kramdown-parser-gfm (1.1.0)
@@ -94,7 +95,7 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    logger (1.6.5)
+    logger (1.6.6)
     mercenary (0.4.0)
     mini_portile2 (2.8.8)
     minitest (5.25.4)
@@ -112,11 +113,11 @@ GEM
       forwardable-extended (~> 2.6)
     public_suffix (6.0.1)
     racc (1.8.1)
-    rack (2.2.10)
+    rack (3.1.10)
     rack-proxy (0.7.7)
       rack
-    rackup (1.0.1)
-      rack (< 3)
+    rackup (0.2.3)
+      rack (>= 3.0.0.beta1)
       webrick
     rainbow (3.1.1)
     rake (13.2.1)
@@ -159,10 +160,10 @@ GEM
       ffi (~> 1.12)
       logger
     safe_yaml (1.0.5)
-    sass-embedded (1.83.4)
+    sass-embedded (1.85.0)
       google-protobuf (~> 4.29)
       rake (>= 13)
-    sass-embedded (1.83.4-arm64-darwin)
+    sass-embedded (1.85.0-arm64-darwin)
       google-protobuf (~> 4.29)
     securerandom (0.4.1)
     terminal-table (3.0.2)
@@ -192,9 +193,9 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-target-blank
   jekyll-toc
-  jekyll-vite
+  jekyll-vite (~> 3.0.4)
   rack
-  rackup (~> 1.0.0)
+  rackup
   rubocop-rails-omakase
   ruby-vips
 

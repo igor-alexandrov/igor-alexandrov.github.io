@@ -1,4 +1,4 @@
-@layer components {
+/* @layer components { */
   .pagination {
     @apply mt-10 isolate inline-flex -space-x-px rounded-md shadow-sm;
   }
@@ -19,4 +19,4 @@
   .pagination > a.pagination__item-current {
     @apply bg-ruby-700 hover:bg-ruby-500 text-white focus:text-white;
   }
-}
+/* } */

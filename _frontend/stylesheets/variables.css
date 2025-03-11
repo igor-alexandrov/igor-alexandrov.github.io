@@ -1,0 +1,16 @@
+@theme {
+  --color-ruby-50: #fff2f0;
+  --color-ruby-100: #ffe2de;
+  --color-ruby-200: #ffcac3;
+  --color-ruby-300: #ffa599;
+  --color-ruby-400: #ff715e;
+  --color-ruby-500: #ff452c;
+  --color-ruby-600: #f6280c;
+  --color-ruby-700: #d51f06;
+  --color-ruby-800: #ab1d09;
+  --color-ruby-900: #8d1e0f;
+  --color-ruby-950: #4d0b02;
+
+  --font-ubuntu-mono: 'Ubuntu Mono', monospace;
+  --font-inter: 'Inter', sans-serif;
+}
