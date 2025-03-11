@@ -10,25 +10,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // fontFamily: {
-      //   inter: ['"Inter"', "sans-serif"],
-      //   "ubuntu-mono": ['"Ubuntu Mono"', "monospace"],
-      // },
-      // colors: {
-      //   'ruby': {
-      //     '50': '#fff2f0',
-      //     '100': '#ffe2de',
-      //     '200': '#ffcac3',
-      //     '300': '#ffa599',
-      //     '400': '#ff715e',
-      //     '500': '#ff452c',
-      //     '600': '#f6280c',
-      //     '700': '#d51f06',
-      //     '800': '#ab1d09',
-      //     '900': '#8d1e0f',
-      //     '950': '#4d0b02',
-      //   },
-      // },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
