@@ -15,6 +15,10 @@
     @apply text-lg font-semibold text-gray-900;
   }
 
+  .nav__link:hover {
+    @apply text-ruby-500;
+  }
+
   .nav__link-current {
     @apply border-b-2 border-ruby-500;
   }
