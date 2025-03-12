@@ -29,12 +29,12 @@
     <div class="page">
       {% if page.url == "/" %}
       <div class="relative border-b border-gray-200 pb-10">
-        {% if site.cover_image %}
         <div
           class="absolute top-0 right-0 bottom-0 left-0 bg-cover bg-center opacity-15"
-          style="background-image: url({{ site.baseurl }}/assets/images/{{ site.cover_image }})"
+          style="background-image: url({{ site.baseurl }}/assets/images/bc_3.webp)"
         ></div>
-        {% endif %} {% include header.html %} {% if site.author %}
+        {% include header.html %}
+        {% if site.author %}
         <section class="relative">
           <div class="wrapper">{% include author.html %}</div>
         </section>
