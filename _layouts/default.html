@@ -17,6 +17,8 @@
 
     {% vite_client_tag %} {% vite_javascript_tag application %}
     {%vite_stylesheet_tag application %}
+    {% vite_client_tag %}
+    {% vite_javascript_tag application %}
   </head>
 
   {% capture layout %} {% if page.layout %} layout-{{ page.layout }} {% endif %}

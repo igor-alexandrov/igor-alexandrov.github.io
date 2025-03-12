@@ -50,9 +50,10 @@ include:
   - robots.txt
 
 exclude:
-  - config
   - bin
+  - config
   - vite.config.ts
+  - tmp
   - Procfile.dev
   - Rakefile
   - node_modules/
