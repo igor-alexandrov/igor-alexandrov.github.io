@@ -1,38 +1,35 @@
-/* @layer components { */
+.btn-xs {
+  @apply btn;
+  @apply px-3 py-2 text-xs;
+}
 
-  .btn-xs {
-    @apply btn;
-    @apply px-3 py-2 text-xs;
-  }
+.btn-sm {
+  @apply btn;
+  @apply px-3 py-2 text-sm
+}
 
-  .btn-sm {
-    @apply btn;
-    @apply px-3 py-2 text-sm
-  }
+.btn-lg {
+  @apply btn;
+  @apply px-5 py-3 text-base;
+}
 
-  .btn-lg {
-    @apply btn;
-    @apply px-5 py-3 text-base;
-  }
+.btn-xl {
+  @apply btn;
+  @apply px-6 py-3.5 text-base;
+}
 
-  .btn-xl {
-    @apply btn;
-    @apply px-6 py-3.5 text-base;
-  }
+.btn-wide {
+  @apply btn;
+  @apply w-full;
+}
 
-  .btn-wide {
-    @apply btn;
-    @apply w-full;
-  }
+.btn-rounded {
+  @apply btn;
+  @apply p-2.5 rounded-full;
+}
 
-  .btn-rounded {
-    @apply btn;
-    @apply p-2.5 rounded-full;
-  }
-
-  .btn-readmore {
-    @apply btn;
-    @apply px-4 py-3 text-base w-full inline-block;
-    @apply lg:px-9 lg:py-4 lg:text-lg lg:w-auto;
-  }
-/* } */
+.btn-readmore {
+  @apply btn;
+  @apply px-4 py-3 text-base w-full inline-block;
+  @apply lg:px-9 lg:py-4 lg:text-lg lg:w-auto;
+}

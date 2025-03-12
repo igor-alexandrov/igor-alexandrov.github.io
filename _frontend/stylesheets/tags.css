@@ -1,13 +1,11 @@
-/* @layer components { */
-  .tags {
-    @apply flex space-x-4 flex-wrap;
-  }
+.tags {
+  @apply flex space-x-4 flex-wrap;
+}
 
-  .tags-article {
-    @apply justify-center md:justify-start;
-  }
+.tags-article {
+  @apply justify-center md:justify-start;
+}
 
-  .tags__item {
-    @apply before:content-['#'] lowercase text-nowrap;
-  }
-/* } */
+.tags__item {
+  @apply before:content-['#'] lowercase text-nowrap;
+}

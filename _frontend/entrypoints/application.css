@@ -3,9 +3,6 @@
 
 @import "tailwindcss";
 
-/* @import "tailwindcss/components"; */
-/* @import "tailwindcss/utilities"; */
-
 @import "../stylesheets/variables.css";
 
 @plugin "@tailwindcss/typography";
@@ -13,14 +10,11 @@
 
 @config "../../tailwind.config.js";
 
-
-/* @import "../stylesheets/utilities/*.css"; */
-
 @utility btn {
   @apply rounded-xl no-underline cursor-pointer;
   @apply px-5 py-2.5;
   @apply bg-ruby-700 hover:bg-ruby-500 text-white hover:text-white shadow-md;
-  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ruby-600;
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ruby-600;
   @apply text-sm font-semibold text-center;
 }
 
@@ -46,57 +40,12 @@
 }
 
 @layer components {
-  .page {
-    @apply relative;
-    @apply z-[1];
-    @apply transition-all duration-500 ease-in-out delay-0;
-  }
-
-  .overlay {
-    @apply invisible;
-    @apply absolute inset-0 w-full h-full;
-    @apply bg-white;
-  }
-
-  .wrapper {
-    @apply mx-auto px-6 lg:px-8 max-w-6xl w-full ;
-  }
-
-  .container > section {
-    @apply mt-10 lg:mt-20;
-  }
-
-  .posts {
-    @apply space-y-10 lg:space-y-14;
-  }
-
-  .section__title {
-    @apply text-2xl lg:text-4xl uppercase text-gray-600 text-center border-b-2 border-ruby-600 pb-4 lg:pb-6;
-  }
-
-  .meta {
-    @apply text-gray-500 uppercase text-sm space-x-2;
-  }
-
-  .meta > * {
-    @apply after:content-['/'] last:after:content-[''] after:pl-2;
-  }
-
-  .social-links {
-    @apply flex justify-center space-x-6 md:order-2;
-  }
-
-  .social-links__item {
-    @apply p-2.5 rounded-full hover:bg-ruby-600 text-gray-600 hover:text-white transition;
-  }
-
-  .social-links__item--extended {
-    @apply lg:px-4;
-  }
-
+  @import "../stylesheets/page.css";
   @import "../stylesheets/btn.css";
   @import "../stylesheets/header.css";
+  @import "../stylesheets/meta.css";
   @import "../stylesheets/sidebar.css";
+  @import "../stylesheets/social_links.css";
   @import "../stylesheets/article.css";
   @import "../stylesheets/excerpt.css";
   @import "../stylesheets/tags.css";
@@ -104,7 +53,6 @@
   @import "../stylesheets/forms.css";
   @import "../stylesheets/pagination.css";
   @import "../stylesheets/public_speech.css";
-
 
   @import "../stylesheets/prism.css";
 }

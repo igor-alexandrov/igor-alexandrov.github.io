@@ -1,0 +1,7 @@
+.meta {
+  @apply text-gray-500 uppercase text-sm space-x-2;
+}
+
+.meta > * {
+  @apply after:content-['/'] last:after:content-[''] after:pl-2;
+}

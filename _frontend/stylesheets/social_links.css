@@ -1,0 +1,7 @@
+.social-links {
+  @apply flex justify-center space-x-6 md:order-2;
+}
+
+.social-links__item {
+  @apply p-2.5 rounded-full hover:bg-ruby-600 text-gray-600 hover:text-white transition;
+}

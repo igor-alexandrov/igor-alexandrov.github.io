@@ -1,25 +1,23 @@
-/* @layer components { */
-  .form__group {
-    @apply block flex flex-col-reverse w-full;
-  }
+.form__group {
+  @apply block flex flex-col-reverse w-full;
+}
 
-  .form__label {
-    @apply font-bold;
-  }
+.form__label {
+  @apply font-bold;
+}
 
-  .form__input[required=required] + .form__label {
-    @apply after:content-['*'];
-  }
+.form__input[required=required] + .form__label {
+  @apply after:content-['*'];
+}
 
-  /* .form__group:has(.form__input[required=required]) .form__label {
-    @apply after:content-['*'];
-  } */
+/* .form__group:has(.form__input[required=required]) .form__label {
+  @apply after:content-['*'];
+} */
 
-  .form__label::after {
-    @apply pl-1 text-ruby-700;
-  }
+.form__label::after {
+  @apply pl-1 text-ruby-700;
+}
 
-  .form__input {
-    @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-black/50;
-  }
-/* } */
+.form__input {
+  @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-ruby-300 focus:ring focus:ring-ruby-200 focus:ring-black/50;
+}

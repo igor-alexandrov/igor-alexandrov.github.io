@@ -1,22 +1,20 @@
-/* @layer components { */
-  .pagination {
-    @apply mt-10 isolate inline-flex -space-x-px rounded-md shadow-sm;
-  }
+.pagination {
+  @apply mt-10 isolate inline-flex -space-x-px rounded-md shadow-sm;
+}
 
-  .pagination > * {
-    @apply relative inline-flex items-center;
-    @apply first:rounded-l-md last:rounded-r-md;
-    @apply py-2 px-4 first:px-2 last:px-2;
-    @apply ring-1 ring-inset ring-gray-300;
-    @apply font-semibold text-sm text-gray-900 first:text-gray-400 last:text-gray-400;
-  }
+.pagination > * {
+  @apply relative inline-flex items-center;
+  @apply first:rounded-l-md last:rounded-r-md;
+  @apply py-2 px-4 first:px-2 last:px-2;
+  @apply ring-1 ring-inset ring-gray-300;
+  @apply font-semibold text-sm text-gray-900 first:text-gray-400 last:text-gray-400;
+}
 
-  .pagination > a:not(.pagination__item-current) {
-    @apply hover:bg-gray-50;
-    @apply focus:outline-offset-0 hover:text-ruby-500;
-  }
+.pagination > a:not(.pagination__item-current) {
+  @apply hover:bg-gray-50;
+  @apply focus:outline-offset-0 hover:text-ruby-500;
+}
 
-  .pagination > a.pagination__item-current {
-    @apply bg-ruby-700 hover:bg-ruby-500 text-white focus:text-white;
-  }
-/* } */
+.pagination > a.pagination__item-current {
+  @apply bg-ruby-700 hover:bg-ruby-500 text-white focus:text-white;
+}

@@ -1,4 +1,26 @@
 @theme {
+  /* Disabled colors that are not used */
+  --color-red-*: initial;
+  --color-orange-*: initial;
+  --color-yellow-*: initial;
+  --color-lime-*: initial;
+  --color-green-*: initial;
+  --color-emerald-*: initial;
+  --color-teal-*: initial;
+  --color-cyan-*: initial;
+  --color-sky-*: initial;
+  --color-blue-*: initial;
+  --color-indigo-*: initial;
+  --color-violet-*: initial;
+  --color-purple-*: initial;
+  --color-fuchsia-*: initial;
+  --color-pink-*: initial;
+  --color-rose-*: initial;
+  --color-zinc-*: initial;
+  --color-neutral-*: initial;
+  --color-stone-*: initial;
+
+  /* Add a custom Ruby palette */
   --color-ruby-50: #fff2f0;
   --color-ruby-100: #ffe2de;
   --color-ruby-200: #ffcac3;
