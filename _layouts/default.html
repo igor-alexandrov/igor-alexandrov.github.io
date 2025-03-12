@@ -24,14 +24,14 @@
 
   <body
     data-controller="slide-over"
-    class="-center pointer-events-auto flex h-full flex-col overflow-auto bg-white font-inter"
+    class="-center font-inter pointer-events-auto flex h-full flex-col overflow-auto bg-white"
   >
     <div class="page">
       {% if page.url == "/" %}
       <div class="relative border-b border-gray-200 pb-10">
         {% if site.cover_image %}
         <div
-          class="absolute bottom-0 left-0 right-0 top-0 bg-cover bg-center opacity-15"
+          class="absolute top-0 right-0 bottom-0 left-0 bg-cover bg-center opacity-15"
           style="background-image: url({{ site.baseurl }}/assets/images/{{ site.cover_image }})"
         ></div>
         {% endif %} {% include header.html %} {% if site.author %}

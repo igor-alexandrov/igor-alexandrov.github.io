@@ -1,6 +1,6 @@
 <div class="flex h-60 items-center justify-center">
   {% if site.author.webp %}
-  <picture class="w-40 rounded-full border-2 border-ruby-600 shadow-lg">
+  <picture class="border-ruby-600 w-40 rounded-full border-2 shadow-lg">
     <source
       class="rounded-full"
       srcset="{{ site.baseurl }}/assets/images/{{ site.author.webp }}"
@@ -14,7 +14,7 @@
   </picture>
   {% else %}
   <img
-    class="w-40 rounded-full border-2 border-ruby-600 shadow-lg"
+    class="border-ruby-600 w-40 rounded-full border-2 shadow-lg"
     src="{{ site.baseurl }}/assets/images/{{ site.author.image }}"
     alt="{{ site.author.name }}'s Picture"
   />
