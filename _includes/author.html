@@ -5,10 +5,13 @@
       class="rounded-full"
       srcset="{{ site.baseurl }}/assets/images/{{ site.author.webp }}"
       type="image/webp"
+      sizes="160px"
     />
     <img
       class="rounded-full"
       src="{{ site.baseurl }}/assets/images/{{ site.author.image }}"
+      width="160"
+      height="160"
       alt="{{ site.author.name }}'s Picture"
     />
   </picture>
@@ -16,6 +19,8 @@
   <img
     class="border-ruby-600 w-40 rounded-full border-2 shadow-lg"
     src="{{ site.baseurl }}/assets/images/{{ site.author.image }}"
+    width="160"
+    height="160"
     alt="{{ site.author.name }}'s Picture"
   />
   {% endif %}
