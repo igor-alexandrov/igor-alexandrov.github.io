@@ -1,50 +1,48 @@
-@layer components {
-  .article {
-    @apply mx-auto bg-white;
-    @apply my-10 lg:my-12;
-    @apply prose lg:prose-xl max-w-6xl w-full;
-    @apply prose-code:before:hidden prose-code:after:hidden prose-code:bg-amber-50 prose-code:p-1 prose-code:rounded-md prose-code:font-ubuntu-mono;
-    @apply prose-pre:rounded-lg prose-pre:bg-white prose-pre:border prose-pre:border-gray-500;
-    @apply prose-h1:mb-0;
-    @apply prose-figure:px-10 prose-figure:pt-4 prose-figure:pb-8 prose-figure:bg-amber-50;
-    @apply prose-figcaption:text-black prose-figcaption:font-bold;
-  }
+.article {
+  @apply mx-auto bg-white;
+  @apply my-10 lg:my-12;
+  @apply prose lg:prose-xl max-w-6xl w-full;
+  @apply prose-code:before:hidden prose-code:after:hidden prose-code:bg-amber-50 prose-code:p-1 prose-code:rounded-md prose-code:font-ubuntu-mono;
+  @apply prose-pre:rounded-lg prose-pre:bg-white prose-pre:border prose-pre:border-gray-500;
+  @apply prose-h1:mb-0;
+  @apply prose-figure:px-10 prose-figure:pt-4 prose-figure:pb-8 prose-figure:bg-amber-50;
+  @apply prose-figcaption:text-black prose-figcaption:font-bold;
+}
 
-  .article__header {
-    @apply mb-10 lg:mb-12;
-  }
+.article__header {
+  @apply mb-10 lg:mb-12;
+}
 
-  .article__title {
-    @apply mt-5;
-    @apply leading-tight;
-  }
+.article__title {
+  @apply mt-5;
+  @apply leading-tight;
+}
 
-  .article__title::after {
-    @apply content-[''];
-    @apply block w-32 h-1 bg-ruby-600 mt-2;
-  }
+.article__title::after {
+  @apply content-[''];
+  @apply block w-32 h-1 bg-ruby-600 mt-2;
+}
 
-  .article__toc {
-    /* @apply my-14 lg:my-16; */
-  }
+.article__toc {
+  /* @apply my-14 lg:my-16; */
+}
 
-  .article__container {
-    @apply flex flex-col flex-col-reverse;
-  }
+.article__container {
+  @apply flex flex-col flex-col-reverse;
+}
 
-  .article__footer {
-    @apply grid grid-cols-1 lg:grid-cols-2 mt-10 gap-6 lg:gap-20;
-  }
+.article__footer {
+  @apply grid grid-cols-1 lg:grid-cols-2 mt-10 gap-6 lg:gap-20;
+}
 
-  .article__share {
-    @apply flex justify-center md:justify-end space-x-4;
-  }
+.article__share {
+  @apply flex justify-center md:justify-end space-x-4;
+}
 
-  .article__read_more {
-    @apply lg:col-span-2;
-  }
+.article__read_more {
+  @apply lg:col-span-2;
+}
 
-  .article__comments {
-    @apply lg:col-span-2;
-  }
+.article__comments {
+  @apply lg:col-span-2;
 }

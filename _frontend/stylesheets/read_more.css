@@ -1,13 +1,11 @@
-@layer components {
-  .read_more__list {
-    @apply flex flex-col gap-10;
-  }
+.read_more__list {
+  @apply flex flex-col gap-10;
+}
 
-  .read_more__meta {
-    @apply text-gray-500 uppercase text-sm mb-2 space-x-2;
-  }
+.read_more__meta {
+  @apply text-gray-500 uppercase text-sm mb-2 space-x-2;
+}
 
-  .read_more__link {
-    @apply text-gray-900 font-bold;
-  }
+.read_more__link {
+  @apply text-gray-900 font-bold;
 }

@@ -1,0 +1,19 @@
+.page {
+  @apply relative;
+  @apply z-[1];
+  @apply transition-all duration-500 ease-in-out delay-0;
+}
+
+.overlay {
+  @apply invisible;
+  @apply absolute inset-0 w-full h-full;
+  @apply bg-white;
+}
+
+.wrapper {
+  @apply mx-auto px-6 lg:px-8 max-w-6xl w-full ;
+}
+
+.container > section {
+  @apply mt-10 lg:mt-20;
+}
