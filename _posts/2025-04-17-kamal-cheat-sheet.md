@@ -16,7 +16,7 @@ I use Kamal daily to deploy all the apps I maintain. I created a list of Kamal c
 <!--more-->
 
 <pre class="language-bash"><code>
-# Init command is used to create the config and secrets files once after Kamal is added to the app.
+# The init command is used to create the config and secrets files once after Kamal is added to the app.
 $ kamal init
 
 # Install Docker on all target hosts
@@ -63,7 +63,7 @@ $ kamal details [-d staging]
 $ kamal app details [-d staging] [--roles=web]
 
 # Show details only about the PgHero accessory containers [for the staging environment]
-./bin/kamal accessory details pghero -d staging
+$ kamal accessory details pghero -d staging
 </code></pre>
 
 To see all available commands, run `kamal help`. If you prefer to save this cheat sheet as an image, [use this link](/assets/images/posts/2025-04-17/kamal-cheat-sheet.png).
