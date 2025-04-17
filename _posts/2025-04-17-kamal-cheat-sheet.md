@@ -11,7 +11,7 @@ featured: false
 hidden: false
 ---
 
-I use Kamal on a daily basis to deploy all the apps I maintain. Below is a list of commands I use frequently. This is not an exhaustive list, but it covers the most common tasks I usually perform.
+I use Kamal daily to deploy all the apps I maintain. I created a list of Kamal commands I use frequently. While this is not an exhaustive list, but it covers the most common tasks I usually perform.
 
 <!--more-->
 
