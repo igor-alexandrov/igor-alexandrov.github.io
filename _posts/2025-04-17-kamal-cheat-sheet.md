@@ -13,6 +13,8 @@ hidden: false
 
 I use Kamal on a daily basis to deploy all the apps I maintain. Below is a list of commands I use frequently. This is not an exhaustive list, but it covers the most common tasks I usually perform.
 
+<!--more-->
+
 <pre class="language-bash"><code>
 # Init command is used to create the config and secrets files once after Kamal is added to the app.
 $ kamal init
