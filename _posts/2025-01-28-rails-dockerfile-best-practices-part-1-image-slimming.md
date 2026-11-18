@@ -7,8 +7,8 @@ tags:
   - Rails
   - Captain Speaks
   - DevOps
-featured: true
-hidden: true
+featured: false
+hidden: false
 featured_image: /assets/images/docker-mark-blue.png
 toc: true
 ---
