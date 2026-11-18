@@ -5,8 +5,8 @@ layout: post
 tags:
   - Rust
   - Tabletist
-featured: false
-hidden: false
+featured: true
+hidden: true
 toc: true
 ---
 
